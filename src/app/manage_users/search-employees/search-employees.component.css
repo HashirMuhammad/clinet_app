@@ -1,0 +1,217 @@
+.my-input::placeholder {
+    color: #000000b6;
+  }
+  .avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px; /* Adjust line height for vertical centering */
+  }
+
+
+/*--------------------------------------------------- checkboxes ------------------------------------------------*/
+.chkbx1 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #9c27b0; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx1:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #9c27b0; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx1:checked {
+    border-color: #9c27b0; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx2 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #9c27b0; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx2:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #9c27b0; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx2:checked {
+    border-color: #9c27b0; /* Override border color for checked state (purple) */
+  }
+  /* -------------------------------------------------------------------------------------- */
+.chkbx7 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx7:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #3399FF; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx7:checked {
+    border-color: #3399FF; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx8 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx8:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #3399FF; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx8:checked {
+    border-color: #3399FF; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx9 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx9:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #3399FF; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx9:checked {
+    border-color: #3399FF; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx10 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx10:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #3399FF; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx10:checked {
+    border-color: #3399FF; /* Override border color for checked state (purple) */
+  }
+
+
+  
+/* -----------------table------------------------------------------- */
+  /* Style for the entire table */
+  .table-container {
+    border-collapse: collapse;
+    width:initial
+  }
+  
+  /* Style for table header row */
+  .table-container thead tr {
+    background-color: #F0F2F7; /* Header background color */
+    border-radius: 50px; /* Rounded corners for header */
+  }
+  
+  /* Style for table header cells */
+  .table-container th {
+    padding: 15px;
+  }
+  
+  /* Style for table data cells */
+  .table-container td {
+    padding: 10px;
+    border-top: 1px solid #F0F2F7; /* Add a border between rows */
+  }
+  
+  /* Apply border-radius to the first and last cells in the header row */
+  .table-container th:first-child {
+    border-top-left-radius: 10px;
+  }
+  
+  .table-container th:last-child {
+    border-top-right-radius: 10px;
+  }
+  
+  /* Optional: Add hover effect to rows */
+  .table-container tbody tr:hover {
+    background-color: #f0f0f0; /* Hover color */
+  }

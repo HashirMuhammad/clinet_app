@@ -1,0 +1,412 @@
+.my-input::placeholder {
+  color: #000000b6;
+}
+.avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px; /* Adjust line height for vertical centering */
+}
+
+/* .button-panel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button-panel button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #29CCB1;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+} */
+
+
+/* -----------------table------------------------------------------- */
+  /* Style for the entire table */
+  .table-container {
+    border-collapse: collapse;
+    width:initial
+  }
+  
+  /* Style for table header row */
+  .table-container thead tr {
+    background-color: #F0F2F7; /* Header background color */
+    border-radius: 50px; /* Rounded corners for header */
+  }
+  
+  /* Style for table header cells */
+  .table-container th {
+    padding: 15px;
+  }
+  
+  /* Style for table data cells */
+  .table-container td {
+    padding: 10px;
+    border-top: 1px solid #F0F2F7; /* Add a border between rows */
+  }
+  
+  /* Apply border-radius to the first and last cells in the header row */
+  .table-container th:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .table-container th:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  /* Optional: Add hover effect to rows */
+  .table-container tbody tr:hover {
+    background-color: #f0f0f0; /* Hover color */
+  }
+
+
+
+
+
+
+/*--------------------------------------------------- checkboxes ------------------------------------------------*/
+.chkbx1 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #9c27b0; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx1:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #9c27b0; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx1:checked {
+    border-color: #9c27b0; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx2 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #9c27b0; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx2:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #9c27b0; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx2:checked {
+    border-color: #9c27b0; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx3 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #14CC8F; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx3:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #14CC8F; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx3:checked {
+    border-color: #14CC8F; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx4 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #14CC8F; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx4:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #14CC8F; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx4:checked {
+    border-color: #14CC8F; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx5 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #FF8095; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx5:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #FF8095; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx5:checked {
+    border-color: #FF8095; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx6 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #FF8095; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx6:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #FF8095; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx6:checked {
+    border-color: #FF8095; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx7 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx7:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #3399FF; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx7:checked {
+    border-color: #3399FF; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx8 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx8:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #3399FF; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx8:checked {
+    border-color: #3399FF; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx9 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx9:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #3399FF; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx9:checked {
+    border-color: #3399FF; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+.chkbx10 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .chkbx10:checked::before {
+    /* Add a tick mark when the radio button is checked */
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    color: #3399FF; /* Color (purple) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .chkbx10:checked {
+    border-color: #3399FF; /* Override border color for checked state (purple) */
+  }
+/* -------------------------------------------------------------------------------------- */
+
+/* Default styles for larger screens */
+.flex {
+  display: flex;
+}
+
+@media screen and (max-width: 640px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .border-r {
+    border-right: none;
+    border-bottom: 1px solid #ccc; /* Add bottom border for separation */
+    padding-bottom: 1rem; /* Add some padding for spacing */
+    margin-bottom: 1rem; /* Add some margin for spacing */
+  }
+
+  .w-max {
+    width: 100%;
+    max-width: none;
+  }
+
+  .ml-10 {
+    margin-left: 0;
+  }
+
+  .mr-20 {
+    margin-right: 0;
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  .ml-5 {
+    margin-left: 0.5rem;
+  }
+
+  .pl-8 {
+    padding-left: 0.8rem;
+  }
+
+  .pr-48 {
+    padding-right: 4.8rem;
+  }
+
+  .my-input,
+  .my-input::placeholder {
+    width: 100%;
+    max-width: none;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 100%;
+  }
+
+  th,
+  td {
+    text-align: left;
+  }
+}

@@ -1,0 +1,147 @@
+<div class="">
+  <!-- cards -->
+  <div class="lg:flex xl:flex 2xl:flex xl:w-fit 2xl:w-fit lg:h-fit mt-4">
+
+    <div class="sm:flex sm:h-40 lg:h-44">
+      <!-- subscriber btn -->
+      <div class="lg:w-32 lg:mr-8 xl:w-44 xl:flex-none xl:mr-6 bg-white w-56 mr-5 p-2 rounded-lg">
+        <div class="flex p-2">
+          <h1 class="text-4xl font-semibold">{{ subcribers }}</h1>
+          <img src="../../assets/dashboard/cards/sub-icon.png" class="ml-auto" />
+        </div>
+        <h1 class="mt-3 ml-2 text-lg xl:text-xl xl:mb-2">Subscribers</h1>
+        <button class="pr-2 pl-2 rounded-lg ml-1 mr-1 text-xs p-0.5 mt-1 xl:text-sm"
+          style="background-color: #d7fff8; color: #29ccb1">
+          Clients
+        </button>
+        <label class="text-slate-400 xl:text-sm">|</label>
+        <button class="pr-2 pl-2 rounded-lg ml-1 mr-1 text-xs p-0.5 xl:text-sm" style="background-color: #d7fff8; color: #29ccb1">
+          Employees
+        </button>
+      </div>
+
+      <div class="lg:w-32 lg:mr-8 xl:w-44 xl:flex-none xl:mr-6 bg-white w-56 mr-5 p-2 rounded-lg">
+        <div class="flex p-2">
+          <h1 class="text-4xl font-semibold ">{{ employees }}</h1>
+          <img src="../../assets/dashboard/cards/emp.png" class="ml-auto" />
+        </div>
+        <h1 class="mt-3 ml-2 text-lg xl:text-xl xl:mb-2">Employees</h1>
+        <button class="pr-2 pl-2 rounded-lg ml-1 mr-1 text-xs p-0.5 mt-1 xl:text-sm"
+          style="background-color: #f3ebf7; color: #a352cc">
+          Add New
+        </button>
+      </div>
+
+      <div class="lg:w-32 lg:mr-6 xl:w-44 xl:flex-none xl:mr-6 bg-white w-56 p-2 rounded-lg">
+        <div class="flex p-2">
+          <h1 class="text-4xl font-semibold">{{ clients }}</h1>
+          <img src="../../assets/dashboard/cards/cli.png" class="ml-auto" />
+        </div>
+        <h1 class="mt-3 ml-2 text-lg xl:text-xl xl:mb-2">Clients</h1>
+        <button class="pr-2 pl-2 rounded-lg ml-1 mr-1 text-xs p-0.5 mt-1 xl:text-sm"
+          style="background-color: #ebf5ff; color: #3399ff">
+          Clients
+        </button>
+      </div>
+    </div>
+
+    <div class="sm:flex sm:h-40 sm:mt-4 lg:h-44 lg:mt-0 ">
+
+      <div class="lg:w-32 lg:mr-8 xl:w-44 xl:flex-none xl:mr-6 bg-white w-56 mr-5 p-2 rounded-lg">
+        <div class="flex p-2">
+          <h1 class="text-4xl font-semibold">{{ printNewsletter }}</h1>
+          <img src="../../assets/dashboard/cards/printer.png" class="ml-auto" />
+        </div>
+        <h1 class="mt-5 ml-2 sm:text-base text-lg xl:text-xl xl:mb-2">Subcribed to Printed Newsletter</h1>
+      </div>
+
+      <div class="lg:w-32 lg:mr-8 xl:w-44 xl:flex-none xl:mr-6 bg-white w-56 mr-5 p-2 rounded-lg">
+        <div class="flex p-2">
+          <h1 class="text-4xl font-semibold">{{ emailNewsletter }}</h1>
+          <img src="../../assets/dashboard/cards/sms-star.png" class="ml-auto" />
+        </div>
+        <h1 class="mt-5 ml-2 2xl:text-lg xl:text-xl xl:mb-2">Subcribed to Email Newsletter</h1>
+      </div>
+
+      <div class="lg:w-32 lg:mr-8 xl:w-44 xl:flex-none xl:mr-6 bg-white w-56 p-2 rounded-lg">
+        <div class="flex p-2">
+          <h1 class="text-4xl font-semibold">{{ unsub }}</h1>
+          <img src="../../assets/dashboard/cards/unsub.png" class="ml-auto" />
+        </div>
+        <h1 class="mt-3 ml-2 2xl:text-lg xl:text-xl xl:mb-2">Unsubcribers</h1>
+        <button class="pr-2 pl-2 rounded-lg ml-1 mr-1 text-xs p-0.5 mt-1 xl:text-sm"
+          style="background-color: #fff6d7; color: #f2b80c">
+          View List
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- graph -->
+  <div class="sm:h-fit lg:flex lg:space-x-5 xl:space-x-5 mt-4">
+    <div class="sm:mb-5 sm:p-3 bg-white lg:mb-4 lg:h-80 lg:flex-1  rounded-lg">
+      Replace with the graph
+      <kendo-chart class="sm:h-60 sm:rounded-b-lg">
+        <kendo-chart-title text="Units sold"></kendo-chart-title>
+        <kendo-chart-category-axis>
+          <kendo-chart-category-axis-item [categories]="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']"
+            [title]="{ text: 'Months' }">
+          </kendo-chart-category-axis-item>
+        </kendo-chart-category-axis>
+        <kendo-chart-series>
+          <kendo-chart-series-item type="line" [data]="[123, 276, 310, 212, 240, 156, 98]">
+          </kendo-chart-series-item>
+          <kendo-chart-series-item type="line" [data]="[165, 210, 287, 144, 190, 167, 212]">
+          </kendo-chart-series-item>
+          <kendo-chart-series-item type="line" [data]="[56, 140, 195, 46, 123, 78, 95]">
+          </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+    </div>
+    <div class="sm:mb-5 sm:p-3 bg-white h-80 lg:flex-1 rounded-lg">
+      Replace with the graph
+      <kendo-chart class="sm:h-60 sm:rounded-b-lg">
+        <kendo-chart-title text="Units sold"></kendo-chart-title>
+        <kendo-chart-category-axis>
+          <kendo-chart-category-axis-item [categories]="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']"
+            [title]="{ text: 'Months' }">
+          </kendo-chart-category-axis-item>
+        </kendo-chart-category-axis>
+        <kendo-chart-series>
+          <kendo-chart-series-item type="line" [data]="[123, 276, 310, 212, 240, 156, 98]">
+          </kendo-chart-series-item>
+          <kendo-chart-series-item type="line" [data]="[165, 210, 287, 144, 190, 167, 212]">
+          </kendo-chart-series-item>
+          <kendo-chart-series-item type="line" [data]="[56, 140, 195, 46, 123, 78, 95]">
+          </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+    </div>
+  </div>
+
+  <!-- infomailer_&_file&sign -->
+  <div class="lg:flex lg:space-x-3 xl:space-x-6 lg:mt-1 ">
+    <div class="sm:bg-white sm:rounded-lg xl:w-4/12 2xl:w-2/5">
+      <!-- infomailer -->
+      <app-infomailer class="xl:bg-white w-4/12 h-fit rounded-lg"></app-infomailer>
+    </div>
+
+    <div class="sm:bg-white sm:rounded-lg sm:mt-4 lg:mt-0 xl:flex-1">
+      <!-- file and sign -->
+      <app-file-and-sign class="xl:bg-white h-fit lg:flex-1 xl:flex-1 lg:pt-3 rounded-lg"></app-file-and-sign>
+    </div>
+  </div>
+
+  <!-- infolearning & high achievers -->
+  <div class="lg:flex lg:space-x-6 mt-4">
+    <div class="sm:bg-white sm:rounded-lg xl:flex-1">
+      <!-- infolearning -->
+      <app-infolearning class="xl:bg-white h-fit lg:flex-1 rounded-lg"></app-infolearning>
+    </div>
+
+    <div class="sm:bg-white sm:rounded-lg sm:mt-4 lg:mt-0 xl:w-4/12">
+      <!-- high achievers -->
+      <app-high-achievers class="xl:bg-white w-4/12 h-fit rounded-lg"></app-high-achievers>
+    </div>
+  </div>
+</div>

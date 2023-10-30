@@ -1,0 +1,214 @@
+<div class="bg-white h-screen mb-5 mt-3 w-fit rounded-3xl">
+
+    <label class="flex w-auto border-b border-gray-300 p-6 text-2xl">Search Employees</label>
+    
+    <div class="flex mr-20">
+                <!-- filters -->
+        <div class="border-r border-gray-300 h-auto">
+            
+            <div class="flex pl-4 pr-4 pt-4 pb-2">
+                <label class="pr-52 ml-4 text-lg" style="color: #999999;">Filters</label>
+                <img src="../../../assets/manage_clients/filter.png" class="ml-auto w-5 h-5">
+            </div>
+                
+            <!-- filter  -->
+            <div class="flex pl-6 pt-6 pb-2">
+                <input
+                type="radio"
+                class="chkbx1"
+                size="none"
+                id="chkbx1"
+                name="chkbx1"
+                (click)="toggleChecked(0)"
+                [checked]="isChecked[0]"
+              />
+              
+              <h6><label class="ml-4">Is an Account Manager - Yes</label></h6>
+            </div>
+    
+            <div class="flex pl-6 pt-5 pb-2">
+                <input
+                type="radio"
+                class="chkbx2"
+                size="none"
+                id="chkbx2"
+                name="chkbx2"
+                (click)="toggleChecked(1)"
+                [checked]="isChecked[1]"
+              />
+              
+              <h6><label class="ml-4">Is an Account Manager - Yes</label></h6>
+            </div>
+    
+              <div class="flex pl-6 pt-5 pb-2">
+                <input
+                type="radio"
+                class="chkbx7"
+                size="none"
+                id="chkbx7"
+                name="chkbx7"
+                (click)="toggleChecked(6)"
+                [checked]="isChecked[6]"
+              />
+              
+              <h6><label class="ml-4">Male</label></h6>
+              </div>
+    
+              <div class="flex pl-6 pt-5 pb-2">
+                <input
+                type="radio"
+                class="chkbx8"
+                size="none"
+                id="chkbx8"
+                name="chkbx8"
+                (click)="toggleChecked(7)"
+                [checked]="isChecked[7]"
+              />
+              
+              <h6><label class="ml-4">Female</label></h6>
+              </div>
+    
+              <div class="flex pl-6 pt-5 pb-2">
+                <input
+                type="radio"
+                class="chkbx9"
+                size="none"
+                id="chkbx9"
+                name="chkbx9"
+                (click)="toggleChecked(8)"
+                [checked]="isChecked[8]"
+              />
+              
+              <h6><label class="ml-4">Unknown</label></h6>
+              </div>
+    
+              <div class="flex pl-6 pt-5 pb-2">
+                <input
+                type="radio"
+                class="chkbx10"
+                size="none"
+                id="chkbx10"
+                name="chkbx10"
+                (click)="toggleChecked(9)"
+                [checked]="isChecked[9]"
+              />
+              
+              <h6><label class="ml-4">All</label></h6>
+              </div>
+    
+        </div>
+    
+        <div class="w-max p-4">
+          <div class="flex">
+        
+            <div class="ml-3 mt-2">
+              
+            </div>
+            <!-- search input -->
+            <div>
+              <label class="text-base font-medium" style="color: #CC0000;">Search</label><br />
+        
+              <select class="bg-white border border-gray-400 rounded-lg p-2.5 pr-48 mt-2" style="color: #000000BF;">
+                <option class="text-gray-500" value="" disabled selected>Select</option>
+                <option value="search">Option 1</option>
+                <option value="filter">Option 2</option>
+              </select>
+            </div>
+        
+            <!-- value input -->
+            <div class="ml-10 mr-20">
+              <label class="text-base font-medium" style="color: #CC0000;">Value</label><br />
+        
+              <input type="text" placeholder="Enter Here..." class="my-input bg-white border border-gray-400 rounded-lg p-2 pr-32 mt-2">
+            </div>
+        
+            <!-- buttons -->
+            <div class="p-8 flex k-ml-auto">
+              <div>
+                <button class="pl-4 pr-4 p-2 rounded-lg mr-5" style="background-color: #F0F2F7;">
+                  Clear
+                </button>
+              </div>
+        
+              <div class="relative inline-block">
+                <button class="bg-white border p-1.5 pl-4 pr-4 mr-4 rounded-lg flex items-center" style="color: #29CCB1; border-color: #29CCB1;">
+                  Add Filters
+                  <img src="../../../assets/manage_clients/filter -blue.png" class="ml-5">
+                </button>
+              </div>
+        
+              <div class="relative inline-block">
+                <button class="bg-teal-500 text-white px-6 py-2 rounded-lg flex items-center" (click)="toggleDropdown()">
+                  Action
+                  <img src="../../../assets/manage_clients/drop_arrow.png" class="ml-4">
+                </button>            
+                <div *ngIf="isDropdownOpen" class="absolute bg-white border border-gray-300 min-w-32 mt-2 py-2 rounded-lg shadow-lg">
+                  <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Action 1</a>
+                  <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Action 2</a>
+                  <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Action 3</a>
+                </div>
+              </div>
+              
+              
+              
+            </div>
+        
+          </div>
+    
+          <!-- table -->
+          <div>
+            <div class="table-container p-3 ">
+              <table id="tre" class="w-full">
+                  <thead class="">
+                    <tr class="bg-gray-400">
+                      <th class="text-start justify-start">
+                        <input type="checkbox" class="border-gray-400" size="large" [(ngModel)]="selectAll" (change)="toggleSelectAll()" kendoCheckBox checked #large />
+                      </th>
+                      <th class="text-start">Employee ID</th> 
+                      <th class="text-start">Sur Name</th>
+                      <th class="text-start">First Name</th>
+                      <th class="text-start">Email Address</th>
+                      <th class="text-start"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <!-- row1 -->
+                      <tr *ngFor="let employee of EMPLOYEE_DATA">
+                        <td>
+                          <input type="checkbox" class="border-gray-400 " [(ngModel)]="employee.selected" size="large" kendoCheckBox checked #large />
+                        </td>
+                        <td cl>{{ employee.employeeId }}</td>
+                        <td>
+                            <span class="avatar pt-1 mr-4 font-medium" [style.background-color]="avaColoe()">{{ employee.surname.charAt(0) }}</span>
+                          {{ employee.surname }}
+                        </td>
+                        <td>{{ employee.firstName }}</td>
+                        <td>{{ employee.emailAddress }}</td>
+                        <td>
+                          <div class="dropdown">
+                            <img src="../../../assets/manage_clients/table_buton.png" class="cursor-pointer" (click)="togglePanelVisibility()">
+                            <div *ngIf="panel">
+                              <button (click)="handleEditClick(employee)">Edit</button>
+                              <button (click)="handleHistoryClick(employee)">History</button>
+                              <button (click)="handleDataUsageClick(employee)">Data Usage</button>
+                              <button (click)="handleSendPasswordClick(employee)">Send Password</button>
+                              <button (click)="handleSendUsernameClick(employee)">Send Username</button>
+                              <button (click)="handleDeleteClick(employee)">Delete</button>
+                            </div>
+                          </div>
+                          
+                         
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+                
+          </div>
+          </div>
+        </div>
+        
+        <div>
+    
+        </div>
+    </div>
+    </div>

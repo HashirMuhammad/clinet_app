@@ -1,0 +1,136 @@
+<div class="sm:w-48 md:w-56 sm:overflow-x-hidden lg:w-72 fixed bottom-0 top-4 left-4 rounded-s-3xl w-80 p-4 rounded-r-3xl bg-white mb-0">
+    <div>
+        <img src="../../assets/sidebar/informanagemt.png" class=" sm:ml-0 md:ml-1 mt-3 mr-2 ml-5 mb-7 w-max h-auto">
+
+        <!-- dashboard -->
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToDash()">
+            <img src="../../assets/sidebar/home2.png" (click)="routToDash()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            Dashboard
+        </button>
+
+        <!-- ManageUsers -->
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="showManageUsersButtonList()" [class.active]="showManageUsersMore">
+            <img src="../../assets/sidebar/mu-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mu mr-4" [class.activeimg]="showManageUsersMore">
+            Manage Users
+        </button>
+
+            <div *ngIf="showManageUsersMore === true">
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchClients()">
+                <img src="../../assets/sidebar/user/search-user-b.png" (click)="routToSearchClients()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Search Clients
+            </button>
+
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddClient()">
+                <img src="../../assets/sidebar/user/add-user.png" (click)="routToAddClient()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Add Clients</button>
+
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchEmp()">
+                <img src="../../assets/sidebar/user/search-employye.png" (click)="routToSearchEmp()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Search employees
+            </button>
+
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/user/add-employees.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Add employees
+            </button>
+
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/user/unsub.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Unsubcribed Users
+            </button>
+
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/user/data-imp.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Data Import
+            </button>
+            </div>
+
+    <!-- ManageContent -->
+    <button class="sm:text-sm lg:text-lg button  text-left flex items-center" (click)="showManageContentButtonList()" [class.activecontent]="showManageContentMore">
+        <img src="../../assets/sidebar/mc-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" [class.activecontentimg]="showManageContentMore">
+        Manage Content
+    </button>
+
+    <div *ngIf="showManageContentMore === true">
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/content/write-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            Write an Article
+        </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/content/man-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            Manage Articles
+        </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/content/ser-b4.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            Search Articles
+        </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/content/proof-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            Proof Newsletter
+        </button>
+      </div>
+
+    <!-- history -->
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/history.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        History
+    </button>
+    
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/social.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        Social Media
+    </button>
+    
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        Reports
+    </button>
+
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/mailer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        InfoMailer
+    </button>
+    
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/file.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        File & Sign
+    </button>
+
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/learn.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        InforLearning
+    </button>
+
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/wijzer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        InfoWijzers
+    </button>
+
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/share.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        Connections
+    </button>
+
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        Reports
+    </button>
+
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+        <img src="../../assets/sidebar/bug.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        Report a problem
+    </button>
+    
+    <div class=" sm:mt-28 md:mt-20 lg:mt-0 text-left moreapp flex flex-col justify-between items-center mt-40">
+        <button 
+        class="sm:text-sm lg:text-lg app">
+        <img src="../../assets/sidebar/app.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 icon mr-4">
+        More Apps</button>
+    </div>
+    
+    
+    </div> 
+</div>

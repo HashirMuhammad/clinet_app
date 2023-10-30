@@ -1,0 +1,18 @@
+.bg-img {
+    background-image: url('../assets/bg-img/bg.png');
+   
+  }
+  
+  
+  /* Hide scrollbar for Chrome, Safari, and newer Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+/* Note: Firefox doesn't support the above method, so we use this workaround */
+/* Note: This may not work in newer versions of Firefox, as it's not officially supported */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; /* Adjust as needed */
+} 
