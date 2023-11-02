@@ -21,15 +21,15 @@ export class SidebarComponent {
   }
 
   routToSearchClients(){
-    this.route.navigate(['search_clients']);
+    this.route.navigate(['manage_users/search_clients']);
   }
 
   routToAddClient(){
-    this.route.navigate(['add_client']);
+    this.route.navigate(['manage_users/add_client']);
   }
   
   routToSearchEmp(){
-    this.route.navigate(['search_emp']);
+    this.route.navigate(['manage_users/search_emp']);
   }
 
 //manage user button

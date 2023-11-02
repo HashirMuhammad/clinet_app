@@ -26,17 +26,22 @@ const routes: Routes = [
     ]
   },
   {
-      path: "search_clients",
-      component: SearchClientsComponent
-  },
-  {
-    path: "add_client",
-    component: AddClientComponent
-  },
-  {
-    path: "search_emp",
-    component: SearchEmployeesComponent
-  },
+    path: "manage_users",
+    children: [
+      {
+        path: "search_clients",
+        component: SearchClientsComponent
+    },
+    {
+      path: "add_client",
+      component: AddClientComponent
+    },
+    {
+      path: "search_emp",
+      component: SearchEmployeesComponent
+    },
+    ]
+  }
   
 
 ];

@@ -24,9 +24,13 @@
 
 
 
+.sub_div {
+  position: absolute;
+  bottom: 0px;
+}
 
 .moreapp {
-    height:max-content
+    height:max-content;
 }
 
 .app{
