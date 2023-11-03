@@ -12,6 +12,7 @@
     line-height: 30px; /* Adjust line height for vertical centering */
   }
 
+
 /* pagination -------------------------------------------------------------------------------------- */
 .pagibtn:hover{
   background-color: #FFF2F2;
@@ -44,7 +45,6 @@
 .drpbtn:hover img {
   filter: brightness(80%) saturate(100%) invert(30%) sepia(82%) saturate(900%) hue-rotate(315deg) contrast(100%); 
 }
-
 
 /*--------------------------------------------------- checkboxes ------------------------------------------------*/
 .chkbx1 {

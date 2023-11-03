@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
-import { PopupComponent } from '@progress/kendo-angular-popup';
-import { ButtonModule } from '@progress/kendo-angular-buttons';
-import {ServiceManageUserService} from '../service-manage-user.service';
-
-
+import { ServiceManageUserService } from 'src/app/manage_users/service-manage-user.service';
 
 @Component({
-  selector: 'app-search-clients',
-  templateUrl: './search-clients.component.html',
-  styleUrls: ['./search-clients.component.css']
+  selector: 'app-client',
+  templateUrl: './client.component.html',
+  styleUrls: ['./client.component.css']
 })
-export class SearchClientsComponent {
+export class ClientComponent {
   isDropdownOpen:boolean=false;
   isChecked: boolean[] = [false,false,false,false,false,false,false,false,false,false];
   CLIENT_DATA = [
@@ -107,10 +103,6 @@ calculateMaxValue(): number {
     this.panel = !this.panel;
   }
   
-
-  toggleDropdown() {
-      this.isDropdownOpen = !this.isDropdownOpen;
-  }
 
   toggleChecked(index: number) {
     this.isChecked[index] = !this.isChecked[index];

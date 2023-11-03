@@ -20,6 +20,19 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { ButtonModule } from '@progress/kendo-angular-buttons';
 import { AddClientComponent } from './manage_users/add-client/add-client.component';
 import { SearchEmployeesComponent } from './manage_users/search-employees/search-employees.component';
+import { AddEmployeeComponent } from './manage_users/add-employee/add-employee.component';
+import { UnsubUsersComponent } from './manage_users/unsub-users/unsub-users.component';
+import { DataImportComponent } from './manage_users/data-import/data-import.component';
+import { HistoryComponent } from './history/history/history.component';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ClientComponent } from './history/history/client/client.component';
+import { EmployeesComponent } from './history/history/employees/employees.component';
+import { ArticlesComponent } from './history/history/articles/articles.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +46,13 @@ import { SearchEmployeesComponent } from './manage_users/search-employees/search
     SearchClientsComponent,
     AddClientComponent,
     SearchEmployeesComponent,
+    AddEmployeeComponent,
+    UnsubUsersComponent,
+    DataImportComponent,
+    HistoryComponent,
+    ClientComponent,
+    EmployeesComponent,
+    ArticlesComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +64,11 @@ import { SearchEmployeesComponent } from './manage_users/search-employees/search
     FormsModule,
     InputsModule,
     ButtonModule,
+    DateInputsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

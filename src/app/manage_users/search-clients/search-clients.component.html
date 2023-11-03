@@ -206,7 +206,7 @@
                 <div class="inline-blockinline-block md:ml-3 xl:ml-0 lg:ml-0 xl:mr-3 md:mr-3 sm:mr-3 flex-grow">
                   <button class="bg-white border p-1.5 pl-3 pr-3 mr-0 rounded-lg flex flex-grow items-center  lg:pr-6" style="color: #29CCB1; border-color: #29CCB1;" (click)="addFilter()">
                     Add&nbsp;Filters
-                    <img src="../../../assets/manage_clients/filter -blue.png" class="ml-auto w-5 h-5 mr-2">
+                    <img src="../../../assets/manage_clients/filter -blue.png" class="ml-auto w-5 h-5 mr-2 lg:ml-3 lg:mr-0">
                   </button>
                 </div>
           
@@ -252,7 +252,7 @@
                         </td>
                         <td class="xl:text-sm sm:text-xs 2xl:text-lg">{{ client.clientId }}</td>
                         <td  class=" flex">
-                            <span class="avatar pt-1 mr-3 font-medium sm:mr-1 sm:text-xs" [style.background-color]="avaColoe(client.surname.charAt(0) )">{{ client.surname.charAt(0) }}</span>
+                            <span class="avatar pt-1 mr-3 font-medium sm:mr-1 sm:text-xs" [style.background-color]="avaColorservice(client.surname.charAt(0) )">{{ client.surname.charAt(0) }}</span>
                           <span class="sm:text-xs sm:mt-1.5 sm:ml-0 lg:text-sm lg:ml-2 2xl:text-lg">{{ client.surname }}</span>
                         </td>
                         <td class="xl:text-sm lg:text-sm sm:text-xs 2xl:text-lg">{{ client.firstName }}</td>

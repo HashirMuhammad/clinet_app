@@ -13,23 +13,7 @@ export class SidebarComponent {
 
   constructor(private route: Router) {}
 
-  //side bar routes
-  routToDash() {
-    this.route.navigate(['dashboard']);
-  }
-
-  routToSearchClients() {
-    this.route.navigate(['manage_users/search_clients']);
-  }
-
-  routToAddClient() {
-    this.route.navigate(['manage_users/add_client']);
-  }
-
-  routToSearchEmp() {
-    this.route.navigate(['manage_users/search_emp']);
-  }
-
+  
   //manage user button
   showManageUsersButtonList() {
     this.showManageUsersMore = !this.showManageUsersMore;
@@ -38,4 +22,40 @@ export class SidebarComponent {
   showManageContentButtonList() {
     this.showManageContentMore = !this.showManageContentMore;
   }
+
+
+
+//side bar routes
+routToDash() {
+  this.route.navigate(['dashboard']);
 }
+
+routToSearchClients() {
+  this.route.navigate(['manage_users/search_clients']);
+}
+
+routToAddClient() {
+  this.route.navigate(['manage_users/add_client']);
+}
+
+routToSearchEmp() {
+  this.route.navigate(['manage_users/search_emp']);
+}
+
+routToAddemployee(){
+  this.route.navigate(['manage_users/add_emp']);
+}
+
+routToUnSubUsers(){
+  this.route.navigate(['manage_users/unsubcribed_users']);
+}
+
+routToUDataImport(){
+  this.route.navigate(['manage_users/data_import']);
+}
+
+routToHistory(){
+  this.route.navigate(['history']);
+}
+}
+

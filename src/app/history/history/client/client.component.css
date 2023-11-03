@@ -1,0 +1,59 @@
+
+/* pagination -------------------------------------------------------------------------------------- */
+.pagibtn:hover{
+    background-color: #FFF2F2;
+    color: #CC0000;
+    padding-top: 0%;
+  
+  }
+
+  .avatar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px; /* Adjust line height for vertical centering */
+  }
+
+
+/* -----------------table------------------------------------------- */
+  /* Style for the entire table */
+  .table-container {
+    border-collapse: collapse;
+  }
+  
+  /* Style for table header row */
+  .table-container thead tr {
+    background-color: #F0F2F7; /* Header background color */
+    border-radius: 50px; /* Rounded corners for header */
+  }
+  
+  /* Style for table header cells */
+  .table-container th {
+    padding: 10px;
+  }
+  
+  /* Style for table data cells */
+  .table-container td {
+    padding: 7px;
+    border-top: 1px solid #F0F2F7; /* Add a border between rows */
+  }
+  
+  /* Apply border-radius to the first and last cells in the header row */
+  .table-container th:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .table-container th:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  /* Optional: Add hover effect to rows */
+  .table-container tbody tr:hover {
+    background-color: #f0f0f0; /* Hover color */
+  }

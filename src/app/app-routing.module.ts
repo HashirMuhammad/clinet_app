@@ -9,6 +9,13 @@ import { HighAchieversComponent } from './dashboard/infolearning_&_high_achiever
 import { SearchClientsComponent } from './manage_users/search-clients/search-clients.component';
 import { AddClientComponent } from './manage_users/add-client/add-client.component';
 import { SearchEmployeesComponent } from './manage_users/search-employees/search-employees.component';
+import { AddEmployeeComponent } from './manage_users/add-employee/add-employee.component';
+import { UnsubUsersComponent } from './manage_users/unsub-users/unsub-users.component';
+import { DataImportComponent } from './manage_users/data-import/data-import.component';
+import { HistoryComponent } from './history/history/history.component';
+import { ClientComponent } from './history/history/client/client.component';
+import { EmployeesComponent } from './history/history/employees/employees.component';
+import { ArticlesComponent } from './history/history/articles/articles.component';
 
 const routes: Routes = [
   {
@@ -28,18 +35,21 @@ const routes: Routes = [
   {
     path: 'manage_users',
     children: [
-      {
-        path: 'search_clients',
-        component: SearchClientsComponent,
-      },
-      {
-        path: 'add_client',
-        component: AddClientComponent,
-      },
-      {
-        path: 'search_emp',
-        component: SearchEmployeesComponent,
-      },
+      { path: 'search_clients', component: SearchClientsComponent },
+      { path: 'add_client', component: AddClientComponent, },
+      { path: 'search_emp', component: SearchEmployeesComponent, },
+      {  path: 'add_emp', component: AddEmployeeComponent, },
+      { path: 'unsubcribed_users', component: UnsubUsersComponent, },
+      { path: 'data_import', component: DataImportComponent, },
+    ],
+  },
+  {
+    path: 'history',
+    component: HistoryComponent,
+    children: [
+      { path: 'client', component: ClientComponent, },
+      { path: 'employees', component: EmployeesComponent, },
+      { path: 'articles', component: ArticlesComponent, },
     ],
   },
 ];

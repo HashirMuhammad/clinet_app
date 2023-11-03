@@ -29,18 +29,18 @@
                 Search employees
             </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-                <img src="../../assets/sidebar/user/add-employees.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddemployee()">
+                <img src="../../assets/sidebar/user/add-employees.png" (click)="routToAddemployee()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Add employees
             </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-                <img src="../../assets/sidebar/user/unsub.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUnSubUsers()">
+                <img src="../../assets/sidebar/user/unsub.png" (click)="routToUnSubUsers()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Unsubcribed Users
             </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-                <img src="../../assets/sidebar/user/data-imp.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUDataImport()">
+                <img src="../../assets/sidebar/user/data-imp.png" (click)="routToUDataImport()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Data Import
             </button>
             </div>
@@ -74,8 +74,8 @@
       </div>
 
     <!-- history -->
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/history.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+    <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToHistory()">
+        <img src="../../assets/sidebar/history.png" (click)="routToHistory()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
         History
     </button>
     

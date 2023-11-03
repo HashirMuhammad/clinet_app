@@ -1,0 +1,283 @@
+<div class="pb-4 flex-grow h-full">
+    <div class="bg-white mb-5 mt-3 mr-7 rounded-3xl">
+  
+      <label class="flex border-b border-gray-300 pt-6 pb-5 pl-6 text-2xl">History</label>
+      
+      <div class="xl:flex lg:flex flex-grow">
+        <!-- buttons -->
+        <div class="flex-col ">
+            <div class="mt-2">
+                <button class="btn flex pl-2 py-2 w-full" (click)="clientTableToogle()" [class.activecli]="clientTable">
+                    <img src="../../../assets/history/client.png" class="mr-4" [class.activecliimg]="clientTable" (click)="clientTableToogle()">
+                    Clients
+                </button>
+            </div>
+
+            <div >
+                <button class="btn flex pl-2 py-2 w-full" [class.activeemp]="empTable"  (click)="empToogle()">
+                    <img src="../../../assets/history/emp.png" [class.activeempimg]="empTable" class="mr-4" (click)="empToogle()">
+                    Employees
+                </button>
+            </div>
+
+            <div>
+                <button class="btn flex pl-2 py-2 w-full" [class.activeart]="arcticleTable" (click)="arcticleToogle()">
+                    <img src="../../../assets/history/articles.png" [class.activeimgart]="arcticleTable" class="mr-4" (click)="arcticleToogle()">
+                    Articles
+                </button>
+            </div>
+
+            <!-- search input  -->
+            <div class="mx-4 mt-3">
+                <div class="relative">
+                    <input type="text" placeholder="KEYWORDS" class="my-input border py-1 pl-2 border-gray-300 rounded-md pr-8">
+                    <img src="../../../assets/history/search.png" alt="" class="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer">
+                </div>
+            </div>
+              
+        
+
+        <!-- filters -->
+        <div *ngIf="filters">
+            <div class=" border-gray-300 2xl:border-b-transparent sm:border-b flex-col flex-grow lg:border-b-transparent pl-4">
+              
+                <div class="flex pl-4 pr-4 pt-4 pb-2 flex-grow">
+                    <label class="pr-52 ml-4 sm:text-sm sm:ml-2.5 sm:pr-0 lg:-ml-3 lg:text-base xl:text-lg" style="color: #999999;">Filters</label>
+                </div>
+                    <!-- filter div -->
+                <div class="md:flex lg:flex-col">
+                  <!-- filter  -->
+                  <div class="flex pt-6 pb-2 sm:pt-1 sm:pb-1">
+                    <input
+                    type="radio"
+                    class="chkbx1 "
+                    size="none"
+                    id="chkbx1"
+                    name="chkbx1"
+                    (click)="toggleChecked(0)"
+                    [checked]="isChecked[0]"
+                  />
+                  
+                  <h6 class="ml-4"><label class=" sm:text-sm sm:text-center xl:text-sm 2xl:text-base lg:text-sm">Register Online</label></h6>
+                  </div>
+        
+                  <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-10 xl:ml-0 md:ml-0">
+                    <input
+                    type="radio"
+                    class="chkbx2"
+                    size="none"
+                    id="chkbx2"
+                    name="chkbx2"
+                    (click)="toggleChecked(1)"
+                    [checked]="isChecked[1]"
+                  />
+                  
+                  <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Register Offline</label></h6>
+                  </div>
+        
+                  <div class="flex pt-5 pb-2  sm:pt-1 sm:pb-1">
+                    <input
+                    type="radio"
+                    class="chkbx3"
+                    size="none"
+                    id="chkbx3"
+                    name="chkbx3"
+                    (click)="toggleChecked(2)"
+                    [checked]="isChecked[2]"
+                  />
+                  
+                  <h6 class="ml-4"><label class=" sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Printed Newsletter</label></h6>
+                  </div>
+        
+                  <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-5 xl:ml-0 md:ml-0">
+                    <input
+                    type="radio"
+                    class="chkbx4"
+                    size="none"
+                    id="chkbx4"
+                    name="chkbx4"
+                    (click)="toggleChecked(3)"
+                    [checked]="isChecked[3]"
+                  />
+                  
+                  <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">No Printed Newsletter</label></h6>
+                  </div>
+        
+                    <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1">
+                      <input
+                      type="radio"
+                      class="chkbx5"
+                      size="none"
+                      id="chkbx5"
+                      name="chkbx5"
+                      (click)="toggleChecked(4)"
+                      [checked]="isChecked[4]"
+                    />
+                    
+                    <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Email Newsletter</label></h6>
+                    </div>
+          
+                    <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-7 xl:ml-0 md:ml-0">
+                      <input
+                      type="radio"
+                      class="chkbx6"
+                      size="none"
+                      id="chkbx6"
+                      name="chkbx6"
+                      (click)="toggleChecked(5)"
+                      [checked]="isChecked[5]"
+                    />
+                    
+                    <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">No Email Newsletter</label></h6>
+                    </div>
+        
+                    <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:mr-2">
+                      <input
+                      type="radio"
+                      class="chkbx7"
+                      size="none"
+                      id="chkbx7"
+                      name="chkbx7"
+                      (click)="toggleChecked(6)"
+                      [checked]="isChecked[6]"
+                    />
+                    
+                    <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Male</label></h6>
+                    </div>
+          
+                    <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-24 xl:ml-0 md:ml-0">
+                      <input
+                      type="radio"
+                      class="chkbx8"
+                      size="none"
+                      id="chkbx8"
+                      name="chkbx8"
+                      (click)="toggleChecked(7)"
+                      [checked]="isChecked[7]"
+                    />
+                    
+                    <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Female</label></h6>
+                    </div> 
+                </div>
+        
+                  <div class="sm:flex md:flex xl:flex-col lg:flex-col">
+                    <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:mr-3">
+                      <input
+                      type="radio"
+                      class="chkbx9"
+                      size="none"
+                      id="chkbx9"
+                      name="chkbx9"
+                      (click)="toggleChecked(8)"
+                      [checked]="isChecked[8]"
+                    />
+                    
+                    <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Unknown</label></h6>
+                    </div>
+          
+                    <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-16 lg:ml-0 xl:ml-0 md:ml-7">
+                      <input
+                      type="radio"
+                      class="chkbx10"
+                      size="none"
+                      id="chkbx10"
+                      name="chkbx10"
+                      (click)="toggleChecked(9)"
+                      [checked]="isChecked[9]"
+                    />
+                    
+                    <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">All</label></h6>
+                    </div>
+                  </div>
+        
+                </div>
+        </div>
+
+        <div *ngIf="!filters">
+
+            <div>
+                <select class="bg-white p-2.5 pr-32 mt-2 sm:pr-24 md:pr-40 lg:pr-10 xl:pr-20 2xl:pr-32 flex-grow" style="color: #000000BF;">
+                    <option class="text-gray-500" value="" disabled selected>Select</option>
+                    <option value="search">Option 1</option>
+                    <option value="filter">Option 2</option>
+                  </select>
+            </div>
+
+            <div>
+                <select class="bg-white p-2.5 pr-32 mt-2 sm:pr-24 md:pr-40 lg:pr-10 xl:pr-20 2xl:pr-32 flex-grow" style="color: #000000BF;">
+                    <option class="text-gray-500" value="" disabled selected>Select</option>
+                    <option value="search">Option 1</option>
+                    <option value="filter">Option 2</option>
+                  </select>
+            </div>
+            
+            <div>
+                <select class="bg-white p-2.5 pr-32 mt-2 sm:pr-24 md:pr-40 lg:pr-10 xl:pr-20 2xl:pr-32 flex-grow" style="color: #000000BF;">
+                    <option class="text-gray-500" value="" disabled selected>Select</option>
+                    <option value="search">Option 1</option>
+                    <option value="filter">Option 2</option>
+                  </select>
+            </div>
+
+            <div>
+                <select class="bg-white p-2.5 pr-32 mt-2 sm:pr-24 md:pr-40 lg:pr-10 xl:pr-20 2xl:pr-32 flex-grow" style="color: #000000BF;">
+                    <option class="text-gray-500" value="" disabled selected>Select</option>
+                    <option value="search">Option 1</option>
+                    <option value="filter">Option 2</option>
+                  </select>
+            </div>
+
+            <div>
+                <select class="bg-white  p-2.5 pr-32 mt-2 sm:pr-24 md:pr-40 lg:pr-10 xl:pr-20 2xl:pr-32 flex-grow" style="color: #000000BF;">
+                    <option class="text-gray-500" value="" disabled selected>Select</option>
+                    <option value="search">Option 1</option>
+                    <option value="filter">Option 2</option>
+                  </select>
+            </div>
+
+            <div>
+                <div class="flex">
+                    <mat-form-field>
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div>
+                <button class="bg-white border p-1.5 pl-3 pr-3 mr-0 rounded-lg flex flex-grow items-center  lg:pr-6" style="color: #29CCB1; border-color: #29CCB1;">
+                    Apply Search Filters
+                </button>
+            </div>
+        </div>
+            
+        </div>
+
+          <div class="flex-grow p-3 border-l">
+            <div class=" lg:flex flex-grow">
+          
+
+                <!-- for table -->
+                <div class="flex-grow">
+                    <div *ngIf="clientTable" class="flex-grow">
+                        <app-client></app-client>
+                    </div>
+
+                    <div *ngIf="empTable" class="flex-grow">
+                        <app-employees></app-employees>
+                    </div>
+
+                    <div *ngIf="arcticleTable" class="flex-grow">
+                        <app-articles></app-articles>
+                    </div>
+                </div>
+
+            </div>
+      
+            
+          </div>
+      </div>
+  </div>
+  </div>

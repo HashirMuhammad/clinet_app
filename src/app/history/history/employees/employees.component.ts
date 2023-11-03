@@ -1,42 +1,30 @@
 import { Component } from '@angular/core';
-import { PopupComponent } from '@progress/kendo-angular-popup';
-import { ButtonModule } from '@progress/kendo-angular-buttons';
-import {ServiceManageUserService} from '../service-manage-user.service';
-
-
+import { ServiceManageUserService } from 'src/app/manage_users/service-manage-user.service';
 
 @Component({
-  selector: 'app-search-clients',
-  templateUrl: './search-clients.component.html',
-  styleUrls: ['./search-clients.component.css']
+  selector: 'app-employees',
+  templateUrl: './employees.component.html',
+  styleUrls: ['./employees.component.css']
 })
-export class SearchClientsComponent {
+export class EmployeesComponent {
   isDropdownOpen:boolean=false;
   isChecked: boolean[] = [false,false,false,false,false,false,false,false,false,false];
   CLIENT_DATA = [
-    { clientId: 1, surname: 'Doe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 2, surname: 'Cmith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 3, surname: 'Zoe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 4, surname: 'Nit', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 5, surname: 'Michal', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 6, surname: 'Smith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 7, surname: 'Doe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 8, surname: 'Smith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 9, surname: 'Voe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 10, surname: 'Smith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 11, surname: 'Ioe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 12, surname: 'Smith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 13, surname: 'Doe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 14, surname: 'Cmith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 15, surname: 'Michal', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 16, surname: 'Smith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 17, surname: 'Doe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 18, surname: 'Smith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 19, surname: 'Voe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 20, surname: 'Smith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    { clientId: 21, surname: 'Ioe', firstName: 'John', companyName: 'ABC Inc.', emailAddress: 'john.doe@abc.com', selected: false  },
-    { clientId: 22, surname: 'Smith', firstName: 'Jane', companyName: 'XYZ Corp.', emailAddress: 'jane.smith@xyz.com', selected: false  },
-    
+    { clientId: 1, imgUrl: '', fullname: 'Doe', email: 'john.doe@abc.com', companyName: 'ABC Inc.', selected: false },
+  { clientId: 2, imgUrl: '', fullname: 'Smith', email: 'smith.jane@xyz.com', companyName: 'XYZ Corporation', selected: false },
+  { clientId: 3, imgUrl: '', fullname: 'Johnson', email: 'joe.johnson@def.com', companyName: 'DEF Enterprises', selected: false },
+  { clientId: 4, imgUrl: '', fullname: 'Brown', email: 'susan.brown@ghi.com', companyName: 'GHI Ltd.', selected: false },
+  { clientId: 5, imgUrl: '', fullname: 'Taylor', email: 'mike.taylor@jkl.com', companyName: 'JKL Co.', selected: false },
+  { clientId: 6, imgUrl: '', fullname: 'Williams', email: 'lisa.williams@mno.com', companyName: 'MNO Group', selected: false },
+  { clientId: 7, imgUrl: '', fullname: 'Lee', email: 'amy.lee@pqr.com', companyName: 'PQR Industries', selected: false },
+  { clientId: 8, imgUrl: '', fullname: 'Anderson', email: 'robert.anderson@rst.com', companyName: 'RST Ltd.', selected: false },
+  { clientId: 9, imgUrl: '', fullname: 'Harris', email: 'emily.harris@uvw.com', companyName: 'UVW Corporation', selected: false },
+  { clientId: 10, imgUrl: '', fullname: 'Clark', email: 'david.clark@xyz.com', companyName: 'XYZ Corporation', selected: false },
+  { clientId: 11, imgUrl: '', fullname: 'Martin', email: 'sarah.martin@def.com', companyName: 'DEF Enterprises', selected: false },
+  { clientId: 12, imgUrl: '', fullname: 'Young', email: 'jason.young@ghi.com', companyName: 'GHI Ltd.', selected: false },
+  { clientId: 13, imgUrl: '', fullname: 'Garcia', email: 'linda.garcia@jkl.com', companyName: 'JKL Co.', selected: false },
+  { clientId: 14, imgUrl: '', fullname: 'Rodriguez', email: 'paul.rodriguez@mno.com', companyName: 'MNO Group', selected: false },
+  { clientId: 15, imgUrl: '', fullname: 'Jackson', email: 'jessica.jackson@pqr.com', companyName: 'PQR Industries', selected: false }
     // Add more client data as needed
   ];
   selectAll = false;
@@ -107,10 +95,6 @@ calculateMaxValue(): number {
     this.panel = !this.panel;
   }
   
-
-  toggleDropdown() {
-      this.isDropdownOpen = !this.isDropdownOpen;
-  }
 
   toggleChecked(index: number) {
     this.isChecked[index] = !this.isChecked[index];
