@@ -387,8 +387,127 @@
 .flex {
   display: flex;
 }
+@media (min-width:1024px) and (max-width: 1279px) {
+  .chkbx1 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #9c27b0; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx2 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #9c27b0; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx3 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #14CC8F; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx4 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #14CC8F; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx5 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #FF8095; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx6 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #FF8095; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx7 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx8 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx9 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .chkbx10 {
+    /* Add your custom styles for the radio button here */
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    margin-top: 8px;
+    border: 2px solid #3399FF; /* Border color (purple) */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
 
-
-@media screen and (max-width: 640px) {
   
 }

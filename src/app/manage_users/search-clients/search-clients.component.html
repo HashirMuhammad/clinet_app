@@ -1,5 +1,5 @@
-<div class="pb-4 flex-grow">
-  <div class="bg-white mb-5 mt-3 rounded-3xl flex-grow">
+<div class="pb-4 flex-grow h-full">
+  <div class="bg-white mb-5 mt-3 mr-7 rounded-3xl">
 
     <label class="flex border-b border-gray-300 pt-6 pb-5 pl-6 text-2xl">Search Clients</label>
     
@@ -9,13 +9,13 @@
           <div class=" border-gray-300 2xl:border-b-transparent sm:border-b flex-grow lg:border-b-transparent pl-4">
             
           <div class="flex pl-4 pr-4 pt-4 pb-2 flex-grow">
-              <label class="pr-52 ml-4 sm:text-sm sm:ml-2.5 sm:pr-0 lg:text-lg xl:text-lg" style="color: #999999;">Filters</label>
+              <label class="pr-52 ml-4 sm:text-sm sm:ml-2.5 sm:pr-0 lg:-ml-3 lg:text-base xl:text-lg" style="color: #999999;">Filters</label>
               <img src="../../../assets/manage_clients/filter.png" class="ml-auto w-5 h-5 sm:w-4 sm:h-4">
           </div>
               <!-- filter div -->
           <div class="md:flex lg:flex-col">
             <!-- filter  -->
-          <div class="sm:flex md:flex-col lg:flex-col xl:flex-col">
+          <div class="sm:flex md:flex-col md:mr-3 lg:flex-col xl:flex-col">
             <div class="flex pt-6 pb-2 sm:pt-1 sm:pb-1">
               <input
               type="radio"
@@ -27,7 +27,7 @@
               [checked]="isChecked[0]"
             />
             
-            <h6><label class="ml-4 sm:text-sm sm:text-center xl:text-base lg:text-base">Register&nbsp;Online</label></h6>
+            <h6 class="ml-4"><label class=" sm:text-sm sm:text-center xl:text-sm 2xl:text-base lg:text-sm">Register Online</label></h6>
             </div>
   
             <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-10 xl:ml-0 md:ml-0">
@@ -41,7 +41,7 @@
               [checked]="isChecked[1]"
             />
             
-            <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">Register&nbsp;Offline</label></h6>
+            <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Register Offline</label></h6>
             </div>
           </div>
   
@@ -57,7 +57,7 @@
               [checked]="isChecked[2]"
             />
             
-            <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">Printed&nbsp;Newsletter</label></h6>
+            <h6 class="ml-4"><label class=" sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Printed Newsletter</label></h6>
             </div>
   
             <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-5 xl:ml-0 md:ml-0">
@@ -71,7 +71,7 @@
               [checked]="isChecked[3]"
             />
             
-            <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">No&nbsp;Printed&nbsp;Newsletter?</label></h6>
+            <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">No Printed Newsletter? &nbsp;</label></h6>
             </div>
           </div>
   
@@ -87,7 +87,7 @@
                 [checked]="isChecked[4]"
               />
               
-              <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">Email&nbsp;Newsletter</label></h6>
+              <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Email Newsletter</label></h6>
               </div>
     
               <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-7 xl:ml-0 md:ml-0">
@@ -101,7 +101,7 @@
                 [checked]="isChecked[5]"
               />
               
-              <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">NoEmail&nbsp;Newsletter?</label></h6>
+              <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">No Email Newsletter?</label></h6>
               </div>
             </div>
   
@@ -117,7 +117,7 @@
                 [checked]="isChecked[6]"
               />
               
-              <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">Male</label></h6>
+              <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Male</label></h6>
               </div>
     
               <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-24 xl:ml-0 md:ml-0">
@@ -131,7 +131,7 @@
                 [checked]="isChecked[7]"
               />
               
-              <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">Female</label></h6>
+              <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Female</label></h6>
               </div> 
             </div>
           </div>
@@ -148,7 +148,7 @@
                 [checked]="isChecked[8]"
               />
               
-              <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">Unknown</label></h6>
+              <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Unknown</label></h6>
               </div>
     
               <div class="flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-16 lg:ml-0 xl:ml-0 md:ml-7">
@@ -162,14 +162,14 @@
                 [checked]="isChecked[9]"
               />
               
-              <h6><label class="ml-4 sm:text-sm xl:text-base lg:text-base">All</label></h6>
+              <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">All</label></h6>
               </div>
             </div>
   
           </div>
           </div>
     
-        <div class="flex-grow p-3 border border-l">
+        <div class="flex-grow p-3 border-l">
           <div class=" lg:flex flex-grow">
         
             <div class="ml-3 mt-2">
@@ -178,9 +178,9 @@
             <div class="sm:flex md:pl-3 lg:pl-0 xl:pl-0">
               <!-- search input -->
             <div>
-              <label class="text-base font-medium" style="color: #CC0000;">Search</label><br />
+              <label class="2xl:text-base xl:text-sm lg:text-sm font-medium" style="color: #CC0000;">Search</label><br />
         
-              <select class="bg-white border border-gray-400 rounded-lg p-2.5 pr-32 mt-2 sm:pr-24 md:pr-40 flex-grow" style="color: #000000BF;">
+              <select class="bg-white border border-gray-400 rounded-lg p-2.5 pr-32 mt-2 sm:pr-24 md:pr-40 lg:pr-10 xl:pr-20 2xl:pr-32 flex-grow" style="color: #000000BF;">
                 <option class="text-gray-500" value="" disabled selected>Select</option>
                 <option value="search">Option 1</option>
                 <option value="filter">Option 2</option>
@@ -189,16 +189,15 @@
         
             <!-- value input -->
             <div class="ml-5 flex-grow">
-              <label class="text-base font-medium" style="color: #CC0000;">Value</label><br />
+              <label class="2xl:text-base xl:text-sm lg:text-sm font-medium" style="color: #CC0000;">Value</label><br />
         
-              <input type="text" placeholder="Enter Here..." class="my-input bg-white border border-gray-400 rounded-lg p-2 pr-10 mt-2 flex-grow">
+              <input type="text" placeholder="Enter Here..." class="my-input bg-white border border-gray-400 rounded-lg p-2 pr-10 lg:pr-0 xl:pr-3 2xl:pr-10 mt-2 flex-grow">
             </div>
             </div>
         
             <!-- buttons -->
-            <div class="xl:p-8 lg:p-8 md:ml-auto flex k-ml-auto sm:pt-3 md:pt-3 md:pl-3 2xl:ml-auto xl:ml-auto lg:ml-auto flex-grow">
-              
-              <div class="md:ml-auto just items-end flex flex-grow">
+            <div class="xl:p-8 lg:p-8 md:ml-auto flex k-ml-auto sm:pt-3 md:pt-3 md:pl-3 ml-auto">
+              <div class="md:ml-auto items-end flex flex-grow">
                 <div class="md:mr-80 xl:mr-0 lg:mr-0  flex-grow">
                   <button class="pl-4 pr-4 p-2 rounded-lg mr-4" style="background-color: #F0F2F7;">
                     Clear
@@ -211,7 +210,7 @@
                   </button>
                 </div>
           
-                <div class="relative inline-block">
+                <div class="relative">
                   <button class="bg-teal-500 text-white px-4 py-2 text-start rounded-lg flex items-center xl:mt-0" (click)="toggleDropdown()">
                     Action
                     <img src="../../../assets/manage_clients/drop_arrow.png" class="ml-4 mr-2">
@@ -262,7 +261,7 @@
                         <td>
                           <img src="../../../assets/manage_clients/table_buton.png" class="cursor-pointer sm:mr-0 sm:w-5 sm:h-5" (click)="togglePanelVisibility(client.clientId)">    
                           
-                          <div *ngIf="panel && (client.clientId == panelid)" class="absolute bg-white border border-gray-300 k-min-w-max mt-0 py-3 md:right-16 xl:right-20 2xl:right-32 sm:right-8 rounded-lg shadow-lg pl-5 pr-9">
+                          <div *ngIf="panel && (client.clientId == panelid)" class="absolute bg-white border border-gray-300 k-min-w-max mt-0 py-3 md:right-16 xl:right-20 sm:right-8 2xl:right- rounded-lg shadow-lg pl-5 pr-5">
                               <button (click)="handleEditClick(client.clientId)" class="drpbtn flex py-2 w-full">
                                 <img src="../../../assets/manage_clients/edit.png" class="mr-1.5">
                                 Edit
@@ -344,4 +343,5 @@
           </div>
         </div>
     </div>
+</div>
 </div>

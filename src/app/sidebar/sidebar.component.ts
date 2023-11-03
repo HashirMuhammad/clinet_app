@@ -5,41 +5,37 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
 })
-
 export class SidebarComponent {
   showManageUsersMore = false;
-  showManageContentMore=false;
+  showManageContentMore = false;
 
-  
-  constructor(private route: Router){}
+  constructor(private route: Router) {}
 
   //side bar routes
-  routToDash(){
+  routToDash() {
     this.route.navigate(['dashboard']);
   }
 
-  routToSearchClients(){
+  routToSearchClients() {
     this.route.navigate(['manage_users/search_clients']);
   }
 
-  routToAddClient(){
+  routToAddClient() {
     this.route.navigate(['manage_users/add_client']);
   }
-  
-  routToSearchEmp(){
+
+  routToSearchEmp() {
     this.route.navigate(['manage_users/search_emp']);
   }
 
-//manage user button
-  showManageUsersButtonList(){
+  //manage user button
+  showManageUsersButtonList() {
     this.showManageUsersMore = !this.showManageUsersMore;
   }
-//manage content button
-  showManageContentButtonList(){
-    this.showManageContentMore =!this.showManageContentMore;
+  //manage content button
+  showManageContentButtonList() {
+    this.showManageContentMore = !this.showManageContentMore;
   }
-
-  
 }

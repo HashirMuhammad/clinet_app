@@ -43,9 +43,9 @@ import { SearchEmployeesComponent } from './manage_users/search-employees/search
     DropdownModule,
     FormsModule,
     InputsModule,
-    ButtonModule
+    ButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

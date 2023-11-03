@@ -1,23 +1,6 @@
 .bg-img {
-    background-image: url('../assets/bg-img/bg.png');
-    background-color: blue;
-   
-  }
-  
-  
-  /* Hide scrollbar for Chrome, Safari, and newer Edge */
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for Firefox */
-/* Note: Firefox doesn't support the above method, so we use this workaround */
-/* Note: This may not work in newer versions of Firefox, as it's not officially supported */
-body {
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent; /* Adjust as needed */
-} .overflow-auto-y {
-  overflow-y: auto;
+  background-image: url("../assets/bg-img/bg.png");
+  background-color: blue;
 }
 
 /* Add a maximum height if needed */
@@ -25,6 +8,6 @@ body {
   max-height: [value];
 }
 
-.quicmd{
+.quicmd {
   justify-content: center;
 }

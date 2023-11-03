@@ -12,44 +12,40 @@ import { SearchEmployeesComponent } from './manage_users/search-employees/search
 
 const routes: Routes = [
   {
-    path: "sidebar",
-    component: SidebarComponent
+    path: 'sidebar',
+    component: SidebarComponent,
   },
   {
-    path: "dashboard",
+    path: 'dashboard',
     component: DashboardComponent,
     children: [
       { path: 'infomailer', component: InfomailerComponent },
-      { path: 'file_and_sign', component: FileAndSignComponent},
-      { path: 'infolearner', component: InfolearningComponent},
-      { path: 'high_achievers', component: HighAchieversComponent},
-    ]
+      { path: 'file_and_sign', component: FileAndSignComponent },
+      { path: 'infolearner', component: InfolearningComponent },
+      { path: 'high_achievers', component: HighAchieversComponent },
+    ],
   },
   {
-    path: "manage_users",
+    path: 'manage_users',
     children: [
       {
-        path: "search_clients",
-        component: SearchClientsComponent
-    },
-    {
-      path: "add_client",
-      component: AddClientComponent
-    },
-    {
-      path: "search_emp",
-      component: SearchEmployeesComponent
-    },
-    ]
-  }
-  
-
+        path: 'search_clients',
+        component: SearchClientsComponent,
+      },
+      {
+        path: 'add_client',
+        component: AddClientComponent,
+      },
+      {
+        path: 'search_emp',
+        component: SearchEmployeesComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-
- }
+export class AppRoutingModule {}

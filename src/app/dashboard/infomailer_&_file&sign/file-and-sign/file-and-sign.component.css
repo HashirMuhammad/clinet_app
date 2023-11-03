@@ -1,26 +1,22 @@
 .button-group {
-    display: flex;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    background-color: #F0F2F7;
+  display: flex;
+}
 
-  }
-  
-  button.active {
-    background-color: #fff;
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: #f0f2f7;
+}
 
-    color: #CC0000;
-  }
-  
+button.active {
+  background-color: #fff;
 
-  
+  color: #cc0000;
+}
 
-  /* Style for the entire table */
+/* Style for the entire table */
 .table-container {
   border-collapse: collapse;
   width: 100%;
@@ -28,7 +24,7 @@
 
 /* Style for table header row */
 .table-container thead tr {
-  background-color: #F0F2F7; /* Header background color */
+  background-color: #f0f2f7; /* Header background color */
   border-radius: 15px; /* Rounded corners for header */
 }
 
@@ -40,7 +36,7 @@
 /* Style for table data cells */
 .table-container td {
   padding: 10px;
-  border-top: 1px solid #F0F2F7; /* Add a border between rows */
+  border-top: 1px solid #f0f2f7; /* Add a border between rows */
 }
 
 /* Apply border-radius to the first and last cells in the header row */
