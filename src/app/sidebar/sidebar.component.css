@@ -150,14 +150,28 @@
   }
 }
 
-@media screen and (min-width: 641px) and (max-width: 1024px) {
-  /* Styles for screens between 641px and 1024px wide */
-
-  /* Adjust specific styles for medium-sized screens here */
-}
-
-@media screen and (min-width: 1025px) {
-  /* Styles for screens 1025px and wider */
-
-  /* Adjust specific styles for extra-large screens here */
+@media screen and (max-width: 600px) {
+  /* Styles for small screens go here */
+ 
+  .button {
+    padding: 4px;
+    background-color: transparent;
+    color: black;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    align-self: start;
+    width: 100%;
+    font-size: medium;
+  }
+  
+  .app {
+    padding: 4px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    align-self: start;
+    width: 100%;
+    padding: auto;
+  }
 }

@@ -28,3 +28,36 @@
 
   /* Adjust specific styles for extra-large screens here */
 }
+
+@media screen and (max-width: 600px) {
+  /* Styles for small screens go here */
+  body {
+    font-size: 10px; /* Adjust font size for mobile */
+    /* Other mobile styles... */
+  }
+  .card{
+    flex:none;
+    flex-direction: column;
+  }
+  .subscriber, .employees, .clients{
+    margin-left: 15px;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .printNewsletter, .emailNewsletter, .unsub{
+    margin-left: 15px;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .graph1{
+    margin-left: 15px;
+    width: 95%;
+    margin-bottom: 10px;
+  }
+  .g1{
+    height: 100%;
+  }
+
+}

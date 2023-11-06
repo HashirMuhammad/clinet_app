@@ -64,7 +64,9 @@
                           <td class="xl:text-sm lg:text-sm sm:text-xs 2xl:text-lg">{{ user.rows }}</td>
                           <td class="xl:text-sm lg:text-sm sm:text-xs 2xl:text-lg">{{ user.mode }}</td>
                           <td class="xl:text-sm lg:text-sm sm:text-xs 2xl:text-lg">{{ user.from }}</td>
-                          <td class="xl:text-sm lg:text-sm sm:text-xs 2xl:text-lg">{{ user.status }}</td>
+                          <td class="xl:text-sm lg:text-sm sm:text-xs 2xl:text-lg">
+                            <label [ngStyle]="getStatusStyle(user.status)" class="font-medium text-base">{{ user.status | uppercase }}</label>
+                          </td>
                           <td>
                             <img src="../../../assets/manage_clients/table_buton.png" class="cursor-pointer sm:mr-0 sm:w-5 sm:h-5" (click)="togglePanelVisibility(user.userId)">    
                             

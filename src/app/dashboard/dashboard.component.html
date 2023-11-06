@@ -1,10 +1,10 @@
 <div class="pb-4 flex-grow">
   <!-- cards -->
-  <div class="lg:flex xl:flex 2xl:flex lg:h-fit xl:h-fit 2xl:h-fit mt-4 flex-grow">
+  <div class="card lg:flex xl:flex 2xl:flex lg:h-fit xl:h-fit 2xl:h-fit mt-4 flex-grow">
 
     <div class="sm:flex lg:h-44 flex-grow sm:mr-5 lg:mr-0">
       <!-- subscriber btn -->
-      <div class="sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow  bg-white 2xl:mr-6 mr-5 p-2 rounded-lg">
+      <div class="subscriber sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow  bg-white 2xl:mr-6 mr-5 p-2 rounded-lg">
         <div class="flex p-2">
           <h1 class="text-4xl font-medium">{{ subcribers }}</h1>
           <img src="../../assets/dashboard/cards/sub-icon.png" class="ml-auto" />
@@ -20,7 +20,7 @@
         </button>
       </div>
 
-      <div class="sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5 p-2 rounded-lg">
+      <div class="employees sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5 p-2 rounded-lg">
         <div class="flex p-2">
           <h1 class="text-4xl font-medium ">{{ employees }}</h1>
           <img src="../../assets/dashboard/cards/emp.png" class="ml-auto" />
@@ -32,7 +32,7 @@
         </button>
       </div>
 
-      <div class=" sm:flex-grow sm:mr-5 lg:w-32 lg:mr-6 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5  p-2 rounded-lg">
+      <div class="clients sm:flex-grow sm:mr-5 lg:w-32 lg:mr-6 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5  p-2 rounded-lg">
         <div class="flex p-2">
           <h1 class="text-4xl font-medium">{{ clients }}</h1>
           <img src="../../assets/dashboard/cards/cli.png" class="ml-auto" />
@@ -45,9 +45,9 @@
       </div>
     </div>
 
-    <div class="sm:flex sm:mt-4 lg:h-44 lg:mt-0 flex-grow sm:mr-5 lg:mr-0">
+    <div class=" sm:flex sm:mt-4 lg:h-44 lg:mt-0 flex-grow sm:mr-5 lg:mr-0">
 
-      <div class="sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5  p-2 rounded-lg">
+      <div class="printNewsletter sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5  p-2 rounded-lg">
         <div class="flex p-2">
           <h1 class="text-4xl font-medium">{{ printNewsletter }}</h1>
           <img src="../../assets/dashboard/cards/printer.png" class="ml-auto" />
@@ -55,7 +55,7 @@
         <h1 class="mt-5 ml-2 sm:text-base text-lg xl:text-xl xl:mb-2">Subcribed to Printed Newsletter</h1>
       </div>
 
-      <div class="sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5 p-2 rounded-lg">
+      <div class="emailNewsletter sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5 p-2 rounded-lg">
         <div class="flex p-2">
           <h1 class="text-4xl font-medium">{{ emailNewsletter }}</h1>
           <img src="../../assets/dashboard/cards/sms-star.png" class="ml-auto" />
@@ -63,7 +63,7 @@
         <h1 class="mt-5 ml-2 2xl:text-lg xl:text-xl xl:mb-2">Subcribed to Email Newsletter</h1>
       </div>
 
-      <div class="sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5 p-2 rounded-lg">
+      <div class="unsub sm:flex-grow lg:w-32 lg:mr-8 xl:mr-6 xl:flex-grow 2xl:flex-grow bg-white 2xl:mr-6 mr-5 p-2 rounded-lg">
         <div class="flex p-2">
           <h1 class="text-4xl font-medium">{{ unsub }}</h1>
           <img src="../../assets/dashboard/cards/unsub.png" class="ml-auto" />
@@ -79,7 +79,7 @@
 
   <!-- graph -->
   <div class="md:flex-grow-0 sm:h-fit lg:flex lg:space-x-5 mt-4 mr-5">
-    <div class="sm:mb-5 sm:p-3 bg-white lg:mb-4 lg:h-fit lg:flex-grow  rounded-lg">
+    <div class="graph1 sm:mb-5 sm:p-3 bg-white lg:mb-4 lg:h-fit lg:flex-grow  rounded-lg">
       <div class="flex p-1.5">
         <img src="../../assets/dashboard/g1.png" class="w-7 h-7">
         <h1 class="font-medium text-base ml-2 tracking-wider"><strong>Last Newsletter Statistics - Clients</strong></h1>
@@ -107,7 +107,7 @@
         <label class="text-sm items-center mr-3">Opened</label>
       </div>
     </div>
-      <kendo-chart class="sm:h-60 sm:rounded-b-lg">
+      <kendo-chart class="g1 sm:h-60 sm:rounded-b-lg">
         <kendo-chart-category-axis>
           <kendo-chart-category-axis-item [categories]="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']">
           </kendo-chart-category-axis-item>

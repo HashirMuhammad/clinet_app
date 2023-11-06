@@ -10,7 +10,33 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 export class SidebarComponent {
   showManageUsersMore = false;
   showManageContentMore = false;
+  isMobile! : boolean;
+  showDropdown =false;
 
+  ngOnInit() {
+    this.checkScreenSize(); // Check screen size when component is initialized
+  }
+
+  
+
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
+    console.log(this.showDropdown)
+  }
+
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isMobile = window.innerWidth <= 600; // Adjust the threshold as needed
+    console.log('mobile')
+    // If the screen size is not mobile, hide the dropdown
+    if (!this.isMobile) {
+      this.showDropdown = false;
+    } 
+  }
+  
   constructor(private route: Router) {}
 
   
@@ -56,6 +82,10 @@ routToUDataImport(){
 
 routToHistory(){
   this.route.navigate(['history']);
+}
+
+routToWriteAnArticle(){
+  this.route.navigate(['manage_content/write_an_article']);
 }
 }
 

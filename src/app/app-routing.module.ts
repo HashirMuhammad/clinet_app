@@ -16,6 +16,7 @@ import { HistoryComponent } from './history/history/history.component';
 import { ClientComponent } from './history/history/client/client.component';
 import { EmployeesComponent } from './history/history/employees/employees.component';
 import { ArticlesComponent } from './history/history/articles/articles.component';
+import { WriteAnArticleComponent } from './manage_arcticles/write-an-article/write-an-article.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,12 @@ const routes: Routes = [
       {  path: 'add_emp', component: AddEmployeeComponent, },
       { path: 'unsubcribed_users', component: UnsubUsersComponent, },
       { path: 'data_import', component: DataImportComponent, },
+    ],
+  },
+  {
+    path: 'manage_content',
+    children: [
+      { path: 'write_an_article', component: WriteAnArticleComponent },
     ],
   },
   {

@@ -15,19 +15,19 @@ export class DataImportComponent {
     { userId: 4, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'completed', selected: false  },
     { userId: 5,  dateAdded:'2/11/2023', type:'', share:'no', rows:'5', mode:'Add new Data Only', from:'CSV', status:'completed', selected: false  },
     { userId: 6,  dateAdded:'2/11/2023', type:'client',  share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'completed', selected: false  },
-    { userId: 7, dateAdded:'2/11/2023', type:'', share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'ananlyse data', selected: false  },
-    { userId: 8, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'8', mode:'Add new Data Only', from:'CSV', status:'ananlyse data', selected: false  },
+    { userId: 7, dateAdded:'2/11/2023', type:'', share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'analyse data', selected: false  },
+    { userId: 8, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'8', mode:'Add new Data Only', from:'CSV', status:'analyse data', selected: false  },
     { userId: 9, dateAdded:'2/11/2023', type:'', share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'pending', selected: false  },
     { userId: 10, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'4', mode:'Add new Data Only', from:'CSV', status:'completed', selected: false  },
     { userId: 11, dateAdded:'2/11/2023', type:'', share:'no', rows:'8', mode:'', from:'CSV', status:'completed', selected: false  },
     { userId: 12, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'1', mode:'', from:'CSV', status:'completed', selected: false  },
-    { userId: 13, dateAdded:'2/11/2023', type:'', share:'no', rows:'6', mode:'Add new Data Only', from:'CSV', status:'ananlyse data', selected: false  },
+    { userId: 13, dateAdded:'2/11/2023', type:'', share:'no', rows:'6', mode:'Add new Data Only', from:'CSV', status:'analyse data', selected: false  },
     { userId: 14, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'pending', selected: false  },
     { userId: 15, dateAdded:'2/11/2023', type:'', share:'no', rows:'4', mode:'Add new Data Only', from:'CSV', status:'completed', selected: false  },
     { userId: 16, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'1', mode:'', from:'CSV', status:'completed', selected: false  },
     { userId: 17, dateAdded:'2/11/2023', type:'', share:'no', rows:'9', mode:'Add new Data Only', from:'CSV', status:'completed', selected: false  },
-    { userId: 18, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'7', mode:'Add new Data Only', from:'CSV', status:'ananlyse data', selected: false  },
-    { userId: 19, dateAdded:'2/11/2023', type:'', share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'ananlyse data', selected: false  },
+    { userId: 18, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'7', mode:'Add new Data Only', from:'CSV', status:'analyse data', selected: false  },
+    { userId: 19, dateAdded:'2/11/2023', type:'', share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'analyse data', selected: false  },
     { userId: 20, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'7', mode:'Add new Data Only', from:'CSV', status:'pending', selected: false  },
     { userId: 21, dateAdded:'2/11/2023', type:'', share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'pending', selected: false  },
     { userId: 22, dateAdded:'2/11/2023', type:'client',  share:'no', rows:'1', mode:'Add new Data Only', from:'CSV', status:'completed', selected: false  },
@@ -155,5 +155,41 @@ calculateMaxValue(): number {
     // Implement your logic for handling the "Delete" button click
   }
   
+  // status styling-------------------------------------------------------
+  getStatusStyle(status: string) {
+    if (status === 'pending') {
+      return {
+        'background-color': '#EBF5FF',
+        'color': '#3399FF',
+        'padding-left': '10px',
+        'padding-right': '10px',
+        'padding-top':'3px',
+        'padding-bottom':'4px',
+        'border-radius':'10px',
+      };
+    } else if(status === 'analyse data'){
+      return {
+        'background-color': '#FFF6D7',
+        'color': '#FFBF00',
+        'padding-left': '10px',
+        'padding-right': '10px',
+        'padding-top':'3px',
+        'padding-bottom':'4px',
+        'border-radius':'10px',
+      };
+    }  else if(status === 'completed'){
+      return {
+        'background-color': '#D7FFF8',
+        'color': '#29CCB1',
+        'padding-left': '10px',
+        'padding-right': '10px',
+        'padding-top':'3px',
+        'padding-bottom':'4px',
+        'border-radius':'10px',
+      };
+    } else {
+      return {}; // Return an empty object for default styling
+    }
+  }
   
 }

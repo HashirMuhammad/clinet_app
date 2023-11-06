@@ -1,6 +1,5 @@
 .bg-img {
   background-image: url("../assets/bg-img/bg.png");
-  background-color: blue;
 }
 
 /* Add a maximum height if needed */
@@ -10,4 +9,12 @@
 
 .quicmd {
   justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  /* Styles for small screens go here */
+  .bg-img{
+    background-image: url("../assets/bg-img/358871.webp");
+  }
+
 }

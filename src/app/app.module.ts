@@ -32,6 +32,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ClientComponent } from './history/history/client/client.component';
 import { EmployeesComponent } from './history/history/employees/employees.component';
 import { ArticlesComponent } from './history/history/articles/articles.component';
+import { WriteAnArticleComponent } from './manage_arcticles/write-an-article/write-an-article.component';
+import { SimpleArticleComponent } from './manage_arcticles/simple-article/simple-article.component';
+import { AiArticleComponent } from './manage_arcticles/ai-article/ai-article.component';
+
 
 
 @NgModule({
@@ -53,6 +57,9 @@ import { ArticlesComponent } from './history/history/articles/articles.component
     ClientComponent,
     EmployeesComponent,
     ArticlesComponent,
+    WriteAnArticleComponent,
+    SimpleArticleComponent,
+    AiArticleComponent,
   ],
   imports: [
     BrowserModule,

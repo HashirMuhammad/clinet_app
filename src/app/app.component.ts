@@ -1,5 +1,5 @@
 import { TitleCasePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -9,10 +9,37 @@ import { filter } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+@HostListener('window:resize', ['$event'])
 export class AppComponent implements OnInit {
   title = 'client-app';
   currentRoute: string = '';
   routeName: string = '';
+  showDropdown = false;
+  isMobile! : boolean;
+
+  ngOnInit() {
+    this.checkScreenSize(); // Check screen size when component is initialized
+  }
+
+  
+
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
+    console.log(this.showDropdown)
+  }
+
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isMobile = window.innerWidth <= 600; // Adjust the threshold as needed
+    console.log('mobile')
+    // If the screen size is not mobile, hide the dropdown
+    if (!this.isMobile) {
+      this.showDropdown = false;
+    } 
+  }
 
   constructor(private route: ActivatedRoute, private router: Router) {
     this.router.events
@@ -33,5 +60,4 @@ export class AppComponent implements OnInit {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  ngOnInit() {}
 }

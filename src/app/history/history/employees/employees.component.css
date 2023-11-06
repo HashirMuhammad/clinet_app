@@ -6,6 +6,31 @@
     padding-top: 0%;
   
   }
+  
+/* drop button------------------------------------------------------------------------------------ */
+.drpbtn {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: black;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  align-self: start;
+  width: 100%;
+  padding: auto;
+  
+}
+
+.drpbtn:hover {
+  background-color: #CC000026; /* Use your desired hover background color */
+  color: #CC0000; /*rgb(248, 212, 212)ur desired hover text color */
+  border-color: transparent;
+  /* box-shadow: 0 4px 6px rgba(251, 45, 45, 0.777); This adds a shadow */
+}
+
+.drpbtn:hover img {
+  filter: brightness(80%) saturate(100%) invert(30%) sepia(82%) saturate(900%) hue-rotate(315deg) contrast(100%); 
+}
 
   .avatar {
     display: inline-block;
@@ -57,3 +82,8 @@
   .table-container tbody tr:hover {
     background-color: #f0f0f0; /* Hover color */
   }
+/* sorting filter ------------------------------------ */
+.activeidimg{
+  filter: brightness(80%) saturate(100%) invert(30%) sepia(82%) saturate(900%)
+  hue-rotate(315deg) contrast(100%);
+}

@@ -34,7 +34,7 @@
   border-left: 4px solid red;
   color: #cc0000; /* Use your desired text color */
 }
-.activeartimg {
+.activeimgart {
   filter: brightness(80%) saturate(100%) invert(30%) sepia(82%) saturate(900%)
     hue-rotate(315deg) contrast(100%);
 }

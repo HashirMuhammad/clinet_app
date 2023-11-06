@@ -10,7 +10,7 @@ export class EmployeesComponent {
   isDropdownOpen:boolean=false;
   isChecked: boolean[] = [false,false,false,false,false,false,false,false,false,false];
   CLIENT_DATA = [
-    { clientId: 1, imgUrl: '', fullname: 'Doe', email: 'john.doe@abc.com', companyName: 'ABC Inc.', selected: false },
+  { clientId: 1, imgUrl: '', fullname: 'Doe', email: 'john.doe@abc.com', companyName: 'ABC Inc.', selected: false },
   { clientId: 2, imgUrl: '', fullname: 'Smith', email: 'smith.jane@xyz.com', companyName: 'XYZ Corporation', selected: false },
   { clientId: 3, imgUrl: '', fullname: 'Johnson', email: 'joe.johnson@def.com', companyName: 'DEF Enterprises', selected: false },
   { clientId: 4, imgUrl: '', fullname: 'Brown', email: 'susan.brown@ghi.com', companyName: 'GHI Ltd.', selected: false },
@@ -35,12 +35,98 @@ export class EmployeesComponent {
   currentPage = 1;
   itemsPerPage = 10;
   totalItems = this.CLIENT_DATA.length;
+  // for sorting 
+  ascendingOrder = true;
+  sortingColumn = 'clientId';
+  ascendingOrderFullName = true;
+  sortingColumnFullName = 'fullname';
+  ascendingOrderEmail = true;
+  sortingColumnEmail = 'email';
+  ascendingOrderCompanyName = true;
+  sortingColumnCompanyName = 'companyName';
+
+
 
   constructor(
     private mangerUserService:  ServiceManageUserService,
     ){}
 
     
+
+    // sorting for id-------------------------------------------------------------------------------------------------
+    toggleIdSorting() {
+      this.ascendingOrder = !this.ascendingOrder;
+      this.sortingColumn = 'clientId';
+      this.CLIENT_DATA = this.sortData([...this.paginatedData]);
+    }
+    
+    sortData(data : any) {
+      return data.sort((a : any, b : any) => {
+        if (this.ascendingOrder) {
+          return a[this.sortingColumn] - b[this.sortingColumn];
+        } else {
+          return b[this.sortingColumn] - a[this.sortingColumn];
+        }
+      });
+    }
+    // sorting for name-------------------------------------------------------------------------------------------------
+    toggleFullNameSorting() {
+      this.ascendingOrderFullName = !this.ascendingOrderFullName;
+      this.sortingColumnFullName = 'fullname';
+      this.CLIENT_DATA = this.sortDataName([...this.paginatedData]);
+    }
+    
+    sortDataName(data : any) {
+      return data.sort((a : any, b : any) => {
+        const nameA = a[this.sortingColumnFullName].toLowerCase();
+        const nameB = b[this.sortingColumnFullName].toLowerCase();
+    
+        if (this.ascendingOrderFullName) {
+          return nameA.localeCompare(nameB);
+        } else {
+          return nameB.localeCompare(nameA);
+        }
+      });
+    }
+    // sorting for email-------------------------------------------------------------------------------------------------
+    toggleEmailSorting() {
+      this.ascendingOrderEmail = !this.ascendingOrderEmail;
+      this.sortingColumnEmail = 'email';
+      this.CLIENT_DATA = this.sortDataEmail([...this.paginatedData]);
+    }
+
+    sortDataEmail(data : any) {
+      return data.sort((a : any, b : any) => {
+        const nameA = a[this.sortingColumnEmail].toLowerCase();
+        const nameB = b[this.sortingColumnEmail].toLowerCase();
+    
+        if (this.ascendingOrderEmail) {
+          return nameA.localeCompare(nameB);
+        } else {
+          return nameB.localeCompare(nameA);
+        }
+      });
+    }
+    // sorting for company-------------------------------------------------------------------------------------------------
+    toggleCompanyNameSorting() {
+      this.ascendingOrderCompanyName = !this.ascendingOrderCompanyName;
+      this.sortingColumnCompanyName = 'companyName';
+      this.CLIENT_DATA = this.sortDataCompany([...this.paginatedData]);
+    }
+
+    sortDataCompany(data : any) {
+      return data.sort((a : any, b : any) => {
+        const nameA = a[this.sortingColumnCompanyName].toLowerCase();
+        const nameB = b[this.sortingColumnCompanyName].toLowerCase();
+    
+        if (this.ascendingOrderCompanyName) {
+          return nameA.localeCompare(nameB);
+        } else {
+          return nameB.localeCompare(nameA);
+        }
+      });
+    }
+
   // table pagination methods------------------------------------------------------------------------------------------------
   get paginatedData() {
   const startIndex = (this.currentPage - 1) * this.itemsPerPage;
@@ -82,6 +168,7 @@ calculateMaxValue(): number {
   addFilter(){
     this.add_filter = !this.add_filter;
   }
+
   //table select all---------------------------------------------------------------------------------------------
   toggleSelectAll() {
     this.CLIENT_DATA.forEach(client => {

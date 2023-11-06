@@ -8,24 +8,24 @@
             <th class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
                 <div class="flex">
                 ID
-                <img src="../../../../assets/history/filter.png" class="w-3 h-3 ml-auto">
+                <img src="../../../../assets/history/filter.png" class="w-3 h-3 ml-auto" (click)="toggleIdSorting()" [class.activeidimg]="!ascendingOrder">
                 </div>
             </th> 
             <th class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs ">
                 <div class="flex">
                     Full Name
-                <img src="../../../../assets/history/filter.png" class="w-3 h-3 ml-auto">
+                <img src="../../../../assets/history/filter.png" class="w-3 h-3 ml-auto" (click)="toggleFullNameSorting()" [class.activeidimg]="!ascendingOrderFullName">
             </div></th>
             <th class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
                 <div class="flex">
                     Email
-                    <img src="../../../../assets/history/filter.png" class="w-3 h-3 ml-auto">
+                    <img src="../../../../assets/history/filter.png" class="w-3 h-3 ml-auto" (click)="toggleEmailSorting()" [class.activeidimg]="!ascendingOrderEmail">
                 </div>
             </th>
             <th  class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
                 <div class="flex">
                     Company Name
-                    <img src="../../../../assets/history/filter.png" class="w-3 h-3 ml-auto">
+                    <img src="../../../../assets/history/filter.png" class="w-3 h-3 ml-auto" (click)="toggleCompanyNameSorting()" [class.activeidimg]="!sortingColumnCompanyName">
                 </div>
             </th>
             <th class="text-start"></th>
