@@ -17,6 +17,7 @@ import { ClientComponent } from './history/history/client/client.component';
 import { EmployeesComponent } from './history/history/employees/employees.component';
 import { ArticlesComponent } from './history/history/articles/articles.component';
 import { WriteAnArticleComponent } from './manage_arcticles/write-an-article/write-an-article.component';
+import { ArticlesDetailsComponent } from './manage_arcticles/write-an-article/articles-details/articles-details.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,7 @@ const routes: Routes = [
     path: 'manage_content',
     children: [
       { path: 'write_an_article', component: WriteAnArticleComponent },
+      { path: 'article_details', component: ArticlesDetailsComponent },
     ],
   },
   {

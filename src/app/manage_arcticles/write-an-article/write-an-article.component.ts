@@ -9,6 +9,27 @@ export class WriteAnArticleComponent {
   toogle =true;
   selectedOption: string = 'writeArticle';
   art = '';
+  receivedValue: string = '';
+  aireceivedValue: string = '';
+
+
+  receiveValue(value: string) {
+    this.receivedValue = value;
+    if(this.receivedValue === 'false'){
+      console.log(this.receivedValue);
+      this.art = '';
+      console.log(this.art)
+    }
+  }
+
+  aireceiveValue(value: string) {
+    this.aireceivedValue = value;
+    if(this.aireceivedValue === 'false'){
+      console.log(this.aireceivedValue);
+      this.art = '';
+      console.log(this.art)
+    }
+  }
 
   onCancelClick(){
     this,this.selectedOption = '';

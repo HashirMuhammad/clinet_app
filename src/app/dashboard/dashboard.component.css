@@ -51,13 +51,22 @@
     margin-bottom: 10px;
   }
 
-  .graph1{
+  .graph1,.graph2{
     margin-left: 15px;
     width: 95%;
+    height: 30%;
     margin-bottom: 10px;
   }
-  .g1{
-    height: 100%;
+  .g1,.g2{
+    height: fit-content;
+    padding-bottom: 10px;
   }
 
+  .info,.file, .learn,.high{
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 15px;
+    height: 40%;
+    margin-bottom: 10px;
+  }
 }

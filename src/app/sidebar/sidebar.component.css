@@ -152,7 +152,7 @@
 
 @media screen and (max-width: 600px) {
   /* Styles for small screens go here */
- 
+  
   .button {
     padding: 4px;
     background-color: transparent;
@@ -174,4 +174,6 @@
     width: 100%;
     padding: auto;
   }
+
+  
 }

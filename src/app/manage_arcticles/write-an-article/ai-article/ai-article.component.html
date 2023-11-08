@@ -1,0 +1,102 @@
+<div class="h-fit">
+  <div class="pb-3 mt-3 ">
+    <div class="flex">
+      <!-- inputs -->
+      <div class="lg:flex">
+        <div class="flex-grow sm:mt-5 sm:mr-3 lg:mr-7 mb-4 lg:mb-0 lg:mt-6 2xl:mt-0">
+          <label class="text-base font-medium" style="color: #CC0000;">Article Title</label><br/>
+          <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
+       </div>
+  
+       <div class="flex-grow lg:mr-7 mb-4 lg:mb-0 lg:mt-6 2xl:mt-0">
+          <label class="text-base font-medium" style="color: #CC0000;">Number of Words</label><br/>
+          <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
+       </div>
+      </div>
+
+     <div class="lg:flex">
+      <div class="flex-grow lg:mr-7 sm:mr-3 mb-4 lg:mb-0">
+        <label class="text-base font-medium" style="color: #CC0000;">Focused Keywords (seperated with a comma)</label><br/>
+        <input type="text" placeholder="Add Keywords" class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
+     </div>
+
+     <div class="flex-grow sm:ml-4 lg:ml-0 sm:mt-12 lg:mr-7 mt-8 mb-4 lg:mb-0 lg:mt-10 2xl:mt-8">
+        <button class="flex p-1 rounded-lg px-5 mr-5 text-white" style="background-color: #29CCB1;">Generate Article
+            <img src="../../../assets/manage_content/dark.png" class="ml-2">
+        </button>
+
+     </div>
+     </div>
+    </div>
+    <div class="flex mt-3">
+        <!-- editor  -->
+        <div class="editor flex-grow rounded-lg">
+            <label class="text-base font-medium" style="color: #CC0000;">Summary</label><br/>
+            <kendo-editor [value]="value" class="editor md:w-60 xl:w-11/12 2xl:w-full rounded-xl"></kendo-editor>
+        </div>
+
+        <!-- image section  -->
+        <div>
+            <!-- pictures -->
+            <div class="">
+            <label class="text-base font-medium mb-2 ml-8" style="color: #CC0000;">Suggested Pictures</label><br/>
+                <!-- images  -->
+                <div class="w-fit p-4 ml-4 mr-4">
+
+                    <div class="flex space-x-3">
+                      <div class="w-fit">
+                        <img src="../../../assets/manage_content/pic.png" class="h-48">
+                      </div>
+                      <div class="">
+                        <img src="../../../assets/manage_content/pic.png" class="h-48">
+                      </div>
+                    </div>
+
+                    <div class="flex space-x-3  mt-2">
+                      <div class="">
+                        <img src="../../../assets/manage_content/pic.png" class="h-48">
+                      </div>
+                      <div class="">
+                        <img src="../../../assets/manage_content/pic.png" class="h-48">
+                      </div>
+                    </div>
+                    
+                    <div class="flex space-x-3  mt-2">
+                      <div class="">
+                        <img src="../../../assets/manage_content/pic.png" class="h-48">
+                      </div>
+                      <div class="">
+                        <img src="../../../assets/manage_content/pic.png" class="h-48">
+                      </div>
+                    </div>
+                    
+                    <div class="flex space-x-3 mt-2">
+                      <!-- buttons  -->
+                      <div class="">
+                        <button class="flex border border-red-500 rounded-lg px-2 py-1 lg:text-sm xl:text-base">
+                            Modify Content With AI
+                            <img src="../../../assets/manage_clients/add-client/search.png" class="ml-1">
+                        </button>
+                    </div>
+
+                    <div class="">
+                        <button class="flex border border-red-500 rounded-lg px-2 py-1 lg:text-sm xl:text-base">
+                            Generate Images With AI
+                            <img src="../../../assets/manage_clients/add-client/search.png" class="ml-1">
+                        </button>
+                    </div>
+                    </div>
+                        
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="flex">
+        <div class="ml-auto">
+            <button class="p-1 rounded-lg px-5 mr-5" style="background-color: #00000026;">Discard</button>
+            <button class="p-1 rounded-lg px-5 mr-5 text-white" style="background-color: #29CCB1; " (click)="routToArtiDetail()">Next</button>
+        </div>
+    </div>
+</div>
+</div>

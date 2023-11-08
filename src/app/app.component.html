@@ -1,5 +1,5 @@
 <!-- <div class="bg-slate-500 k-h-screen h-screen"> -->
-<div class="bg-img bg-cover object-cover w-full" *ngIf="!isMobile">
+<div *ngIf="!isMobile" class="bg-img bg-cover object-cover w-full" >
   <div class="flex">
     
     
@@ -57,7 +57,7 @@
 <!-- for mobile -->
 <div *ngIf="isMobile" class="flex flex-col">
   <!-- header -->
-  <div class=" sticky flex items-center justify-between p-2 bg-white rounded-lg">
+  <div class=" sticky flex items-center justify-between p-2 bg-white round">
     <div class="flex items-center">
       <app-sidebar></app-sidebar>
       <img src="../../assets/sidebar/informanagemt.png" class="w-52 h-8" />
@@ -71,7 +71,7 @@
   </div>
 
   <!-- main div -->
-  <div class=" top-0 left-0 w-full h-full overflow-y-auto mt-14 bg-slate-300">
+  <div class=" top-0 left-0 w-full h-full overflow-y-auto bg-slate-300">
     <router-outlet></router-outlet>
   </div>
 </div>

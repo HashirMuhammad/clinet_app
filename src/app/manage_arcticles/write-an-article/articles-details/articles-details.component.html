@@ -1,0 +1,273 @@
+<div class="h-screen overflow-y-auto">
+    <div class="pb-3 mt-3 ">
+        <!-- Profiling -->
+        <div class="rounded-lg m-3 p-5 ml-5 mr-5 mt-5 flex-grow" style="background-color: #F0F2F7BF;">
+            <label class="text-base font-semibold tracking-wider">Profiling</label>
+            <div class="flex flex-col xl:flex-row mt-3 lg:pr-8">
+
+                <!-- checkbox -->
+                <div class="lg:mt-5 flex flex-grow  mb-4 lg:mb-0 ">
+                    <div class="flex items-start mr-5">
+                        <input type="checkbox" class="border-gray-400 mr-4" size="large" kendoCheckBox #large />
+                        <label class="text-base">Employee Newsletter</label>
+                    </div>
+
+                    <div class="flex items-start mr-5">
+                        <input type="checkbox" class="border-gray-400 mr-4" size="large" kendoCheckBox #large />
+                        <label class="text-base">Monthly Newsletter</label>
+                    </div>
+
+                    <div class="flex items-start">
+                        <input type="checkbox" class="border-gray-400 mr-4" size="large" kendoCheckBox #large />
+                        <label class="text-base">Printed Newsletter</label>
+                    </div>
+                </div>
+
+                <!-- select  -->
+                <div class="flex-grow xl:mr-80 lg:mb-0 lg:mt-2 xl:mt-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Include in (currently
+                        proofing)</label><br />
+                    <select class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"
+                        style="color: #000000BF;">
+                        <option class="text-gray-500" value="" disabled selected>Select</option>
+                        <option value="search">Male</option>
+                        <option value="filter">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 2nd row select  -->
+            <div class="flex flex-col xl:flex-row mt-3 lg:pr-8">
+                <div class="flex-grow xl:mr-12 lg:mb-0 ">
+                    <label class="text-base font-medium" style="color: #CC0000;">Category</label><br />
+                    <select class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"
+                        style="color: #000000BF;">
+                        <option class="text-gray-500" value="" disabled selected>Select</option>
+                        <option value="search">Male</option>
+                        <option value="filter">Female</option>
+                    </select>
+                </div>
+
+                <div class="flex-grow  lg:mb-0 lg:mt-2 xl:mt-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Profiling</label><br />
+                    <select class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"
+                        style="color: #000000BF;">
+                        <option class="text-gray-500" value="" disabled selected>Standard Profiles</option>
+                        <option value="search">Male</option>
+                        <option value="filter">Female</option>
+                    </select>
+                </div>
+
+                <div class="flex-grow xl:ml-28 lg:mb-0 lg:mt-2 xl:mt-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Customers Profiles</label><br />
+                    <select class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"
+                        style="color: #000000BF;">
+                        <option class="text-gray-500" value="" disabled selected>All - picks up on every news item
+                        </option>
+                        <option value="search">Male</option>
+                        <option value="filter">Female</option>
+                    </select>
+                </div>
+
+                <div class="flex-grow xl:ml-5 mt-8 lg:mb-0">
+                    <button class="p-1 rounded-lg px-5 mr-5 text-white"
+                        style="background-color: #29CCB1;">Select</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Newsfeed -->
+        <div class="rounded-lg m-3 p-5 ml-5 mr-5 mt-5 flex-grow" style="background-color: #F0F2F7BF;">
+            <label class="text-base font-semibold tracking-wider">Newsfeed</label>
+            <div class="flex flex-col xl:flex-row mt-3 lg:pr-0">
+
+                <!-- checkbox -->
+                <div class=" lg:flex flex-grow mt-8">
+                    <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                        <div class="flex">
+                            <div class="flex items-start mr-5">
+                                <input type="checkbox" class="border-gray-400 mr-4" size="large" kendoCheckBox #large />
+                                <label class="text-base">Newsfeed?</label>
+                            </div>
+    
+                            <div class="flex items-start mr-5">
+                                <input type="checkbox" class="border-gray-400 mr-4" size="large" kendoCheckBox #large />
+                                <label class="text-base">Feature this article</label>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <!-- radio button  -->
+                    <div class=" flex-grow lg:mr-7 mb-4 lg:mb-0">
+                        <div class="flex">
+                            <div class="flex mr-5">
+                                <input type="radio" class="custom-radio" [(ngModel)]="selectedOption" value="alwaysfeature">
+                                <label class="ml-4 text-lg font-medium">Always Feature</label>
+                            </div>
+    
+                            <div class="flex mr-5">
+                                <input type="radio" class="custom-radio" [(ngModel)]="selectedOption" value="featureuntil">
+                                <label class="ml-4 text-lg font-medium">Feature Until</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- date -->
+                <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                    <div class="date-picker-container mt-2 ml-3 mr-3">
+                    <label class="text-base font-medium" style="color: #CC0000;">Choose a Date</label><br />
+                        <div class="flex">
+                            <mat-form-field class="date">
+                                <mat-label>Choose a date</mat-label>
+                                <input matInput [matDatepicker]="picker">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Social Media -->
+        <div class="rounded-lg m-3 p-5 ml-5 mr-5 mt-5 flex-grow" style="background-color: #F0F2F7BF;">
+            <label class="text-base font-semibold tracking-wider">Social Media</label>
+            <div class="xl:flex">
+                <div class=" flex-grow">
+                    <!-- checkbox  -->
+                    <div>
+                        <label>If you select Social Media, Newsfeed will be selected.</label>
+                        <div class="flex items-start mt-10">
+                            <input type="checkbox" class="border-gray-400 mr-4" size="large" kendoCheckBox #large />
+                            <label class="text-base">Social Media?</label>
+                        </div>
+                    </div>
+
+                    <!-- radio button  -->
+                    <div class="flex mt-20">
+                        <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                            <div class="flex">
+                                <input type="radio" class="custom-radio" [(ngModel)]="selectedOptionDate"
+                                    value="pushNow">
+                                <label class="ml-4 text-lg font-medium">Push&nbsp;Now</label>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                            <div class="flex">
+                                <input type="radio" class="custom-radio" [(ngModel)]="selectedOptionDate"
+                                    value="pushAfter2Hrs">
+                                <label class="ml-4 text-lg font-medium">Push&nbsp;After&nbsp;2&nbsp;hours</label>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                            <div class="flex">
+                                <input type="radio" class="custom-radio" [(ngModel)]="selectedOptionDate"
+                                    value="specificDate">
+                                <label class="ml-4 text-lg font-medium">Specific&nbsp;Date</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- social media checkbox  -->
+                    <div class="mt-14">
+                        <div class="flex items-start">
+                            <input type="checkbox" class="border-gray-400 mr-4" size="large" kendoCheckBox #large />
+                            <label class="text-base">Linkedin</label>
+                            <img src="../../../../assets/manage_content/linkedin.png" class="ml-2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <!-- inputs -->
+                    <div class="flex flex-col lg:flex-row mt-3 lg:pr-8">
+                        <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                            <label class="text-base font-medium" style="color: #CC0000;">Social Media
+                                Title</label><br />
+                            <input type="text" placeholder="Enter Here..."
+                                class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+                            <label class="text-xs">If you do not provide a title then the Article Title will be inserted.</label>
+                        </div>
+
+                        <div class="flex-grow  mb-4 lg:mb-0">
+                            <label class="text-base font-medium" style="color: #CC0000;">Hashtags</label><br />
+                            <input type="text" placeholder="Enter Here..."
+                                class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+                        </div>
+                    </div>
+
+                    <!-- date  -->
+                    <div class="flex flex-col lg:flex-row mt-3 ">
+                        <div class="flex-grow mb-4 lg:mb-0">
+                            <label class="text-base font-medium" style="color: #CC0000;">Choose a Date</label><br />
+                            <div class="date-picker-container mt-2 ml-3 mr-3">
+                                <div class="flex">
+                                    <mat-form-field class="date">
+                                        <mat-label>Choose a date</mat-label>
+                                        <input matInput [matDatepicker]="picker">
+                                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow lg:mr-4 lg:mb-0 mt-4">
+                            <label class="text-base font-medium" style="color: #CC0000;">Hours</label><br />
+                            <select id="numericSelect"
+                                class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"
+                                style="color: #000000BF;" required pattern="[0-9]+">
+                                <option class="text-gray-500" value="" disabled selected>00</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+
+                        </div>
+
+                        <div class="flex-grow lg:mr-4 lg:mb-0 mt-4">
+                            <label class="text-base font-medium" style="color: #CC0000;">Minutes</label><br />
+                            <select class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"
+                                style="color: #000000BF;">
+                                <option class="text-gray-500" value="" disabled selected>00</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                                <option value="60">60</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- buttons -->
+        <div class="buttons flex">
+            <div class="flex flex-col lg:flex-row  mt-5 mr-7 mb-7 ml-auto">
+                <button class="bg-white border p-1.5 pl-3 pr-3 mr-0 rounded-lg flex items-center text-white sm:mt-2"
+                    style="background-color: #29CCB1;">Next</button>
+            </div>
+
+        </div>
+    </div>
+</div>

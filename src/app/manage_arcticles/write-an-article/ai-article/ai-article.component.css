@@ -1,0 +1,14 @@
+.editor{
+  height: 570px;
+}
+
+@media screen and (max-width: 768px) {
+  .editor{
+    height: 370px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .editor{
+    height: 430px;
+  }
+}

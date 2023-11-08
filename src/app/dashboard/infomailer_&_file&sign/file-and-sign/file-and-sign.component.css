@@ -54,3 +54,28 @@ button.active {
 .table-container tbody tr:hover {
   background-color: #f0f0f0; /* Hover color */
 }
+
+
+@media screen and (max-width: 600px) {
+  button {
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #f0f2f7;
+    font-size: small;
+  }
+
+  .table-container {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: small;
+    overflow-x: auto;
+  }
+
+  .labeltd{
+    font-size: smaller;
+
+  }
+  
+}

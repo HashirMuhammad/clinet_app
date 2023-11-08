@@ -1,5 +1,5 @@
 import { TitleCasePipe } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, DoCheck, HostListener, OnChanges, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -9,7 +9,7 @@ import { filter } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-@HostListener('window:resize', ['$event'])
+
 export class AppComponent implements OnInit {
   title = 'client-app';
   currentRoute: string = '';
@@ -21,24 +21,29 @@ export class AppComponent implements OnInit {
     this.checkScreenSize(); // Check screen size when component is initialized
   }
 
-  
-
-  toggleDropdown() {
-    this.showDropdown = !this.showDropdown;
-    console.log(this.showDropdown)
-  }
-
+  @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.checkScreenSize();
   }
 
   checkScreenSize() {
-    this.isMobile = window.innerWidth <= 600; // Adjust the threshold as needed
-    console.log('mobile')
+    const screenWidth = window.innerWidth;
+    this.isMobile = screenWidth < 641; // Adjust the threshold as needed
+
     // If the screen size is not mobile, hide the dropdown
     if (!this.isMobile) {
       this.showDropdown = false;
-    } 
+      console.log("app window");
+    } else {
+      this.showDropdown = true;
+      console.log("app mobile");
+      this.isMobile = true;
+    }
+  }
+
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
+    console.log(this.showDropdown)
   }
 
   constructor(private route: ActivatedRoute, private router: Router) {

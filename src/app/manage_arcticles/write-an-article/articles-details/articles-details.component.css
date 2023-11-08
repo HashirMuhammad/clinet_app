@@ -1,0 +1,6 @@
+.custom-radio {
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    accent-color: red;
+    border-radius: 50%;
+  }

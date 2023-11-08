@@ -138,10 +138,10 @@
 
 
 
-<div *ngIf="isMobile" class="" >
-    <div class="relative ">
+<div *ngIf="isMobile" class="sidebar" >
+    <div class="relative">
         <img src="../assets/bg-img/3169290-200.png" (click)="toggleDropdown()" class="w-10 h-10 mr-5" />
-    <div *ngIf="showDropdown" class="absolute flex-col bg-white overflow-y-auto">
+    <div *ngIf="showDropdown" class="absolute flex-col bg-white overflow-y-auto w-64 rounded-lg p-2">
         <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToDash()">
             <img src="../../assets/sidebar/home2.png" (click)="routToDash()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
             Dashboard

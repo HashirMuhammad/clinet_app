@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { PopupComponent } from '@progress/kendo-angular-popup';
 import { ButtonModule } from '@progress/kendo-angular-buttons';
 import {ServiceManageUserService} from '../service-manage-user.service';
@@ -50,6 +50,7 @@ export class SearchClientsComponent {
 
   constructor(
     private mangerUserService:  ServiceManageUserService,
+    private elRef: ElementRef,
     ){}
 
     
@@ -107,6 +108,15 @@ calculateMaxValue(): number {
     this.panel = !this.panel;
   }
   
+  @HostListener('mouseleave', ['$event'])
+  onMouseLeave(event: MouseEvent) {
+    if (this.panel) {
+      const panelElement = document.querySelector('.imgpanel');
+      if (panelElement && !panelElement.contains(event.target as Node)) {
+        this.panel = false;
+      }
+    }
+  }
 
   toggleDropdown() {
       this.isDropdownOpen = !this.isDropdownOpen;

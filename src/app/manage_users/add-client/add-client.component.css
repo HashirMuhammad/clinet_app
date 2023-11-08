@@ -1,0 +1,9 @@
+@media screen and (max-width: 600px) {
+    .addcli{
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+    .buttons button{
+        margin-bottom: 4px;
+    }
+}

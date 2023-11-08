@@ -33,8 +33,12 @@ import { ClientComponent } from './history/history/client/client.component';
 import { EmployeesComponent } from './history/history/employees/employees.component';
 import { ArticlesComponent } from './history/history/articles/articles.component';
 import { WriteAnArticleComponent } from './manage_arcticles/write-an-article/write-an-article.component';
-import { SimpleArticleComponent } from './manage_arcticles/simple-article/simple-article.component';
-import { AiArticleComponent } from './manage_arcticles/ai-article/ai-article.component';
+import { SimpleArticleComponent } from './manage_arcticles/write-an-article/simple-article/simple-article.component';
+import { AiArticleComponent } from './manage_arcticles/write-an-article/ai-article/ai-article.component';
+import { EditorModule } from "@progress/kendo-angular-editor";
+import { LabelModule } from "@progress/kendo-angular-label";
+import { ArticlesDetailsComponent } from './manage_arcticles/write-an-article/articles-details/articles-details.component';
+import { PreviewArticleComponent } from './manage_arcticles/write-an-article/preview-article/preview-article.component';
 
 
 
@@ -60,6 +64,8 @@ import { AiArticleComponent } from './manage_arcticles/ai-article/ai-article.com
     WriteAnArticleComponent,
     SimpleArticleComponent,
     AiArticleComponent,
+    ArticlesDetailsComponent,
+    PreviewArticleComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +82,8 @@ import { AiArticleComponent } from './manage_arcticles/ai-article/ai-article.com
     MatInputModule,
     MatNativeDateModule,
     MatFormFieldModule,
+    EditorModule,
+    LabelModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

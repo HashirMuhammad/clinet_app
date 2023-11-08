@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {ServiceManageUserService} from '../service-manage-user.service';
 
 
@@ -102,6 +102,15 @@ calculateMaxValue(): number {
   handleButtonClick() {
     // Add your button click logic here
     this.panel = !this.panel;
+  }
+  @HostListener('mouseleave', ['$event'])
+  onMouseLeave(event: MouseEvent) {
+    if (this.panel) {
+      const panelElement = document.querySelector('.imgpanel');
+      if (panelElement && !panelElement.contains(event.target as Node)) {
+        this.panel = false;
+      }
+    }
   }
   
 

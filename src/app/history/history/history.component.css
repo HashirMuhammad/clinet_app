@@ -438,3 +438,43 @@
   }
 
 }
+
+@media screen and (max-width: 600px) {
+  .sercli{
+    padding-left: 17px;
+    width: 390px;
+  }
+  .fltrlbl{
+    margin-left: -10px;
+  }
+  .chkbox{
+    margin-top: -10px;
+  }
+  .fltr2{
+    border-bottom: 1px solid #ccc;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+  .fltr2 select{
+    width: 100%;
+    padding: 0.625rem 1.5rem 0.625rem 0.75rem;
+    margin-top: 0.5rem;
+    color: #000000BF;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #fff;
+  }
+  .date-picker-container {
+    margin-top: 0.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    width: 100%;
+  }
+  .date {
+    width: 100%;
+    padding-right: 25px;
+  }
+  .btnfltr{
+    margin-left: 60px;
+  }
+}

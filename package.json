@@ -25,6 +25,7 @@
     "@progress/kendo-angular-charts": "^14.0.1",
     "@progress/kendo-angular-common": "14.0.1",
     "@progress/kendo-angular-dateinputs": "^14.0.1",
+    "@progress/kendo-angular-editor": "^14.0.1",
     "@progress/kendo-angular-icons": "14.0.1",
     "@progress/kendo-angular-inputs": "14.0.1",
     "@progress/kendo-angular-intl": "14.0.1",

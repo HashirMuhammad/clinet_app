@@ -123,7 +123,7 @@
       </kendo-chart>
     </div>
     
-    <div class="sm:mb-5 sm:p-3 bg-white h-fit lg:flex-grow rounded-lg">
+    <div class="graph2 sm:mb-5 sm:p-3 bg-white h-fit lg:flex-grow rounded-lg">
       <div class="flex p-1.5">
         <img src="../../assets/dashboard/g2.png" class="w-7 h-7">
         <h1 class="font-medium text-base ml-2 tracking-wider"><strong>Last Newsletter Statistics - Employees</strong></h1>
@@ -151,7 +151,7 @@
         <label class="text-sm items-center mr-3">Opened</label>
       </div>
     </div>
-      <kendo-chart class="sm:h-60 sm:rounded-b-lg">
+      <kendo-chart class="g2 sm:h-60 sm:rounded-b-lg">
         <kendo-chart-category-axis>
           <kendo-chart-category-axis-item [categories]="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']">
           </kendo-chart-category-axis-item>
@@ -170,12 +170,12 @@
 
   <!-- infomailer_&_file&sign -->
   <div class="lg:flex lg:space-x-3 xl:space-x-6 lg:mt-1 mr-5">
-    <div class="sm:bg-white sm:rounded-lg xl:w-4/12 2xl:w-2/5">
+    <div class="info sm:bg-white sm:rounded-lg xl:w-4/12 2xl:w-2/5">
       <!-- infomailer -->
       <app-infomailer class="xl:bg-white w-4/12 h-fit rounded-lg"></app-infomailer>
     </div>
 
-    <div class="sm:bg-white sm:rounded-lg sm:mt-4 lg:mt-0 xl:flex-1">
+    <div class="file sm:bg-white sm:rounded-lg sm:mt-4 lg:mt-0 xl:flex-1">
       <!-- file and sign -->
       <app-file-and-sign class="xl:bg-white h-fit lg:flex-1 xl:flex-1 lg:pt-3 rounded-lg"></app-file-and-sign>
     </div>
@@ -183,12 +183,12 @@
 
   <!-- infolearning & high achievers -->
   <div class="lg:flex lg:space-x-6 mt-4 mr-5">
-    <div class="sm:bg-white sm:rounded-lg xl:flex-1">
+    <div class="learn sm:bg-white sm:rounded-lg xl:flex-1">
       <!-- infolearning -->
       <app-infolearning class="xl:bg-white h-fit lg:flex-1 rounded-lg"></app-infolearning>
     </div> 
 
-    <div class="sm:bg-white sm:rounded-lg sm:mt-4 lg:mt-0 xl:w-4/12">
+    <div class="high sm:bg-white sm:rounded-lg sm:mt-4 lg:mt-0 xl:w-4/12">
       <!-- high achievers -->
       <app-high-achievers class="xl:bg-white w-4/12 h-fit rounded-lg"></app-high-achievers>
     </div> 

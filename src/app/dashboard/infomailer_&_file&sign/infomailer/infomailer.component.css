@@ -38,4 +38,11 @@
   .table-container tbody tr:hover {
     background-color: #f0f0f0; /* Hover color */
   }
-    
+  
+@media screen and (max-width: 600px) {
+  .table-container {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: small;
+  }
+}

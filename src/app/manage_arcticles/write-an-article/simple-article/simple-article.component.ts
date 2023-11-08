@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { ArticleDataServiceService } from '../service/article-data-service.service'
 
 @Component({
   selector: 'app-simple-article',
@@ -12,7 +14,32 @@ export class SimpleArticleComponent {
   progress = 0;
   uploadTask: any;
   uploadComplete = false;
+  // editor value 
+  public value: string = '';
 
+  artTitle = '';
+  artSource = '';
+  // for toogle 
+  @Output() valueEmitter = new EventEmitter<string>();
+
+  constructor(
+    private router: Router,
+    private artservice: ArticleDataServiceService,
+    ) { }
+
+  
+
+  // changing component 
+  routToArtiDetail(){
+
+    // sending to service 
+    this.artservice
+
+    const valueToSend = 'false';
+    this.valueEmitter.emit(valueToSend);
+  }
+
+  // for image uploading
   onFileSelected(event: any) {
     const file = event.target.files[0];
     if (file && file.type.startsWith('image/')) {
