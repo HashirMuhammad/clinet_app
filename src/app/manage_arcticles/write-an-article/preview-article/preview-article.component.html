@@ -2,77 +2,113 @@
     <!-- textarea  -->
     <div class="">
         <div >
-            <textarea class="w-full h-80" [value]="textarea" disabled></textarea>
+            <textarea class="w-full h-80 p-4 rounded-lg bg-white" [value]="textarea" disabled></textarea>
         </div>
     </div>
 
     <!-- input aera  -->
     <div>
-        <div class="flex">
-            <div class="flex-grow mb-4 lg:mb-0 bg-red-200">
-                <label class="text-base font-medium" style="color: #CC0000;">Include in</label><br/>
-                <span></span>
+        <div class="div1 flex mt-10">
+            <div class="w-full mb-8 lg:mb-0">
+                <label class="text-base font-medium " style="color: #CC0000;">Include in</label><br/>
+                <div class="mt-2">
+                    <span class="bg-slate-200 px-4 py-2 rounded-lg">{{include_in}}</span>
+                </div>
             </div>
 
-            <div class="flex-grow mb-4 lg:mb-0 bg-red-200">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Include in(currently proofing)</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span class="bg-slate-200 px-4 py-2 rounded-lg mr-1" *ngFor="let item of include_in_currently_proofing">{{item}}</span>
+                </div>
             </div>
 
-            <div class="flex-grow mb-4 lg:mb-0 bg-red-200">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Source</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span>{{source}}</span>
+
+                </div>
             </div>
 
-            <div class="flex-grow mb-4 lg:mb-0 bg-red-200">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Category</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span>{{category}}</span>
+                </div>
+
             </div>
         </div>
 
-        <div class="flex">
-            <div class="flex-grow mb-4 lg:mb-0 bg-red-200">
+        <div class="div2 flex mt-10">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Profiling: Standard Profiles</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span class="bg-slate-200 px-4 py-2 rounded-lg text-sm">{{profiling}}</span>
+                </div>
+
             </div>
 
-            <div class="flex-grow mb-4 lg:mb-0 bg-red-200">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Newsfeed?</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span>{{newsfeed}}</span>
+                </div>
+
             </div>
 
-            <div class="flex-grow mb-4 lg:mb-0 bg-red-200">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Feature this Article</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span>{{featureThisArticle}}</span>
+                </div>
+
             </div>
 
-            <div class="flex-grow mb-4 lg:mb-0 bg-red-200">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Feature Until</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span>{{featureUntil}}</span>
+
+                </div>
+
             </div>
             
         </div>
 
-        <div class="flex">
-            <div class="flex-grow  mb-4 lg:mb-0 bg-red-200">
+        <div class="div3 flex mt-10">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Social Media</label><br/>
-                <img src="../../../../assets/manage_content/linkedin.png">
+                <div class="mt-2">
+                <img src="{{socialMedia}}">
+                </div>
+
             </div>
 
-            <div class="flex-grow  mb-4 lg:mb-0 bg-red-200">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Social Media Title</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span>{{socialMediaTitle}}</span>
+                </div>
+
             </div>
 
-            <div class="flex-grow  mb-4 lg:mb-0 bg-red-200">
+            <div class="w-full mb-4 lg:mb-0 ">
                 <label class="text-base font-medium" style="color: #CC0000;">Specific Date</label><br/>
-                <span></span>
+                <div class="mt-2">
+                <span>{{specificDate}}</span>
+                </div>
+
+            </div>
+
+            <div class="w-full">
+                <label class="text-base font-medium">&nbsp;</label><br/>
             </div>
         </div>
 
     </div>
 
-    <div class="flex">
+    <div class="flex mt-10 mr-5">
         <div class="ml-auto">
             <button class="pl-4 pr-4 p-2 rounded-lg mr-4 sm:mt-2" style="background-color: #F0F2F7;">Back</button>
 

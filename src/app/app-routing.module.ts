@@ -18,6 +18,14 @@ import { EmployeesComponent } from './history/history/employees/employees.compon
 import { ArticlesComponent } from './history/history/articles/articles.component';
 import { WriteAnArticleComponent } from './manage_arcticles/write-an-article/write-an-article.component';
 import { ArticlesDetailsComponent } from './manage_arcticles/write-an-article/articles-details/articles-details.component';
+import { ConnectionComponent } from './connection/connection.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
+import { NewPostComponent } from './social-media/new-post/new-post.component';
+import { ConfigurationComponent } from './social-media/configuration/configuration.component';
+import { ManageArticlesComponent } from './manage_arcticles/write-an-article/manage-articles/manage-articles.component';
+import { ViewArticlesComponent } from './manage_arcticles/write-an-article/manage-articles/view-articles/view-articles.component';
+import { SearchArticlesComponent } from './manage_arcticles/write-an-article/search-articles/search-articles.component';
+import { ProofNewslettersComponent } from './manage_arcticles/write-an-article/proof-newsletters/proof-newsletters.component';
 
 const routes: Routes = [
   {
@@ -50,6 +58,10 @@ const routes: Routes = [
     children: [
       { path: 'write_an_article', component: WriteAnArticleComponent },
       { path: 'article_details', component: ArticlesDetailsComponent },
+      { path: 'manage_article', component: ManageArticlesComponent },
+      { path: 'view_article', component: ViewArticlesComponent },
+      { path: 'search_article', component: SearchArticlesComponent },
+      { path: 'proof_newsletters', component: ProofNewslettersComponent },
     ],
   },
   {
@@ -60,6 +72,22 @@ const routes: Routes = [
       { path: 'employees', component: EmployeesComponent, },
       { path: 'articles', component: ArticlesComponent, },
     ],
+  },
+  {
+    path: 'connection',
+    component: ConnectionComponent,
+  },
+  {
+    path: 'social_media',
+    component: SocialMediaComponent,
+  },
+  { 
+    path: 'manage_articles/new_post', 
+    component: NewPostComponent, 
+  },
+  { 
+    path: 'social_media/configuration', 
+    component: ConfigurationComponent, 
   },
 ];
 

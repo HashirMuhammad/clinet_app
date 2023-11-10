@@ -39,6 +39,17 @@ import { EditorModule } from "@progress/kendo-angular-editor";
 import { LabelModule } from "@progress/kendo-angular-label";
 import { ArticlesDetailsComponent } from './manage_arcticles/write-an-article/articles-details/articles-details.component';
 import { PreviewArticleComponent } from './manage_arcticles/write-an-article/preview-article/preview-article.component';
+import { ConnectionComponent } from './connection/connection.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
+import { LatestComponent } from './social-media/latest/latest.component';
+import { PendingComponent } from './social-media/pending/pending.component';
+import { PostErrorComponent } from './social-media/post-error/post-error.component';
+import { NewPostComponent } from './social-media/new-post/new-post.component';
+import { ConfigurationComponent } from './social-media/configuration/configuration.component';
+import { ManageArticlesComponent } from './manage_arcticles/write-an-article/manage-articles/manage-articles.component';
+import { ViewArticlesComponent } from './manage_arcticles/write-an-article/manage-articles/view-articles/view-articles.component';
+import { SearchArticlesComponent } from './manage_arcticles/write-an-article/search-articles/search-articles.component';
+import { ProofNewslettersComponent } from './manage_arcticles/write-an-article/proof-newsletters/proof-newsletters.component';
 
 
 
@@ -66,6 +77,17 @@ import { PreviewArticleComponent } from './manage_arcticles/write-an-article/pre
     AiArticleComponent,
     ArticlesDetailsComponent,
     PreviewArticleComponent,
+    ConnectionComponent,
+    SocialMediaComponent,
+    LatestComponent,
+    PendingComponent,
+    PostErrorComponent,
+    NewPostComponent,
+    ConfigurationComponent,
+    ManageArticlesComponent,
+    ViewArticlesComponent,
+    SearchArticlesComponent,
+    ProofNewslettersComponent,
   ],
   imports: [
     BrowserModule,

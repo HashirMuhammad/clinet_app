@@ -1,0 +1,11 @@
+@media screen and (max-width: 640px) {
+    .div1{
+        display: block;
+    }
+    .div2{
+        display: block;
+    }
+    .div3{
+        display: block;
+    }
+}

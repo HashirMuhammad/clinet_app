@@ -11,22 +11,41 @@ export class WriteAnArticleComponent {
   art = '';
   receivedValue: string = '';
   aireceivedValue: string = '';
+  detailreceivedValue: string = '';
 
 
   receiveValue(value: string) {
+    console.log("receiveValue");
     this.receivedValue = value;
     if(this.receivedValue === 'false'){
       console.log(this.receivedValue);
       this.art = '';
+      this.aireceivedValue = '';
+      this.detailreceivedValue = '';
       console.log(this.art)
     }
   }
 
   aireceiveValue(value: string) {
+    console.log("aireceiveValue");
     this.aireceivedValue = value;
-    if(this.aireceivedValue === 'false'){
+    if(this.aireceivedValue === 'ai_art'){
       console.log(this.aireceivedValue);
       this.art = '';
+      this.receivedValue = '';
+      this.detailreceivedValue = '';
+      console.log(this.art)
+    }
+  }
+
+  detailreceiveValue(value: string) {
+    console.log("detailreceiveValue")
+    this.detailreceivedValue = value;
+    if(this.detailreceivedValue === 'false'){
+      console.log(this.detailreceivedValue);
+      this.art = '';
+      this.receivedValue = '';
+      this.aireceivedValue = '';
       console.log(this.art)
     }
   }

@@ -4,3 +4,12 @@
     accent-color: red;
     border-radius: 50%;
   }
+
+@media screen and (max-width: 640px) {
+  .checkboxdiv{
+    display: block;
+  }
+  .radiodiv{
+    display: block;
+  }
+}

@@ -114,5 +114,25 @@ routToWriteAnArticle(){
   this.route.navigate(['manage_content/write_an_article']);
   this.showDropdown = false;
 }
+routToConnection(){
+  this.route.navigate(['connection']);
+  this.showDropdown = false;
+}
+routToSocial(){
+  this.route.navigate(['social_media']);
+  this.showDropdown = false;
+}
+routToManageArticle(){
+  this.route.navigate(['manage_content/manage_article']);
+  this.showDropdown = false;
+}
+routToSearchArticle(){
+  this.route.navigate(['manage_content/search_article']);
+  this.showDropdown = false;
+}
+routToProofNewsletters(){
+  this.route.navigate(['manage_content/proof_newsletters']);
+  this.showDropdown = false;
+}
 }
 

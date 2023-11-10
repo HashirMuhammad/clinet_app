@@ -1,0 +1,192 @@
+<div class="sercli pb-4 flex-grow h-full">
+    <div class="bg-white mb-5 mt-3 mr-7 rounded-3xl">
+  
+      <div class="headerdiv flex border-b border-gray-300">
+        <div>
+            <label class="flex  pt-6 pb-5 pl-6 text-2xl">Social Media</label>
+        </div>
+
+        <div class="ml-auto  pt-6 pb-5 pl-6 mr-2">
+            <div class="flex">
+                <div class="mr-3">
+                    <button class="flex border border-gray-300 rounded-lg px-4 py-1 text-base" (click)="routToConfig()">
+                        Configuration
+                        <img src="../../assets/social-media/setting-3.png" (click)="routToConfig()" class="ml-2">
+                    </button>
+                </div>
+    
+                <div class="mr-3">
+                    <button class="flex rounded-lg px-4 py-1 text-white text-base" (click)="routToNewPost()" style="background-color: #29CCB1; border-color: #29CCB1;">
+                        Add New Post
+                        <img src="../../assets/social-media/user-square.png"(click)="routToNewPost()" class="ml-2">
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="xl:flex lg:flex flex-grow">
+        <!-- buttons -->
+        <div class="flex-col ">
+            <div class="mt-2">
+                <button class="btn flex pl-2 py-2 w-full" (click)="clientTableToogle()" [class.activecli]="clientTable">
+                    <img src="../../assets/social-media/signpost.png" class="mr-4" [class.activecliimg]="clientTable" (click)="clientTableToogle()">
+                    Latest
+                </button>
+            </div>
+
+            <div >
+                <button class="btn flex pl-2 py-2 w-full" [class.activeemp]="empTable"  (click)="empToogle()">
+                    <img src="../../assets/social-media/timer.png" [class.activeempimg]="empTable" class="mr-4" (click)="empToogle()">
+                Pending
+                </button>
+            </div>
+
+            <div>
+                <button class="btn flex pl-2 py-2 w-full" [class.activeart]="arcticleTable" (click)="arcticleToogle()">
+                    <img src="../../assets/social-media/danger.png" [class.activeimgart]="arcticleTable" class="mr-4" (click)="arcticleToogle()">
+                    Post Error
+                </button>
+            </div>
+
+            <!-- search input  -->
+            <div class="mx-4 mt-3">
+                <div class="relative">
+                    <input type="text" placeholder="KEYWORDS" class="my-input border py-1 pl-2 border-gray-300 rounded-md pr-8">
+                    <img src="../../../assets/history/search.png" alt="" class="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer">
+                </div>
+            </div>
+              
+        
+
+        <!-- filters -->
+        <div *ngIf="filters">
+            <div class=" border-gray-300 2xl:border-b-transparent sm:border-b flex-col flex-grow lg:border-b-transparent pl-4">
+              
+                <div class="flex pl-4 pr-4 pt-4 pb-2 flex-grow">
+                    <label class="fltrlbl pr-52 ml-4 sm:text-sm sm:ml-2.5 sm:pr-0 lg:-ml-3 lg:text-base xl:text-lg" style="color: #999999;">Filters</label>
+                </div>
+                    <!-- filter div -->
+                <div class="md:flex lg:flex-col">
+                  <!-- filter  -->
+                  <div class="chkbox flex pt-6 pb-2 sm:pt-1 sm:pb-1">
+                    <input
+                    type="radio"
+                    class="chkbx1 "
+                    size="none"
+                    id="chkbx1"
+                    name="chkbx1"
+                    (click)="toggleChecked(0)"
+                    [checked]="isChecked[0]"
+                  />
+                  
+                  <h6 class="ml-4"><label class=" sm:text-sm sm:text-center xl:text-sm 2xl:text-base lg:text-sm">All</label></h6>
+                  </div>
+        
+                  <div class="chkbox flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-10 xl:ml-0 md:ml-0">
+                    <input
+                    type="radio"
+                    class="chkbx2"
+                    size="none"
+                    id="chkbx2"
+                    name="chkbx2"
+                    (click)="toggleChecked(1)"
+                    [checked]="isChecked[1]"
+                  />
+                  
+                  <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Campagins</label></h6>
+                  </div>
+        
+                  <div class="chkbox flex pt-5 pb-2  sm:pt-1 sm:pb-1">
+                    <input
+                    type="radio"
+                    class="chkbx3"
+                    size="none"
+                    id="chkbx3"
+                    name="chkbx3"
+                    (click)="toggleChecked(2)"
+                    [checked]="isChecked[2]"
+                  />
+                  
+                  <h6 class="ml-4"><label class=" sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Events</label></h6>
+                  </div>
+        
+                  <div class="chkbox flex pt-5 pb-2 sm:pt-1 sm:pb-1 sm:ml-5 xl:ml-0 md:ml-0">
+                    <input
+                    type="radio"
+                    class="chkbx4"
+                    size="none"
+                    id="chkbx4"
+                    name="chkbx4"
+                    (click)="toggleChecked(3)"
+                    [checked]="isChecked[3]"
+                  />
+                  
+                  <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Weekly</label></h6>
+                  </div>
+        
+                    <div class="chkbox flex pt-5 pb-2 sm:pt-1 sm:pb-1">
+                      <input
+                      type="radio"
+                      class="chkbx5"
+                      size="none"
+                      id="chkbx5"
+                      name="chkbx5"
+                      (click)="toggleChecked(4)"
+                      [checked]="isChecked[4]"
+                    />
+                    
+                    <h6 class="ml-4"><label class="sm:text-sm xl:text-sm 2xl:text-base lg:text-sm">Daily</label></h6>
+                    </div>
+        
+        
+                </div>
+        </div>
+
+        <!-- <div *ngIf="!filters" class="">
+
+            <div class="fltr2 border-b border-gray-300 ml-3 mr-3">
+                <select class="bg-white p-2.5 pr-32 mt-2 sm:pr-24 md:pr-40 lg:pr-10 xl:pr-20 2xl:pr-32 flex-grow" style="color: #000000BF;">
+                    <option class="text-gray-500" value="" disabled selected>Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="search">Option 1</option>
+                    <option value="filter">Option 2</option>
+                  </select>
+            </div>
+
+            <div class="btnfltr ml-5">
+                <button class="bg-white border p-1.5 pl-4 pr-4 mr-0 rounded-lg flex flex-grow items-center  lg:pr-6 tracking-wider" style="color: #29CCB1; border-color: #29CCB1;">
+                    Apply Search Filters
+                </button>
+            </div>
+        </div> -->
+            
+        </div>
+
+          
+      </div>
+      <div class="flex-grow p-3 border-l">
+        <div class=" lg:flex flex-grow">
+      
+
+            <!-- for table -->
+            <div class="flex-grow">
+                <div *ngIf="clientTable" class="flex-grow">
+                    <app-latest></app-latest>
+                </div>
+
+                <div *ngIf="empTable" class="flex-grow">
+                    <app-pending></app-pending>
+                </div>
+
+                <div *ngIf="arcticleTable" class="flex-grow">
+                    <app-post-error></app-post-error>
+                </div>
+            </div>
+
+        </div>
+  
+        
+      </div>
+  </div>
+  </div>
+</div>

@@ -89,6 +89,7 @@
 }
 
 @media screen and (max-width: 600px) {
+  
   .table-container {
     border-collapse: collapse;
     padding-top: 10px;

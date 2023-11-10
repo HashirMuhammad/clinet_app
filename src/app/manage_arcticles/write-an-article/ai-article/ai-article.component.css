@@ -12,3 +12,31 @@
     height: 430px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .inputsdiv{
+    display: block;
+    padding-right: 20px;
+  }
+  .editorsdiv{
+    display: block;
+  }
+  .editor{
+    height: 200px;
+    width: fit-content;
+  }
+  .divbody{
+    height:auto;
+  }
+  .imagesectiondiv{
+    background-color: white;
+    margin-left: -16px;
+  }
+  .imagesectiondivbtn{
+    background-color: white;
+    margin-left: -16px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 15px;
+  }
+}

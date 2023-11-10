@@ -4,3 +4,19 @@
     accent-color: red;
     border-radius: 50%;
   }
+
+  @media screen and (max-width: 640px) {
+    .main{
+      padding: 10px;
+    }
+
+    .rd{
+      display: block;
+      padding-right: 20px;
+    }
+
+    .rd1{
+      margin-bottom: 30px;
+    }
+
+  }

@@ -12,7 +12,7 @@ public value: string = '../../../assets/manage_content/pic.png';
 
 
   routToArtiDetail(){
-    const aivalueToSend = 'false';
+    const aivalueToSend = 'ai_art';
     this.aivalueEmitter.emit(aivalueToSend);
   }
 
