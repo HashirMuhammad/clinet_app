@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-articles',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-articles.component.css']
 })
 export class ViewArticlesComponent {
+  ARTICLE_DATA = [
+    { articletId: 1, imgUrl: '', title: 'account and legal firms', arcticles: 'very utility class in Tailwind can be very utility class in Tailwind can be very utility class in Tailwind can be very utility class in Tailwind can be', published_date: '06/11/2023' },
+  ]  
 
+  constructor(
+    private route: ActivatedRoute,
+    
+    ) {
+    this.route.params.subscribe(params => {
+      const clientId = params['id'];
+      // Do something with clientId
+      console.log(clientId);
+    });
+  }
+  
 }

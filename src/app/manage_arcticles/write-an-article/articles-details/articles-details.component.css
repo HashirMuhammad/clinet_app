@@ -12,4 +12,9 @@
   .radiodiv{
     display: block;
   }
+  
+  .detailsdiv{
+    background-color: white;
+    border-radius: 15px;
+  }
 }

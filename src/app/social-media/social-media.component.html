@@ -11,7 +11,7 @@
                 <div class="mr-3">
                     <button class="flex border border-gray-300 rounded-lg px-4 py-1 text-base" (click)="routToConfig()">
                         Configuration
-                        <img src="../../assets/social-media/setting-3.png" (click)="routToConfig()" class="ml-2">
+                        <img src="../../assets/social-media/setting-3.png" (click)="routToConfig()" class="ml-2 mr-2">
                     </button>
                 </div>
     
@@ -170,15 +170,15 @@
 
             <!-- for table -->
             <div class="flex-grow">
-                <div *ngIf="clientTable" class="flex-grow">
+                <div *ngIf="clientTable" class="flex-grow latesttable">
                     <app-latest></app-latest>
                 </div>
 
-                <div *ngIf="empTable" class="flex-grow">
+                <div *ngIf="empTable" class="flex-grow pendingtable">
                     <app-pending></app-pending>
                 </div>
 
-                <div *ngIf="arcticleTable" class="flex-grow">
+                <div *ngIf="arcticleTable" class="flex-grow errortable">
                     <app-post-error></app-post-error>
                 </div>
             </div>

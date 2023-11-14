@@ -8,6 +8,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class ArticlesDetailsComponent {
   selectedOption: string = 'alwaysfeature';
   selectedOptionDate: string = 'pushAfter2Hrs';
+  public value: Date = new Date();
   @Output() detailvalueEmitter = new EventEmitter<string>();
 
 

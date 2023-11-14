@@ -149,3 +149,9 @@
     display: none;
   }
   
+  @media screen and (max-width: 640px) {
+
+    .sercli{
+        padding-left: 15px;
+    }
+  }

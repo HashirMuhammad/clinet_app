@@ -37,3 +37,11 @@
     transform: translateX(20px); /* Move the knob to the right when switched on */
     background-color: #CC0000;
 }
+
+
+@media screen and (max-width: 640px) {
+
+    .sercli{
+        padding-left: 10px;
+    }
+}

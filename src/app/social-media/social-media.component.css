@@ -174,3 +174,19 @@
   .chkbx5:checked {
     border-color: #3399FF; /* Override border color for checked state (purple) */
   }
+
+  @media screen and (max-width: 640px) {
+
+    .sercli{
+      padding-left: 15px;
+    }
+
+    .headerdiv{
+      display: block;
+    }
+
+    .latesttable, .pendingtable, .errortable{
+      overflow-y: auto;
+    }
+
+  }

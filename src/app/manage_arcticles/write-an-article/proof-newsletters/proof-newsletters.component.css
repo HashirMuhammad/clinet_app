@@ -1,0 +1,92 @@
+.inputbtn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #f0f2f7;
+    margin-right: 10px; /* Adjust margin for spacing between buttons */
+}
+.active {
+    background-color: #fff;
+    accent-color: red;
+}
+.button-group {
+    display: flex;
+}
+
+/* step 2  */
+/* -----------------table------------------------------------------- */
+  /* Style for the entire table */
+  .table-container {
+    border-collapse: collapse;
+  }
+  
+  /* Style for table header row */
+  .table-container thead tr {
+    background-color: #F0F2F7; /* Header background color */
+    border-radius: 50px; /* Rounded corners for header */
+  }
+  
+  /* Style for table header cells */
+  .table-container th {
+    padding: 10px;
+  }
+  
+  /* Style for table data cells */
+  .table-container td {
+    padding: 15px;
+    border-top: 1px solid #F0F2F7; /* Add a border between rows */
+  }
+  
+  /* Apply border-radius to the first and last cells in the header row */
+  .table-container th:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .table-container th:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  /* Optional: Add hover effect to rows */
+  .table-container tbody tr:hover {
+    background-color: #f0f0f0; /* Hover color */
+  }
+
+@media screen and (max-width: 640px) {
+    .bodydiv{
+        margin-left: 15px;
+    }
+    .texth2{
+        font-size: smaller;
+    }
+    .texth3{
+        font-size:x-small;
+    }
+    .imgdiv{
+        display: block;
+    }
+    .detailsdiv{
+        margin-top: 10px;
+    }
+    .step1div{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .tablediv {
+        overflow-x: auto;
+        padding: 10px;
+      }
+    .table-container {
+        border-collapse: collapse;
+        padding-top: 10px;
+        font-size: small;
+        overflow-x: auto;
+    }
+    .table-container td img {
+        width: 200%;
+        height: 200%;
+    }
+}

@@ -1,5 +1,5 @@
-<div class="flex-grow ">
-    <div class="pb-3 mt-3 ">
+<div class="detailsdiv flex-grow pb-4 h-full">
+    <div class="pb-3 mt-3 flex-grow h-full">
         <!-- Profiling -->
         <div class="rounded-lg m-3 p-5 ml-5 mr-5 mt-5 flex-grow" style="background-color: #F0F2F7BF;">
             <label class="text-base font-semibold tracking-wider">Profiling</label>
@@ -117,15 +117,20 @@
 
                 <!-- date -->
                 <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-                    <div class="date-picker-container mt-2 ml-3 mr-3">
+                    <div class="date-picker-container ml-3 mr-3">
                     <label class="text-base font-medium" style="color: #CC0000;">Choose a Date</label><br />
                         <div class="flex">
-                            <mat-form-field class="date">
+                            <!-- <mat-form-field class="date">
                                 <mat-label>Choose a date</mat-label>
                                 <input matInput [matDatepicker]="picker">
                                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
-                            </mat-form-field>
+                            </mat-form-field> -->
+                            <kendo-datepicker
+                            calendarType="classic"
+                            [value]="value"
+                            class="rounded-xl py-1.5 border"
+                            ></kendo-datepicker>
                         </div>
                     </div>
                 </div>
@@ -207,14 +212,19 @@
                     <div class="flex flex-col lg:flex-row mt-3 ">
                         <div class="flex-grow mb-4 lg:mb-0">
                             <label class="text-base font-medium" style="color: #CC0000;">Choose a Date</label><br />
-                            <div class="date-picker-container mt-2 ml-3 mr-3">
+                            <div class="date-picker-container mt-5 ml-3 mr-3">
                                 <div class="flex">
-                                    <mat-form-field class="date">
+                                    <!-- <mat-form-field class="date">
                                         <mat-label>Choose a date</mat-label>
                                         <input matInput [matDatepicker]="picker">
                                         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                                         <mat-datepicker #picker></mat-datepicker>
-                                    </mat-form-field>
+                                    </mat-form-field> -->
+                                    <kendo-datepicker
+                                    calendarType="classic"
+                                    [value]="value"
+                                    class="rounded-xl py-1.5 border"
+                                    ></kendo-datepicker>
                                 </div>
                             </div>
                         </div>

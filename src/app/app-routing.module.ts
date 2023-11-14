@@ -59,7 +59,7 @@ const routes: Routes = [
       { path: 'write_an_article', component: WriteAnArticleComponent },
       { path: 'article_details', component: ArticlesDetailsComponent },
       { path: 'manage_article', component: ManageArticlesComponent },
-      { path: 'view_article', component: ViewArticlesComponent },
+      { path: 'view_article/:id', component: ViewArticlesComponent },
       { path: 'search_article', component: SearchArticlesComponent },
       { path: 'proof_newsletters', component: ProofNewslettersComponent },
     ],

@@ -8,4 +8,8 @@
     .div3{
         display: block;
     }
+    .previewdiv{
+        background-color: white;
+    border-radius: 15px;
+    }
 }

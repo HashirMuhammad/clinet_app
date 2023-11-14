@@ -1,1 +1,148 @@
-<p>proof-newsletters works!</p>
+<div class="bodydiv pb-4 flex-grow h-full bg-white rounded-lg mr-5">
+    <div class="mb-5 mt-3 mr-7 rounded-3xl ">
+        <div class=" flex border-b border-gray-300">
+            <label class="flex pt-6 pb-5 pl-6 text-2xl">Proof Newsletters</label>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center">
+        <div class="w-fit rounded-lg mt-4 flex items-center">
+            <div class="button-group flex p-1 rounded-lg " style="background-color: #F0F2F7;">
+                <div [ngClass]="{'active': selectedOption === 'Step1'}"
+                    class="flex-grow p-1 rounded-lg flex items-center justify-center mr-2 lg:px-8">
+                    <input type="radio" class="custom-radio" (click)="setActive('Step1')" [(ngModel)]="selectedOption"
+                        value="Step1" class="inputbtn rounded-lg lg:text-xs xl:text-base">
+                    <label class="ml-2" (click)="setActive('Step1')">Step 1</label>
+                </div>
+
+                <div [ngClass]="{'active': selectedOption === 'Step2'}"
+                    class="flex-grow p-1 rounded-lg flex items-center justify-center mr-2 lg:px-8">
+                    <input type="radio" (click)="setActive('Step2')" class="custom-radio" [(ngModel)]="selectedOption"
+                        value="Step2" class="inputbtn rounded-lg lg:text-xs xl:text-base">
+                    <label class="ml-2" (click)="setActive('Step2')">Step 2</label>
+                </div>
+
+                <div [ngClass]="{'active': selectedOption === 'Step3'}"
+                    class="flex-grow p-1 rounded-lg flex items-center justify-center mr-2 lg:px-8">
+                    <input type="radio" (click)="setActive('Step3')" class="custom-radio" [(ngModel)]="selectedOption"
+                        value="Step3" class="inputbtn rounded-lg lg:text-xs xl:text-base">
+                    <label class="ml-2" (click)="setActive('Step3')">Step 3</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- step 1 div  -->
+    <div *ngIf="selectedOption === 'Step1'" class="flex justify-center items-center mt-4 ">
+        <div class="step1div flex bg-gray-100 space-x-5 pl-4 pr-4 rounded-t-xl">
+            <!-- Include List -->
+            <div class="list-container border-r pl-4 pr-4 ">
+                <div class="flex justify-center items-center pb-1.5 xl:px-36" style="background-color: #14CC8F;">
+                    <h2 class="texth2 text-white">INCLUDE</h2>
+                </div>
+
+                <ul class="mt-4">
+                    <li *ngFor="let article of includeList" (click)="moveToExcludeList(article)"
+                        class="bg-white border border-gray-300 rounded-xl p-2 mb-3 w-full">
+                        <div class="imgdiv flex">
+                            <div class="detailsdiv">
+                                <img src="{{article.imgUrl}}" class="mr-2">
+                            </div>
+                            <!-- <img src="../../../../assets/history/Avatar.png" alt=""> -->
+                            <div>
+                                <label class="texth2">{{ article.arcticles }}</label><br />
+                                <label class="texth3 text-gray-500 text-sm">Informanagement (System Article)</label>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Exclude List -->
+            <div class="list-container pl-4 pr-4">
+                <div class="flex justify-center items-center bg-red-500 pb-1.5 px-5 xl:px-36">
+                    <h2 class="texth2 text-white">EXCLUDE</h2>
+                </div>
+                <ul class="mt-4">
+                    <li *ngFor="let article of excludeList" (click)="moveToIncludeList(article)"
+                        class="bg-white border border-gray-300 rounded-xl p-2 mb-3 w-full">
+
+                        <div class="imgdiv flex">
+                            <div>
+                                <img src="{{article.imgUrl}}" class="mr-2">
+                            </div>
+                            <!-- <img src="../../../../assets/history/Avatar.png" alt=""> -->
+                            <div>
+                                <label class="texth2">{{ article.arcticles }}</label><br />
+                                <label class="texth3 text-gray-500 text-sm">Informanagement (System Article)</label>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- step 2 div  -->
+    <div *ngIf="selectedOption === 'Step2'" class="flex justify-center items-center mt-4">
+        <div class="tablediv">
+            <div class="table-container xl:p-3 sm:pt-3 flex-grow ">
+                <table id="tre" class="lg:flex-grow xl:flex-grow md:w-full sm:w-11/12">
+                    <thead class="">
+                        <tr class="bg-gray-400">
+                          <th class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
+                            <div class="flex">
+                              Profile
+                            </div>
+                          </th>
+                          <!-- Use *ngFor to loop through ProfileId and display the profile IDs -->
+                          <th *ngFor="let profId of ProfileId" class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
+                            <div class="flex bg-white rounded-lg justify-center items-center">
+                              {{ profId.profileid }}
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      
+                      <tbody>
+                        <!-- row1 -->
+                        <tr *ngFor="let client of Articles">
+                          <td class="ava flex">
+                            <img src="../../../../assets/history/Avatar.png">
+                            <div class="ml-2 mr-2 lg:mt-4">
+                              <label>{{ client.arcticles }}</label>
+                            </div>
+                          </td>
+                          <!-- Loop through ProfileId to generate checkboxes for each profile -->
+                          <td *ngFor="let profId of ProfileId" class="">
+                            <input
+                              type="checkbox"
+                              class="border-gray-400"
+                              size="medium"
+                              kendoCheckBox
+                              #medium
+                              [id]="'checkbox_' + client.articleId + '_' + profId.profileid"
+                              (change)="onCheckboxChange(client.articleId, profId.profileid)"
+                            />
+                          </td>
+                        </tr>
+                      </tbody>
+                </table>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- step 3 div  -->
+    <div *ngIf="selectedOption === 'Step3'" class="flex justify-center items-center mt-4">
+        hi step 3
+    </div>
+
+</div>

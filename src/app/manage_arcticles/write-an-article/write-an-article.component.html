@@ -1,4 +1,4 @@
-<div class="main pb-4 pr-4 flex-grow">
+<div class="main pb-4 pr-4 flex-grow h-full">
     <div class="bg-white rounded-lg pb-6 flex-grow h-screen mb-40">
      <div class="p-4 border-b">
         <div *ngIf="!(art === 'generateAI')">
@@ -9,7 +9,7 @@
          </div>
      </div>
 
-     <div class="pl-4 mt-2">
+     <div class="radiodiv  mt-2">
         <div *ngIf="toogle">
             <div class="p-3">
                 <label class="text-base font-medium text-red-500 ml-3">Please select how you want to Write an Article.</label>
@@ -51,22 +51,24 @@
                 </div>
         </div>
 
-        <div *ngIf="art === 'writeArticle' ">
-            <app-simple-article (valueEmitter)="receiveValue($event)"></app-simple-article>
+        <div class="h-full flex-grow">
+            <div *ngIf="art === 'writeArticle' " class="h-full">
+                <app-simple-article (valueEmitter)="receiveValue($event)"></app-simple-article>
+            </div>
+    
+            <div *ngIf="art === 'generateAI' " class="h-full">
+                <app-ai-article (aivalueEmitter)="aireceiveValue($event)"></app-ai-article>
+            </div>
+    
+            <div *ngIf="(receivedValue === 'false' || aireceivedValue === 'ai_art')" class="h-full">
+                <app-articles-details (detailvalueEmitter)="detailreceiveValue($event)"></app-articles-details>
+            </div>
+    
+            <div *ngIf="detailreceivedValue === 'false'" class="h-full">
+                <app-preview-article></app-preview-article>
+            </div>
+    
         </div>
-
-        <div *ngIf="art === 'generateAI' ">
-            <app-ai-article (aivalueEmitter)="aireceiveValue($event)"></app-ai-article>
-        </div>
-
-        <div *ngIf="(receivedValue === 'false' || aireceivedValue === 'ai_art')">
-            <app-articles-details (detailvalueEmitter)="detailreceiveValue($event)"></app-articles-details>
-        </div>
-
-        <div *ngIf="detailreceivedValue === 'false'">
-            <app-preview-article></app-preview-article>
-        </div>
-
 
         <!-- <app-ai-article></app-ai-article> -->
         <!-- <app-simple-article></app-simple-article> -->
