@@ -25,10 +25,10 @@ import { UnsubUsersComponent } from './manage_users/unsub-users/unsub-users.comp
 import { DataImportComponent } from './manage_users/data-import/data-import.component';
 import { HistoryComponent } from './history/history/history.component';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatDatepickerModule } from '@angular/material/datepicker';
+// import { MatNativeDateModule } from '@angular/material/core';
 import { ClientComponent } from './history/history/client/client.component';
 import { EmployeesComponent } from './history/history/employees/employees.component';
 import { ArticlesComponent } from './history/history/articles/articles.component';
@@ -100,10 +100,10 @@ import { ProofNewslettersComponent } from './manage_arcticles/write-an-article/p
     InputsModule,
     ButtonModule,
     DateInputsModule,
-    MatDatepickerModule,
-    MatInputModule,
-    MatNativeDateModule,
-    MatFormFieldModule,
+    // MatDatepickerModule,
+    // MatInputModule,
+    // MatNativeDateModule,
+    // MatFormFieldModule,
     EditorModule,
     LabelModule,
   ],

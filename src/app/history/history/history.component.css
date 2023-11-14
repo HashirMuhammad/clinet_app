@@ -309,6 +309,7 @@
   .chkbx10:checked {
     border-color: #3399FF; /* Override border color for checked state (purple) */
   }
+
 /* -------------------------------------------------------------------------------------- */
 
 /* Default styles for larger screens */
