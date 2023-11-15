@@ -14,13 +14,11 @@
   /* Adjust line height for vertical centering */
 }
 
-
 /* pagination -------------------------------------------------------------------------------------- */
 .pagibtn:hover {
   background-color: #FFF2F2;
   color: #CC0000;
   padding-top: 0%;
-
 }
 
 /* drop button------------------------------------------------------------------------------------ */
@@ -34,7 +32,6 @@
   align-self: start;
   width: 100%;
   padding: auto;
-
 }
 
 .drpbtn:hover {
@@ -241,8 +238,6 @@
   border-color: #3399FF;
   /* Override border color for checked state (purple) */
 }
-
-
 
 /* -----------------table------------------------------------------- */
 /* Style for the entire table */

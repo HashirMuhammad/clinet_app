@@ -1,6 +1,5 @@
 .container-with-scrollbar::-webkit-scrollbar {
   width: 5px;
-
 }
 
 .container-with-scrollbar::-webkit-scrollbar-track {
@@ -200,6 +199,4 @@
     width: 100%;
     padding: auto;
   }
-
-
 }

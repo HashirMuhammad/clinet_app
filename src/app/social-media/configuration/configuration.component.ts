@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ConfigurationComponent {
   date = '22/01/2023';
+  showDiv: boolean = false;
   records = [
     {
       avatar: '../../../assets/history/Avatar.png',
@@ -24,11 +25,11 @@ export class ConfigurationComponent {
       isChecked: false,
     },
   ];
-  showDiv: boolean = false;
 
   toggleSwitch(index: number): void {
     this.records[index].isChecked = !this.records[index].isChecked;
   }
+
   toggleAdditionalDiv() {
     this.showDiv = !this.showDiv;
   }

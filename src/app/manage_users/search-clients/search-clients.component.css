@@ -19,13 +19,11 @@
   border-color: #ccc;
 }
 
-
 /* pagination -------------------------------------------------------------------------------------- */
 .pagibtn:hover {
   background-color: #FFF2F2;
   color: #CC0000;
   padding-top: 0%;
-
 }
 
 /* drop button------------------------------------------------------------------------------------ */
@@ -39,7 +37,6 @@
   align-self: start;
   width: 100%;
   padding: auto;
-
 }
 
 .drpbtn:hover {
@@ -69,7 +66,6 @@
   color: white;
   cursor: pointer;
 } */
-
 
 /* -----------------table------------------------------------------- */
 /* Style for the entire table */
@@ -113,11 +109,6 @@
   background-color: #f0f0f0;
   /* Hover color */
 }
-
-
-
-
-
 
 /*--------------------------------------------------- checkboxes ------------------------------------------------*/
 .chkbx1 {
@@ -660,14 +651,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
   }
 
   .pagination-controls button {
     font-size: 14px;
     /* Adjust the font size as needed */
-
   }
 
   .pagination-jump input {
@@ -677,5 +665,4 @@
     margin-right: 0;
     /* Remove margin */
   }
-
 }

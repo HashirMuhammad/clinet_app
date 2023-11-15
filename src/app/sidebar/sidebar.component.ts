@@ -19,6 +19,8 @@ export class SidebarComponent {
   isMobile!: boolean;
   showDropdown = false;
 
+  constructor(private route: Router, private elRef: ElementRef) {}
+
   ngOnInit() {
     this.checkScreenSize(); // Check screen size when component is initialized
   }
@@ -55,8 +57,6 @@ export class SidebarComponent {
       this.showDropdown = false;
     }
   }
-
-  constructor(private route: Router, private elRef: ElementRef) {}
 
   //manage user button
   showManageUsersButtonList() {
@@ -112,22 +112,27 @@ export class SidebarComponent {
     this.route.navigate(['manage_content/write_an_article']);
     this.showDropdown = false;
   }
+
   routToConnection() {
     this.route.navigate(['connection']);
     this.showDropdown = false;
   }
+
   routToSocial() {
     this.route.navigate(['social_media']);
     this.showDropdown = false;
   }
+
   routToManageArticle() {
     this.route.navigate(['manage_content/manage_article']);
     this.showDropdown = false;
   }
+
   routToSearchArticle() {
     this.route.navigate(['manage_content/search_article']);
     this.showDropdown = false;
   }
+  
   routToProofNewsletters() {
     this.route.navigate(['manage_content/proof_newsletters']);
     this.showDropdown = false;

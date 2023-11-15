@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-pending',
   templateUrl: './pending.component.html',
-  styleUrls: ['./pending.component.css']
+  styleUrls: ['./pending.component.css'],
 })
-export class PendingComponent {
-
-}
+export class PendingComponent {}

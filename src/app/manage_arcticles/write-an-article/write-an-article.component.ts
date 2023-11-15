@@ -53,6 +53,7 @@ export class WriteAnArticleComponent {
     this.selectedOption = 'writeArticle';
     this.toogle = true;
   }
+  
   onNextClick() {
     this.art = this.selectedOption;
     console.log('Selected Option:', this.selectedOption);

@@ -242,8 +242,6 @@
   /* Override border color for checked state (purple) */
 }
 
-
-
 /* -----------------table------------------------------------------- */
 /* Style for the entire table */
 .table-container {
@@ -505,14 +503,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
   }
 
   .pagination-controls button {
     font-size: 14px;
     /* Adjust the font size as needed */
-
   }
 
   .pagination-jump input {

@@ -261,6 +261,7 @@ export class SearchEmployeesComponent {
   addFilter() {
     this.add_filter = !this.add_filter;
   }
+  
   //table select all---------------------------------------------------------------------------------------------
   toggleSelectAll() {
     this.EMPLOYEE_DATA.forEach((emplyee) => {
@@ -272,6 +273,7 @@ export class SearchEmployeesComponent {
     // Add your button click logic here
     this.panel = !this.panel;
   }
+
   @HostListener('mouseleave', ['$event'])
   onMouseLeave(event: MouseEvent) {
     if (this.panel) {

@@ -60,6 +60,7 @@ export class SocialMediaComponent {
   routToConfig() {
     this.route.navigate(['social_media/configuration']);
   }
+  
   routToNewPost() {
     this.route.navigate(['manage_articles/new_post']);
   }
