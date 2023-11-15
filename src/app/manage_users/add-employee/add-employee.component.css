@@ -1,20 +1,24 @@
 @media screen and (max-width: 600px) {
-    .addcli{
+    .addcli {
         padding-left: 15px;
         margin-top: 10px;
     }
-    .printed{
+
+    .printed {
         display: flex;
         margin-bottom: 5px;
     }
-    .printed label{
+
+    .printed label {
         display: inline-block;
         white-space: nowrap;
     }
-    .standard{
+
+    .standard {
         width: auto;
     }
-    .buttons button{
+
+    .buttons button {
         margin-bottom: 4px;
     }
 }

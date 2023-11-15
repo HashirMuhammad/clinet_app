@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { ArticleDataServiceService } from '../service/article-data-service.service'
+import { ArticleDataServiceService } from '../service/article-data-service.service';
 
 @Component({
   selector: 'app-simple-article',
   templateUrl: './simple-article.component.html',
-  styleUrls: ['./simple-article.component.css']
+  styleUrls: ['./simple-article.component.css'],
 })
 export class SimpleArticleComponent {
   file: File | null = null;
@@ -14,26 +14,32 @@ export class SimpleArticleComponent {
   progress = 0;
   uploadTask: any;
   uploadComplete = false;
-  // editor value 
+  // editor value
   public value: string = '';
 
   artTitle = '';
   artSource = '';
-  // for toogle 
+  // for toogle
   @Output() valueEmitter = new EventEmitter<string>();
 
   constructor(
     private router: Router,
-    private artservice: ArticleDataServiceService,
-    ) { }
+    private artservice: ArticleDataServiceService
+  ) {}
 
-  
-
-  // changing component 
-  routToArtiDetail(){
-
-    // sending to service 
-    this.artservice
+  discard() {
+    this.artTitle = '';
+    this.artSource = '';
+    this.value = '';
+    this.fileUrl = null;
+    this.file = null;
+    this.uploadComplete = false;
+    this.cancelUpload();
+  }
+  // changing component
+  routToArtiDetail() {
+    // sending to service
+    this.artservice;
 
     const valueToSend = 'false';
     this.valueEmitter.emit(valueToSend);
@@ -79,7 +85,6 @@ export class SimpleArticleComponent {
       }, intervalTime);
     }
   }
-  
 
   cancelUpload() {
     clearInterval(this.uploadTask);
@@ -94,7 +99,6 @@ export class SimpleArticleComponent {
     this.file = null;
     this.fileUrl = null;
   }
-  
 
   formatFileSize(size: number): string {
     const kilobyte = 1024;

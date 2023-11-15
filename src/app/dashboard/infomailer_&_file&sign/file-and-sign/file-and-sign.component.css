@@ -24,8 +24,10 @@ button.active {
 
 /* Style for table header row */
 .table-container thead tr {
-  background-color: #f0f2f7; /* Header background color */
-  border-radius: 15px; /* Rounded corners for header */
+  background-color: #f0f2f7;
+  /* Header background color */
+  border-radius: 15px;
+  /* Rounded corners for header */
 }
 
 /* Style for table header cells */
@@ -36,7 +38,8 @@ button.active {
 /* Style for table data cells */
 .table-container td {
   padding: 10px;
-  border-top: 1px solid #f0f2f7; /* Add a border between rows */
+  border-top: 1px solid #f0f2f7;
+  /* Add a border between rows */
 }
 
 /* Apply border-radius to the first and last cells in the header row */
@@ -52,9 +55,9 @@ button.active {
 
 /* Optional: Add hover effect to rows */
 .table-container tbody tr:hover {
-  background-color: #f0f0f0; /* Hover color */
+  background-color: #f0f0f0;
+  /* Hover color */
 }
-
 
 @media screen and (max-width: 600px) {
   button {
@@ -73,9 +76,7 @@ button.active {
     overflow-x: auto;
   }
 
-  .labeltd{
+  .labeltd {
     font-size: smaller;
-
   }
-  
 }

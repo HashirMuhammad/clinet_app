@@ -17,8 +17,9 @@
     display: none;
 }
 
-#toggleSwitch1:checked + .switch1 {
-    background-color: #FFEDED; /* Change color when switched on */
+#toggleSwitch1:checked+.switch1 {
+    background-color: #FFEDED;
+    /* Change color when switched on */
 }
 
 .switch1::before {
@@ -33,8 +34,9 @@
     transition: transform 0.3s;
 }
 
-#toggleSwitch1:checked + .switch1::before {
-    transform: translateX(20px); /* Move the knob to the right when switched on */
+#toggleSwitch1:checked+.switch1::before {
+    transform: translateX(20px);
+    /* Move the knob to the right when switched on */
     background-color: #CC0000;
 }
 
@@ -53,8 +55,9 @@
     display: none;
 }
 
-#toggleSwitch2:checked + .switch2 {
-    background-color: #FFEDED; /* Change color when switched on */
+#toggleSwitch2:checked+.switch2 {
+    background-color: #FFEDED;
+    /* Change color when switched on */
 }
 
 .switch2::before {
@@ -69,8 +72,9 @@
     transition: transform 0.3s;
 }
 
-#toggleSwitch2:checked + .switch2::before {
-    transform: translateX(20px); /* Move the knob to the right when switched on */
+#toggleSwitch2:checked+.switch2::before {
+    transform: translateX(20px);
+    /* Move the knob to the right when switched on */
     background-color: #CC0000;
 }
 
@@ -89,8 +93,9 @@
     display: none;
 }
 
-#toggleSwitch3:checked + .switch3 {
-    background-color: #FFEDED; /* Change color when switched on */
+#toggleSwitch3:checked+.switch3 {
+    background-color: #FFEDED;
+    /* Change color when switched on */
 }
 
 .switch3::before {
@@ -105,8 +110,9 @@
     transition: transform 0.3s;
 }
 
-#toggleSwitch3:checked + .switch3::before {
-    transform: translateX(20px); /* Move the knob to the right when switched on */
+#toggleSwitch3:checked+.switch3::before {
+    transform: translateX(20px);
+    /* Move the knob to the right when switched on */
     background-color: #CC0000;
 }
 
@@ -120,8 +126,10 @@
     cursor: pointer;
     outline: none;
     background-color: #f0f2f7;
-    margin-right: 10px; /* Adjust margin for spacing between buttons */
+    margin-right: 10px;
+    /* Adjust margin for spacing between buttons */
 }
+
 .active {
     background-color: #fff;
     accent-color: red;
@@ -133,25 +141,25 @@
     padding: 20px;
     text-align: center;
     cursor: pointer;
-  }
-  
-  .file-input-label {
+}
+
+.file-input-label {
     display: inline-block;
     background-color: #29CCB1;
     color: #FFFFFF;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  /* Hide the default file input style */
-  .file-input-label input {
-    display: none;
-  }
-  
-  @media screen and (max-width: 640px) {
+}
 
-    .sercli{
+/* Hide the default file input style */
+.file-input-label input {
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+
+    .sercli {
         padding-left: 15px;
     }
-  }
+}

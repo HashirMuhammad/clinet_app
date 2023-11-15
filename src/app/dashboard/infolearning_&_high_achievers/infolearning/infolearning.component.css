@@ -1,5 +1,4 @@
-
-  /* Style for the entire table */
+/* Style for the entire table */
 .table-container {
   border-collapse: collapse;
   width: 100%;
@@ -7,8 +6,10 @@
 
 /* Style for table header row */
 .table-container thead tr {
-  background-color: #F0F2F7; /* Header background color */
-  border-radius: 10px; /* Rounded corners for header */
+  background-color: #F0F2F7;
+  /* Header background color */
+  border-radius: 10px;
+  /* Rounded corners for header */
 }
 
 /* Style for table header cells */
@@ -19,7 +20,8 @@
 /* Style for table data cells */
 .table-container td {
   padding: 10px;
-  border-top: 1px solid #F0F2F7; /* Add a border between rows */
+  border-top: 1px solid #F0F2F7;
+  /* Add a border between rows */
 }
 
 /* Apply border-radius to the first and last cells in the header row */
@@ -35,7 +37,8 @@
 
 /* Optional: Add hover effect to rows */
 .table-container tbody tr:hover {
-  background-color: #f0f0f0; /* Hover color */
+  background-color: #f0f0f0;
+  /* Hover color */
 }
 
 @media screen and (max-width: 600px) {
@@ -48,5 +51,4 @@
   .table-container td label {
     font-size: small;
   }
-  
 }

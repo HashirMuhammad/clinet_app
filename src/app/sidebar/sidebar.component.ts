@@ -1,4 +1,10 @@
-import { Component, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Output,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
@@ -10,18 +16,16 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 export class SidebarComponent {
   showManageUsersMore = false;
   showManageContentMore = false;
-  isMobile! : boolean;
-  showDropdown =false;
+  isMobile!: boolean;
+  showDropdown = false;
 
   ngOnInit() {
     this.checkScreenSize(); // Check screen size when component is initialized
   }
 
-  
-
   toggleDropdown() {
     this.showDropdown = !this.showDropdown;
-    console.log(this.showDropdown)
+    console.log(this.showDropdown);
   }
 
   onResize(event: Event) {
@@ -32,16 +36,16 @@ export class SidebarComponent {
     this.isMobile = window.innerWidth < 641; // Adjust the threshold as needed
     // If the screen size is not mobile, hide the dropdown
     if (!this.isMobile) {
-      console.log("side mobile");
+      console.log('side mobile');
 
       this.showDropdown = false;
       this.isMobile = false;
     } else {
       this.showDropdown = false;
-      console.log("side window");
+      console.log('side window');
       this.isMobile = false;
       this.isMobile = true;
-      this.ngOnInit()
+      this.ngOnInit();
     }
   }
 
@@ -51,13 +55,9 @@ export class SidebarComponent {
       this.showDropdown = false;
     }
   }
-  
-  constructor(
-    private route: Router,
-    private elRef: ElementRef
-    ) {}
 
-  
+  constructor(private route: Router, private elRef: ElementRef) {}
+
   //manage user button
   showManageUsersButtonList() {
     this.showManageUsersMore = !this.showManageUsersMore;
@@ -67,72 +67,69 @@ export class SidebarComponent {
     this.showManageContentMore = !this.showManageContentMore;
   }
 
+  //side bar routes
+  routToDash() {
+    this.route.navigate(['dashboard']);
+    this.showDropdown = false;
+  }
 
+  routToSearchClients() {
+    this.route.navigate(['manage_users/search_clients']);
+    this.showDropdown = false;
+  }
 
-//side bar routes
-routToDash() {
-  this.route.navigate(['dashboard']);
-  this.showDropdown = false;
-}
+  routToAddClient() {
+    this.route.navigate(['manage_users/add_client']);
+    this.showDropdown = false;
+  }
 
-routToSearchClients() {
-  this.route.navigate(['manage_users/search_clients']);
-  this.showDropdown = false;
-}
+  routToSearchEmp() {
+    this.route.navigate(['manage_users/search_emp']);
+    this.showDropdown = false;
+  }
 
-routToAddClient() {
-  this.route.navigate(['manage_users/add_client']);
-  this.showDropdown = false;
-}
+  routToAddemployee() {
+    this.route.navigate(['manage_users/add_emp']);
+    this.showDropdown = false;
+  }
 
-routToSearchEmp() {
-  this.route.navigate(['manage_users/search_emp']);
-  this.showDropdown = false;
-}
+  routToUnSubUsers() {
+    this.route.navigate(['manage_users/unsubcribed_users']);
+    this.showDropdown = false;
+  }
 
-routToAddemployee(){
-  this.route.navigate(['manage_users/add_emp']);
-  this.showDropdown = false;
-}
+  routToUDataImport() {
+    this.route.navigate(['manage_users/data_import']);
+    this.showDropdown = false;
+  }
 
-routToUnSubUsers(){
-  this.route.navigate(['manage_users/unsubcribed_users']);
-  this.showDropdown = false;
-}
+  routToHistory() {
+    this.route.navigate(['history']);
+    this.showDropdown = false;
+  }
 
-routToUDataImport(){
-  this.route.navigate(['manage_users/data_import']);
-  this.showDropdown = false;
+  routToWriteAnArticle() {
+    this.route.navigate(['manage_content/write_an_article']);
+    this.showDropdown = false;
+  }
+  routToConnection() {
+    this.route.navigate(['connection']);
+    this.showDropdown = false;
+  }
+  routToSocial() {
+    this.route.navigate(['social_media']);
+    this.showDropdown = false;
+  }
+  routToManageArticle() {
+    this.route.navigate(['manage_content/manage_article']);
+    this.showDropdown = false;
+  }
+  routToSearchArticle() {
+    this.route.navigate(['manage_content/search_article']);
+    this.showDropdown = false;
+  }
+  routToProofNewsletters() {
+    this.route.navigate(['manage_content/proof_newsletters']);
+    this.showDropdown = false;
+  }
 }
-
-routToHistory(){
-  this.route.navigate(['history']);
-  this.showDropdown = false;
-}
-
-routToWriteAnArticle(){
-  this.route.navigate(['manage_content/write_an_article']);
-  this.showDropdown = false;
-}
-routToConnection(){
-  this.route.navigate(['connection']);
-  this.showDropdown = false;
-}
-routToSocial(){
-  this.route.navigate(['social_media']);
-  this.showDropdown = false;
-}
-routToManageArticle(){
-  this.route.navigate(['manage_content/manage_article']);
-  this.showDropdown = false;
-}
-routToSearchArticle(){
-  this.route.navigate(['manage_content/search_article']);
-  this.showDropdown = false;
-}
-routToProofNewsletters(){
-  this.route.navigate(['manage_content/proof_newsletters']);
-  this.showDropdown = false;
-}
-}
-

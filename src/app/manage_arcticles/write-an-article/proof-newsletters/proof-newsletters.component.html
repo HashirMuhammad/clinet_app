@@ -95,43 +95,38 @@
                 <table id="tre" class="lg:flex-grow xl:flex-grow md:w-full sm:w-11/12">
                     <thead class="">
                         <tr class="bg-gray-400">
-                          <th class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
-                            <div class="flex">
-                              Profile
-                            </div>
-                          </th>
-                          <!-- Use *ngFor to loop through ProfileId and display the profile IDs -->
-                          <th *ngFor="let profId of ProfileId" class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
-                            <div class="flex bg-white rounded-lg justify-center items-center">
-                              {{ profId.profileid }}
-                            </div>
-                          </th>
+                            <th class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
+                                <div class="flex">
+                                    Profile
+                                </div>
+                            </th>
+                            <!-- Use *ngFor to loop through ProfileId and display the profile IDs -->
+                            <th *ngFor="let profId of ProfileId"
+                                class="text-start xl:text-sm lg:text-sm font-medium sm:text-xs">
+                                <div class="flex bg-white rounded-lg justify-center items-center">
+                                    {{ profId.profileid }}
+                                </div>
+                            </th>
                         </tr>
-                      </thead>
-                      
-                      <tbody>
+                    </thead>
+
+                    <tbody>
                         <!-- row1 -->
                         <tr *ngFor="let client of Articles">
-                          <td class="ava flex">
-                            <img src="../../../../assets/history/Avatar.png">
-                            <div class="ml-2 mr-2 lg:mt-4">
-                              <label>{{ client.arcticles }}</label>
-                            </div>
-                          </td>
-                          <!-- Loop through ProfileId to generate checkboxes for each profile -->
-                          <td *ngFor="let profId of ProfileId" class="">
-                            <input
-                              type="checkbox"
-                              class="border-gray-400"
-                              size="medium"
-                              kendoCheckBox
-                              #medium
-                              [id]="'checkbox_' + client.articleId + '_' + profId.profileid"
-                              (change)="onCheckboxChange(client.articleId, profId.profileid)"
-                            />
-                          </td>
+                            <td class="ava flex">
+                                <img src="../../../../assets/history/Avatar.png">
+                                <div class="ml-2 mr-2 lg:mt-4">
+                                    <label>{{ client.arcticles }}</label>
+                                </div>
+                            </td>
+                            <!-- Loop through ProfileId to generate checkboxes for each profile -->
+                            <td *ngFor="let profId of ProfileId" class="">
+                                <input type="checkbox" class="border-gray-400" size="medium" kendoCheckBox #medium
+                                    [id]="'checkbox_' + client.articleId + '_' + profId.profileid"
+                                    (change)="onCheckboxChange(client.articleId, profId.profileid)" />
+                            </td>
                         </tr>
-                      </tbody>
+                    </tbody>
                 </table>
 
 

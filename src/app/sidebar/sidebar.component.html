@@ -1,273 +1,314 @@
-<div *ngIf="!isMobile" class="container-with-scrollbar sm:w-48 md:w-56 sm:overflow-x-hidden lg:w-56 xl:w-72 fixed bottom-0 top-4 left-4 rounded-s-3xl w-80 p-4 rounded-r-3xl bg-white mb-3">
+<div *ngIf="!isMobile"
+    class="container-with-scrollbar sm:w-48 md:w-56 sm:overflow-x-hidden lg:w-56 xl:w-72 fixed bottom-0 top-4 left-4 rounded-s-3xl w-80 p-4 rounded-r-3xl bg-white mb-3">
     <div>
         <img src="../../assets/sidebar/informanagemt.png" class=" sm:ml-0 md:ml-1 mt-3 mr-2 ml-5 mb-7 w-max h-auto">
 
         <!-- dashboard -->
         <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToDash()">
-            <img src="../../assets/sidebar/home2.png" (click)="routToDash()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            <img src="../../assets/sidebar/home2.png" (click)="routToDash()"
+                class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
             Dashboard
         </button>
 
         <!-- ManageUsers -->
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="showManageUsersButtonList()" [class.active]="showManageUsersMore">
-            <img src="../../assets/sidebar/mu-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mu mr-4" [class.activeimg]="showManageUsersMore">
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="showManageUsersButtonList()"
+            [class.active]="showManageUsersMore">
+            <img src="../../assets/sidebar/mu-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mu mr-4"
+                [class.activeimg]="showManageUsersMore">
             Manage Users
         </button>
 
-            <div *ngIf="showManageUsersMore === true">
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchClients()">
-                <img src="../../assets/sidebar/user/search-user-b.png" (click)="routToSearchClients()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+        <div *ngIf="showManageUsersMore === true">
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchClients()">
+                <img src="../../assets/sidebar/user/search-user-b.png" (click)="routToSearchClients()"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Search Clients
             </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddClient()">
-                <img src="../../assets/sidebar/user/add-user.png" (click)="routToAddClient()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddClient()">
+                <img src="../../assets/sidebar/user/add-user.png" (click)="routToAddClient()"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Add Clients</button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchEmp()">
-                <img src="../../assets/sidebar/user/search-employye.png" (click)="routToSearchEmp()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchEmp()">
+                <img src="../../assets/sidebar/user/search-employye.png" (click)="routToSearchEmp()"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Search employees
             </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddemployee()">
-                <img src="../../assets/sidebar/user/add-employees.png" (click)="routToAddemployee()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddemployee()">
+                <img src="../../assets/sidebar/user/add-employees.png" (click)="routToAddemployee()"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Add employees
             </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUnSubUsers()">
-                <img src="../../assets/sidebar/user/unsub.png" (click)="routToUnSubUsers()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUnSubUsers()">
+                <img src="../../assets/sidebar/user/unsub.png" (click)="routToUnSubUsers()"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Unsubcribed Users
             </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUDataImport()">
-                <img src="../../assets/sidebar/user/data-imp.png" (click)="routToUDataImport()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUDataImport()">
+                <img src="../../assets/sidebar/user/data-imp.png" (click)="routToUDataImport()"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
                 Data Import
             </button>
-            </div>
+        </div>
 
-    <!-- ManageContent -->
-    <button class="sm:text-sm lg:text-lg button  text-left flex items-center" (click)="showManageContentButtonList()" [class.activecontent]="showManageContentMore">
-        <img src="../../assets/sidebar/mc-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" [class.activecontentimg]="showManageContentMore">
-        Manage Content
-    </button>
-
-    <div *ngIf="showManageContentMore === true">
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToWriteAnArticle()">
-            <img src="../../assets/sidebar/content/write-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToWriteAnArticle()">
-            Write an Article
+        <!-- ManageContent -->
+        <button class="sm:text-sm lg:text-lg button  text-left flex items-center"
+            (click)="showManageContentButtonList()" [class.activecontent]="showManageContentMore">
+            <img src="../../assets/sidebar/mc-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4"
+                [class.activecontentimg]="showManageContentMore">
+            Manage Content
         </button>
 
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToManageArticle()">
-            <img src="../../assets/sidebar/content/man-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToManageArticle()">
-            Manage Articles
+        <div *ngIf="showManageContentMore === true">
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToWriteAnArticle()">
+                <img src="../../assets/sidebar/content/write-b.png"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToWriteAnArticle()">
+                Write an Article
+            </button>
+
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToManageArticle()">
+                <img src="../../assets/sidebar/content/man-b.png"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToManageArticle()">
+                Manage Articles
+            </button>
+
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchArticle()">
+                <img src="../../assets/sidebar/content/ser-b4.png"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToSearchArticle()">
+                Search Articles
+            </button>
+
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToProofNewsletters()">
+                <img src="../../assets/sidebar/content/proof-b.png"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToProofNewsletters()">
+                Proof Newsletter
+            </button>
+        </div>
+
+        <!-- history -->
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToHistory()">
+            <img src="../../assets/sidebar/history.png" (click)="routToHistory()"
+                class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            History
         </button>
 
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchArticle()">
-            <img src="../../assets/sidebar/content/ser-b4.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToSearchArticle()">
-            Search Articles
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSocial()">
+            <img src="../../assets/sidebar/social.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4"
+                (click)="routToSocial()">
+            Social Media
         </button>
 
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToProofNewsletters()">
-            <img src="../../assets/sidebar/content/proof-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToProofNewsletters()">
-            Proof Newsletter
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            Reports
         </button>
-      </div>
 
-    <!-- history -->
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToHistory()">
-        <img src="../../assets/sidebar/history.png" (click)="routToHistory()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        History
-    </button>
-    
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSocial()">
-        <img src="../../assets/sidebar/social.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToSocial()">
-        Social Media
-    </button>
-    
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        Reports
-    </button>
-
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/mailer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        InfoMailer
-    </button>
-    
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/file.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        File & Sign
-    </button>
-
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/learn.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        InforLearning
-    </button>
-
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/wijzer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        InfoWijzers
-    </button>
-
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToConnection()">
-        <img src="../../assets/sidebar/share.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToConnection()">
-        Connections
-    </button>
-
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" >
-        Reports
-    </button>
-
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/bug.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        Report a problem
-    </button>
-
-
-    <div class="sm:relative sm:bottom-0 lg:relative md:relative flex  justify-between items-center ml-5">
-        <!-- Content goes here -->
-        <button class="sm:text-sm lg:text-lg app">
-            <img src="../../assets/sidebar/app.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 icon mr-4">
-            More Apps
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/mailer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            InfoMailer
         </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/file.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            File & Sign
+        </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/learn.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            InforLearning
+        </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/wijzer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            InfoWijzers
+        </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToConnection()">
+            <img src="../../assets/sidebar/share.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4"
+                (click)="routToConnection()">
+            Connections
+        </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            Reports
+        </button>
+
+        <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+            <img src="../../assets/sidebar/bug.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+            Report a problem
+        </button>
+
+
+        <div class="sm:relative sm:bottom-0 lg:relative md:relative flex  justify-between items-center ml-5">
+            <!-- Content goes here -->
+            <button class="sm:text-sm lg:text-lg app">
+                <img src="../../assets/sidebar/app.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 icon mr-4">
+                More Apps
+            </button>
+        </div>
     </div>
-    </div> 
-    
+
 </div>
 
 
 
-<div *ngIf="isMobile" class="sidebar" >
+<div *ngIf="isMobile" class="sidebar">
     <div class="relative">
         <img src="../assets/bg-img/3169290-200.png" (click)="toggleDropdown()" class="w-10 h-10 mr-5" />
-    <div *ngIf="showDropdown" class="absolute flex-col bg-white overflow-y-auto w-64 rounded-lg p-2">
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToDash()">
-            <img src="../../assets/sidebar/home2.png" (click)="routToDash()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-            Dashboard
-        </button>
+        <div *ngIf="showDropdown" class="absolute flex-col bg-white overflow-y-auto w-64 rounded-lg p-2">
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToDash()">
+                <img src="../../assets/sidebar/home2.png" (click)="routToDash()"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Dashboard
+            </button>
 
-        <!-- ManageUsers -->
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="showManageUsersButtonList()" [class.active]="showManageUsersMore">
-            <img src="../../assets/sidebar/mu-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mu mr-4" [class.activeimg]="showManageUsersMore">
-            Manage Users
-        </button>
+            <!-- ManageUsers -->
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center"
+                (click)="showManageUsersButtonList()" [class.active]="showManageUsersMore">
+                <img src="../../assets/sidebar/mu-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mu mr-4"
+                    [class.activeimg]="showManageUsersMore">
+                Manage Users
+            </button>
 
             <div *ngIf="showManageUsersMore === true">
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchClients()">
-                <img src="../../assets/sidebar/user/search-user-b.png" (click)="routToSearchClients()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-                Search Clients
-            </button>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center"
+                    (click)="routToSearchClients()">
+                    <img src="../../assets/sidebar/user/search-user-b.png" (click)="routToSearchClients()"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                    Search Clients
+                </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddClient()">
-                <img src="../../assets/sidebar/user/add-user.png" (click)="routToAddClient()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-                Add Clients</button>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddClient()">
+                    <img src="../../assets/sidebar/user/add-user.png" (click)="routToAddClient()"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                    Add Clients</button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchEmp()">
-                <img src="../../assets/sidebar/user/search-employye.png" (click)="routToSearchEmp()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-                Search employees
-            </button>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchEmp()">
+                    <img src="../../assets/sidebar/user/search-employye.png" (click)="routToSearchEmp()"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                    Search employees
+                </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddemployee()">
-                <img src="../../assets/sidebar/user/add-employees.png" (click)="routToAddemployee()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-                Add employees
-            </button>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToAddemployee()">
+                    <img src="../../assets/sidebar/user/add-employees.png" (click)="routToAddemployee()"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                    Add employees
+                </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUnSubUsers()">
-                <img src="../../assets/sidebar/user/unsub.png" (click)="routToUnSubUsers()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-                Unsubcribed Users
-            </button>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUnSubUsers()">
+                    <img src="../../assets/sidebar/user/unsub.png" (click)="routToUnSubUsers()"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                    Unsubcribed Users
+                </button>
 
-              <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUDataImport()">
-                <img src="../../assets/sidebar/user/data-imp.png" (click)="routToUDataImport()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-                Data Import
-            </button>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToUDataImport()">
+                    <img src="../../assets/sidebar/user/data-imp.png" (click)="routToUDataImport()"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                    Data Import
+                </button>
             </div>
 
             <!-- ManageContent -->
-    <button class="sm:text-sm lg:text-lg button  text-left flex items-center" (click)="showManageContentButtonList()" [class.activecontent]="showManageContentMore">
-        <img src="../../assets/sidebar/mc-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" [class.activecontentimg]="showManageContentMore">
-        Manage Content
-    </button>
+            <button class="sm:text-sm lg:text-lg button  text-left flex items-center"
+                (click)="showManageContentButtonList()" [class.activecontent]="showManageContentMore">
+                <img src="../../assets/sidebar/mc-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4"
+                    [class.activecontentimg]="showManageContentMore">
+                Manage Content
+            </button>
 
-    <div *ngIf="showManageContentMore === true">
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToWriteAnArticle()">
-            <img src="../../assets/sidebar/content/write-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToWriteAnArticle()">
-            Write an Article
-        </button>
+            <div *ngIf="showManageContentMore === true">
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center"
+                    (click)="routToWriteAnArticle()">
+                    <img src="../../assets/sidebar/content/write-b.png"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToWriteAnArticle()">
+                    Write an Article
+                </button>
 
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToManageArticle()">
-            <img src="../../assets/sidebar/content/man-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToManageArticle()">
-            Manage Articles
-        </button>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center"
+                    (click)="routToManageArticle()">
+                    <img src="../../assets/sidebar/content/man-b.png"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToManageArticle()">
+                    Manage Articles
+                </button>
 
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSearchArticle()">
-            <img src="../../assets/sidebar/content/ser-b4.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToSearchArticle()">
-            Search Articles
-        </button>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center"
+                    (click)="routToSearchArticle()">
+                    <img src="../../assets/sidebar/content/ser-b4.png"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToSearchArticle()">
+                    Search Articles
+                </button>
 
-        <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToProofNewsletters()">
-            <img src="../../assets/sidebar/content/proof-b.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToProofNewsletters()">
-            Proof Newsletter
-        </button>
-      </div>
+                <button class="sm:text-sm lg:text-lg button text-left flex items-center"
+                    (click)="routToProofNewsletters()">
+                    <img src="../../assets/sidebar/content/proof-b.png"
+                        class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToProofNewsletters()">
+                    Proof Newsletter
+                </button>
+            </div>
 
-    <!-- history -->
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToHistory()">
-        <img src="../../assets/sidebar/history.png" (click)="routToHistory()" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        History
-    </button>
-    
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSocial()">
-        <img src="../../assets/sidebar/social.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4" (click)="routToSocial()">
-        Social Media
-    </button>
-    
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        Reports
-    </button>
+            <!-- history -->
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToHistory()">
+                <img src="../../assets/sidebar/history.png" (click)="routToHistory()"
+                    class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                History
+            </button>
 
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/mailer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        InfoMailer
-    </button>
-    
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/file.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        File & Sign
-    </button>
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center" (click)="routToSocial()">
+                <img src="../../assets/sidebar/social.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4"
+                    (click)="routToSocial()">
+                Social Media
+            </button>
 
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/learn.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        InforLearning
-    </button>
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Reports
+            </button>
 
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/wijzer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        InfoWijzers
-    </button>
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/mailer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                InfoMailer
+            </button>
 
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/share.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        Connections
-    </button>
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/file.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                File & Sign
+            </button>
 
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        Reports
-    </button>
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/learn.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                InforLearning
+            </button>
 
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/bug.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        Report a problem
-    </button>
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/wijzer.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                InfoWijzers
+            </button>
 
-    <button class="sm:text-sm lg:text-lg button text-left flex items-center">
-        <img src="../../assets/sidebar/app.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
-        More Apps
-    </button>
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/share.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Connections
+            </button>
 
-    </div>
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/reports.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Reports
+            </button>
+
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/bug.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                Report a problem
+            </button>
+
+            <button class="sm:text-sm lg:text-lg button text-left flex items-center">
+                <img src="../../assets/sidebar/app.png" class="sm:mr-2 sm:w-5 sm:h-5 lg:mr-4 lg:w-7 lg:h-7 mr-4">
+                More Apps
+            </button>
+
+        </div>
     </div>
 </div>

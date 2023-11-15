@@ -2,31 +2,34 @@
   <div class="inputdiv flex">
     <!-- inputs -->
     <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-      <label class="text-base font-medium" style="color: #CC0000;">Article Title</label><br/>
-      <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
+      <label class="text-base font-medium" style="color: #CC0000;">Article Title</label><br />
+      <input [(ngModel)]="artTitle" type="text" placeholder="Enter Here..."
+        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+    </div>
+
+    <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+      <label class="text-base font-medium" style="color: #CC0000;">Source</label><br />
+      <input [(ngModel)]="artSource" type="text" placeholder="Enter Here..."
+        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+    </div>
+
+    <!-- file -->
+    <div class="filediv bg-slate-50 row-span-full">
+      <label class="text-base font-medium" style="color: #CC0000;">Attach Image</label><br />
+      <div class="drop-zone w-96" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+        <p>Drop files here or click to upload</p>
+        <input [(ngModel)]="file" type="file" (change)="onFileSelected($event)" accept="image/*" [disabled]="uploading"
+          class="mt-5 justify-center items-center">
+      </div>
+    </div>
   </div>
 
-  <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-      <label class="text-base font-medium" style="color: #CC0000;">Source</label><br/>
-      <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
-  </div>
-  
-  <!-- file -->
-  <div class="filediv bg-slate-50 row-span-full">
-      <label class="text-base font-medium" style="color: #CC0000;">Attach Image</label><br/>
-        <div class="drop-zone w-96" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
-          <p>Drop files here or click to upload</p>
-          <input type="file" (change)="onFileSelected($event)" accept="image/*" [disabled]="uploading" class="mt-5 justify-center items-center">
-        </div>    
-  </div>
-  </div>
+  <div class="textareadiv flex">
+    <!-- textarea -->
+    <div class="editor flex-grow  rounded-lg">
+      <label class="text-base font-medium" style="color: #CC0000;">Summary</label><br />
 
-   <div class="textareadiv flex">
-     <!-- textarea -->
-     <div class="editor flex-grow  rounded-lg">
-      <label class="text-base font-medium" style="color: #CC0000;">Summary</label><br/>
-
-    <kendo-editor [value]="value" class="editor"></kendo-editor>
+      <kendo-editor [(ngModel)]="value" [value]="value" class="editor"></kendo-editor>
     </div>
 
     <!-- file  -->
@@ -34,43 +37,41 @@
       <div *ngIf="file && !uploadComplete" class="mt-5">
         <p>{{ file.name }}</p>
         <div *ngIf="uploading" class="flex">
-            <div class="progress">
-              <div class="progress-bar" [style.width.%]="progress">
-             
-              </div>
+          <div class="progress">
+            <div class="progress-bar" [style.width.%]="progress">
+
             </div>
-            <div *ngIf="uploading">
+          </div>
+          <div *ngIf="uploading">
             <img src="../../../assets/manage_content/x-circle.png" (click)="cancelUpload()" class="w-3 h-3 mt-1 ml-2">
-            </div>
-            <!-- <button  [disabled]="!uploading">Cancel</button> -->
+          </div>
+          <!-- <button  [disabled]="!uploading">Cancel</button> -->
 
         </div>
         <p>{{ formatFileSize(file.size) }}</p>
         <!-- <button (click)="uploadFile()" [disabled]="uploading">Upload</button> -->
       </div>
-      
-      
-      
-      <div class="img2div border border-black w-96">
-        <div *ngIf="uploadComplete" class="mt-5 w-40 bg-slate-300">
-          <button (click)="deselectFile()"><img src="../../../assets/manage_content/x-circle.png"></button>
-          <img [src]="fileUrl" alt="Uploaded File">
+
+
+
+      <div class="img2div w-96">
+        <div *ngIf="uploadComplete" class="mt-5 w-80 bg-slate-300">
+          <button (click)="deselectFile()">
+            <img src="../../../assets/manage_content/x-circle.png"></button>
+          <img [src]="fileUrl" alt="Uploaded File" class="w-96">
         </div>
       </div>
 
       <div class="btndiv flex mt-8 mr-3 absolute bottom-4 right-4">
         <div class="ml-auto">
-            <button class="p-1 rounded-lg px-5 mr-5" style="background-color: #00000026;" >Discard</button>
-            <button class="p-1 rounded-lg px-5 mr-5 text-white" style="background-color: #29CCB1;" (click)="routToArtiDetail()">Next</button>
+          <button class="p-1 rounded-lg px-5 mr-5" style="background-color: #00000026;"
+            (click)="discard()">Discard</button>
+          <button class="p-1 rounded-lg px-5 mr-5 text-white" style="background-color: #29CCB1;"
+            (click)="routToArtiDetail()">Next</button>
         </div>
+      </div>
     </div>
-    </div>
-    
-   </div>
-   
-</div>
 
-   
-      
-      
-      
+  </div>
+
+</div>

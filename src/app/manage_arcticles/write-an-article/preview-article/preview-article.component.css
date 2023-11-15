@@ -1,15 +1,18 @@
 @media screen and (max-width: 640px) {
-    .div1{
+    .div1 {
         display: block;
     }
-    .div2{
+
+    .div2 {
         display: block;
     }
-    .div3{
+
+    .div3 {
         display: block;
     }
-    .previewdiv{
+
+    .previewdiv {
         background-color: white;
-    border-radius: 15px;
+        border-radius: 15px;
     }
 }

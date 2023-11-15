@@ -20,20 +20,22 @@
   background-color: #29CCB1;
 }
 
-.editor{
+.editor {
   height: 570px;
 }
 
 @media screen and (max-width: 640px) {
-  .inputdiv{
+  .inputdiv {
     display: block;
     padding-right: 20px;
   }
-  .filediv{
+
+  .filediv {
     padding-right: 20px;
     background-color: white;
     margin-bottom: 20px;
   }
+
   .drop-zone {
     border: 2px dashed #ccc;
     border-radius: 8px;
@@ -42,17 +44,21 @@
     text-align: center;
     cursor: pointer;
   }
-  .textareadiv{
+
+  .textareadiv {
     display: block;
     padding-right: 20px;
   }
-  .imgdiv{
+
+  .imgdiv {
     margin-left: 0px;
     width: 330px;
   }
-  .img2div{
+
+  .img2div {
     width: 330px;
   }
+
   .progress {
     width: 320px;
     height: 10px;
@@ -60,11 +66,13 @@
     border-radius: 4px;
     margin-top: 10px;
   }
-  .editor{
+
+  .editor {
     height: 200px;
     margin-bottom: 40px;
   }
-  .btndiv{
+
+  .btndiv {
     position: relative;
     margin-right: 0px;
   }

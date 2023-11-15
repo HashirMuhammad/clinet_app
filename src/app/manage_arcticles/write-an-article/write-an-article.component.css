@@ -1,25 +1,27 @@
 .custom-radio {
-    width: 20px; /* Adjust the width as needed */
-    height: 20px; /* Adjust the height as needed */
-    accent-color: red;
-    border-radius: 50%;
+  width: 20px;
+  /* Adjust the width as needed */
+  height: 20px;
+  /* Adjust the height as needed */
+  accent-color: red;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 10px;
   }
 
-  @media screen and (max-width: 640px) {
-    .main{
-      padding: 10px;
-    }
-
-    .rd{
-      display: block;
-      padding-right: 20px;
-    }
-
-    .rd1{
-      margin-bottom: 30px;
-    }
-
-    .radiodiv{
-      padding-left: -15px;
-    }
+  .rd {
+    display: block;
+    padding-right: 20px;
   }
+
+  .rd1 {
+    margin-bottom: 30px;
+  }
+
+  .radiodiv {
+    padding-left: -15px;
+  }
+}

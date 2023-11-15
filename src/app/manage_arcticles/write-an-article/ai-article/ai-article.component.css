@@ -1,38 +1,44 @@
-.editor{
+.editor {
   height: 570px;
 }
 
 @media screen and (max-width: 768px) {
-  .editor{
+  .editor {
     height: 370px;
   }
 }
+
 @media screen and (max-width: 1024px) {
-  .editor{
+  .editor {
     height: 430px;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .inputsdiv{
+  .inputsdiv {
     display: block;
     padding-right: 20px;
   }
-  .editorsdiv{
+
+  .editorsdiv {
     display: block;
   }
-  .editor{
+
+  .editor {
     height: 200px;
     width: fit-content;
   }
-  .divbody{
-    height:auto;
+
+  .divbody {
+    height: auto;
   }
-  .imagesectiondiv{
+
+  .imagesectiondiv {
     background-color: white;
     margin-left: -16px;
   }
-  .imagesectiondivbtn{
+
+  .imagesectiondivbtn {
     background-color: white;
     margin-left: -16px;
     border-bottom-left-radius: 15px;

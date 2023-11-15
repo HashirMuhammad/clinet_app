@@ -9,6 +9,7 @@
 }
 
 @media screen and (min-width: 641px) and (max-width: 768px) {
+
   /* Styles for screens between 641px and 768px wide */
   .app-file {
     width: 365px;
@@ -30,39 +31,53 @@
 }
 
 @media screen and (max-width: 600px) {
+
   /* Styles for small screens go here */
   body {
-    font-size: 10px; /* Adjust font size for mobile */
+    font-size: 10px;
+    /* Adjust font size for mobile */
     /* Other mobile styles... */
   }
-  .card{
-    flex:none;
+
+  .card {
+    flex: none;
     flex-direction: column;
   }
-  .subscriber, .employees, .clients{
+
+  .subscriber,
+  .employees,
+  .clients {
     margin-left: 15px;
     width: 90%;
     margin-bottom: 10px;
   }
 
-  .printNewsletter, .emailNewsletter, .unsub{
+  .printNewsletter,
+  .emailNewsletter,
+  .unsub {
     margin-left: 15px;
     width: 90%;
     margin-bottom: 10px;
   }
 
-  .graph1,.graph2{
+  .graph1,
+  .graph2 {
     margin-left: 15px;
     width: 95%;
     height: 30%;
     margin-bottom: 10px;
   }
-  .g1,.g2{
+
+  .g1,
+  .g2 {
     height: fit-content;
     padding-bottom: 10px;
   }
 
-  .info,.file, .learn,.high{
+  .info,
+  .file,
+  .learn,
+  .high {
     background-color: white;
     border-radius: 20px;
     margin-left: 15px;

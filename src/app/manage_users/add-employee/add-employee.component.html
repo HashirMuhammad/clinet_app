@@ -1,124 +1,138 @@
 <div class="addcli pb-4 pr-4 flex-grow">
     <div class="bg-white rounded-lg flex-grow">
-     <div class="p-3 border-b">
-         <label class="text-lg font-medium">Add Employee</label>
-     </div>
- 
-     <!-- Personal Information -->
-     <div class="rounded-lg m-3 p-5 ml-5 mr-5 mt-5 flex-grow" style="background-color: #F0F2F7BF;">
-         <label class="text-base font-semibold tracking-wider">Personal Information</label>
-         <div class="flex flex-col lg:flex-row mt-3 lg:pr-8">
-            <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">Employee ID</label><br/>
-                <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
-            </div>
-        
-            <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">Title</label><br/>
-                <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1">
-            </div>
-        
-            <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">First Name</label><br/>
-                <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1">
-            </div>
-        
-            <div class="flex-grow mb-4 lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">Sur Name</label><br/>
-                <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1">
-            </div>
+        <div class="p-3 border-b">
+            <label class="text-lg font-medium">Add Employee</label>
         </div>
-        
-         <div class="flex flex-col lg:flex-row mt-3 lg:pr-8">
-             <div class="flex-grow lg:mr-12 mb-4 lg:mb-0">
-                 <label class="text-base font-medium" style="color: #CC0000;">Custom Greetins</label><br/>
-                 <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
-             </div>
- 
-             <div class="flex-grow lg:mr-12 mb-4 lg:mb-0">
-                 <label class="text-base font-medium" style="color: #CC0000;">Email Address</label><br/>
-                 <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1">
-             </div>
- 
-             <div class="flex-grow lg:mr-12 lg:mb-0">
-                 <label class="text-base font-medium" style="color: #CC0000;">Gender</label><br/>
-                 <select class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" style="color: #000000BF;">
-                     <option class="text-gray-500" value="" disabled selected>Select</option>
-                     <option value="search">Male</option>
-                     <option value="filter">Female</option>
-                   </select>
-             </div>
 
-             <div class="flex-grow lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">&nbsp;</label><br/>
-                <input type="text" class="w-full bg-transparent p-2" disabled>
+        <!-- Personal Information -->
+        <div class="rounded-lg m-3 p-5 ml-5 mr-5 mt-5 flex-grow" style="background-color: #F0F2F7BF;">
+            <label class="text-base font-semibold tracking-wider">Personal Information</label>
+            <div class="flex flex-col lg:flex-row mt-3 lg:pr-8">
+                <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Employee ID</label><br />
+                    <input [(ngModel)]="employeeIdInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+                </div>
+
+                <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Title</label><br />
+                    <input [(ngModel)]="titleInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1">
+                </div>
+
+                <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">First Name</label><br />
+                    <input [(ngModel)]="firstnameInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1">
+                </div>
+
+                <div class="flex-grow mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Sur Name</label><br />
+                    <input [(ngModel)]="surnameInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1">
+                </div>
             </div>
 
-         </div>
-     </div>
+            <div class="flex flex-col lg:flex-row mt-3 lg:pr-8">
+                <div class="flex-grow lg:mr-12 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Custom Greetins</label><br />
+                    <input [(ngModel)]="customGreetingInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+                </div>
 
-    <!-- Profiling -->
-    <div class="rounded-lg m-3 p-5 ml-5 mr-5 mt-5 flex-grow" style="background-color: #F0F2F7BF;">
-        <label class="text-base font-semibold tracking-wider">Profiling</label>
-        <div class="flex flex-col lg:flex-row mt-3 lg:pr-0">
-            <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">Username</label><br/>
-                <select class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" style="color: #000000BF;">
-                    <option class="text-gray-500" value="" disabled selected>Select</option>
-                    <option value="search">option 1</option>
-                    <option value="filter">option 2</option>
-                  </select>
-            </div>
+                <div class="flex-grow lg:mr-12 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Email Address</label><br />
+                    <input [(ngModel)]="emailInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1">
+                </div>
 
-            <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">Qualification</label><br/>
-                <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
-            </div>
+                <div class="flex-grow lg:mr-12 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Gender</label><br />
+                    <select [(ngModel)]="genderInput" class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"
+                        style="color: #000000BF;">
+                        <option class="text-gray-500" value="" disabled selected>Select</option>
+                        <option value="search">Male</option>
+                        <option value="filter">Female</option>
+                    </select>
+                </div>
 
-            <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">Permissions</label><br/>
-                <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
-            </div>
+                <div class="flex-grow lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">&nbsp;</label><br />
+                    <input type="text" class="w-full bg-transparent p-2" disabled>
+                </div>
 
-            <div class="ml-1 mt-7 pr-4 flex-grow">
-                <input type="checkbox" class="border-gray-400 mr-2" size="large" kendoCheckBox #large />
-                <label>Email Newsletter</label>
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row mt-3 lg:pr-0">
-            
-            <div class=" printed flex-grow ml-0 mr-0 mt-7 w-0">
-                <input type="checkbox" class="border-gray-400 mr-2" size="large" kendoCheckBox #large />
-                <label>Printed Newsletter</label>
+        <!-- Profiling -->
+        <div class="rounded-lg m-3 p-5 ml-5 mr-5 mt-5 flex-grow" style="background-color: #F0F2F7BF;">
+            <label class="text-base font-semibold tracking-wider">Profiling</label>
+            <div class="flex flex-col lg:flex-row mt-3 lg:pr-0">
+                <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Username</label><br />
+                    <select [(ngModel)]="userNameInput"
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" style="color: #000000BF;">
+                        <option class="text-gray-500" value="" disabled selected>Select</option>
+                        <option value="search">option 1</option>
+                        <option value="filter">option 2</option>
+                    </select>
+                </div>
+
+                <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Qualification</label><br />
+                    <input [(ngModel)]="qualificationInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+                </div>
+
+                <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Permissions</label><br />
+                    <input [(ngModel)]="permissionInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+                </div>
+
+                <div class="ml-1 mt-7 pr-4 flex-grow">
+                    <input [(ngModel)]="emailNewsletterInput" type="checkbox" class="border-gray-400 mr-2" size="large"
+                        kendoCheckBox #large />
+                    <label>Email Newsletter</label>
+                </div>
             </div>
 
-            <div class="standard flex-grow lg:mr-7 mb-4 lg:mb-0 xl:-ml-16 w-7">
-                <label class="text-base font-medium" style="color: #CC0000;">Standard Profile</label><br/>
-                <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1 xl::w-80"/>
+            <div class="flex flex-col lg:flex-row mt-3 lg:pr-0">
+
+                <div class=" printed flex-grow ml-0 mr-0 mt-7 w-0">
+                    <input [(ngModel)]="printedNewsletterInput" type="checkbox" class="border-gray-400 mr-2"
+                        size="large" kendoCheckBox #large />
+                    <label>Printed Newsletter</label>
+                </div>
+
+                <div class="standard flex-grow lg:mr-7 mb-4 lg:mb-0 xl:-ml-16 w-7">
+                    <label class="text-base font-medium" style="color: #CC0000;">Standard Profile</label><br />
+                    <input [(ngModel)]="standardprofileInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1 xl::w-80" />
+                </div>
+
+                <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
+                    <label class="text-base font-medium" style="color: #CC0000;">Tags</label><br />
+                    <input [(ngModel)]="tagsInput" type="text" placeholder="Enter Here..."
+                        class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1" />
+                </div>
             </div>
 
-            <div class="flex-grow lg:mr-7 mb-4 lg:mb-0">
-                <label class="text-base font-medium" style="color: #CC0000;">Tags</label><br/>
-                <input type="text" placeholder="Enter Here..." class="w-full bg-white border border-gray-400 rounded-lg p-2 mt-1"/>
+        </div>
+
+        <!-- buttons -->
+        <div class="buttons flex">
+            <div class="flex flex-col lg:flex-row  mt-5 mr-7 mb-7 ml-auto">
+                <button class="pl-4 pr-4 p-2 rounded-lg mr-4 sm:mt-2" style="background-color: #F0F2F7;"
+                    (click)="cancel()">Cancel</button>
+
+                <button class="border border-gray-300  rounded-lg p-1.5 pl-3 pr-3 mr-4 sm:mt-2">Save and more</button>
+
+                <button class="bg-white border p-1.5 pl-3 pr-3 mr-0 rounded-lg flex items-center text-white sm:mt-2"
+                    style="background-color: #29CCB1;">Save and Finish</button>
             </div>
+
         </div>
 
     </div>
-
-    <!-- buttons -->
-    <div class="buttons flex">
-        <div class="flex flex-col lg:flex-row  mt-5 mr-7 mb-7 ml-auto">
-            <button class="pl-4 pr-4 p-2 rounded-lg mr-4 sm:mt-2" style="background-color: #F0F2F7;">Cancel</button>
-
-            <button class="border border-gray-300  rounded-lg p-1.5 pl-3 pr-3 mr-4 sm:mt-2">Save and more</button>
-
-            <button class="bg-white border p-1.5 pl-3 pr-3 mr-0 rounded-lg flex items-center text-white sm:mt-2" style="background-color: #29CCB1;">Save and Finish</button>
-        </div>
-
-    </div>
- 
- </div>
- </div>
- 
- 
+</div>

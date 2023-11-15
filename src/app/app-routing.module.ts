@@ -46,11 +46,11 @@ const routes: Routes = [
     path: 'manage_users',
     children: [
       { path: 'search_clients', component: SearchClientsComponent },
-      { path: 'add_client', component: AddClientComponent, },
-      { path: 'search_emp', component: SearchEmployeesComponent, },
-      {  path: 'add_emp', component: AddEmployeeComponent, },
-      { path: 'unsubcribed_users', component: UnsubUsersComponent, },
-      { path: 'data_import', component: DataImportComponent, },
+      { path: 'add_client', component: AddClientComponent },
+      { path: 'search_emp', component: SearchEmployeesComponent },
+      { path: 'add_emp', component: AddEmployeeComponent },
+      { path: 'unsubcribed_users', component: UnsubUsersComponent },
+      { path: 'data_import', component: DataImportComponent },
     ],
   },
   {
@@ -68,9 +68,9 @@ const routes: Routes = [
     path: 'history',
     component: HistoryComponent,
     children: [
-      { path: 'client', component: ClientComponent, },
-      { path: 'employees', component: EmployeesComponent, },
-      { path: 'articles', component: ArticlesComponent, },
+      { path: 'client', component: ClientComponent },
+      { path: 'employees', component: EmployeesComponent },
+      { path: 'articles', component: ArticlesComponent },
     ],
   },
   {
@@ -81,13 +81,13 @@ const routes: Routes = [
     path: 'social_media',
     component: SocialMediaComponent,
   },
-  { 
-    path: 'manage_articles/new_post', 
-    component: NewPostComponent, 
+  {
+    path: 'manage_articles/new_post',
+    component: NewPostComponent,
   },
-  { 
-    path: 'social_media/configuration', 
-    component: ConfigurationComponent, 
+  {
+    path: 'social_media/configuration',
+    component: ConfigurationComponent,
   },
 ];
 

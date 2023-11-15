@@ -1,19 +1,22 @@
 .custom-radio {
-    width: 20px; /* Adjust the width as needed */
-    height: 20px; /* Adjust the height as needed */
-    accent-color: red;
-    border-radius: 50%;
-  }
+  width: 20px;
+  /* Adjust the width as needed */
+  height: 20px;
+  /* Adjust the height as needed */
+  accent-color: red;
+  border-radius: 50%;
+}
 
 @media screen and (max-width: 640px) {
-  .checkboxdiv{
+  .checkboxdiv {
     display: block;
   }
-  .radiodiv{
+
+  .radiodiv {
     display: block;
   }
-  
-  .detailsdiv{
+
+  .detailsdiv {
     background-color: white;
     border-radius: 15px;
   }

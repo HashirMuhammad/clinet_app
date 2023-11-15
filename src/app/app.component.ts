@@ -1,5 +1,13 @@
 import { TitleCasePipe } from '@angular/common';
-import { AfterContentInit, AfterViewInit, Component, DoCheck, HostListener, OnChanges, OnInit } from '@angular/core';
+import {
+  AfterContentInit,
+  AfterViewInit,
+  Component,
+  DoCheck,
+  HostListener,
+  OnChanges,
+  OnInit,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -9,41 +17,15 @@ import { filter } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-
 export class AppComponent implements OnInit {
   title = 'client-app';
   currentRoute: string = '';
   routeName: string = '';
   showDropdown = false;
-  isMobile! : boolean;
+  isMobile!: boolean;
 
   ngOnInit() {
     this.checkScreenSize(); // Check screen size when component is initialized
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.checkScreenSize();
-  }
-
-  checkScreenSize() {
-    const screenWidth = window.innerWidth;
-    this.isMobile = screenWidth < 641; // Adjust the threshold as needed
-
-    // If the screen size is not mobile, hide the dropdown
-    if (!this.isMobile) {
-      this.showDropdown = false;
-      console.log("app window");
-    } else {
-      this.showDropdown = true;
-      console.log("app mobile");
-      this.isMobile = true;
-    }
-  }
-
-  toggleDropdown() {
-    this.showDropdown = !this.showDropdown;
-    console.log(this.showDropdown)
   }
 
   constructor(private route: ActivatedRoute, private router: Router) {
@@ -61,8 +43,36 @@ export class AppComponent implements OnInit {
       });
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+
+  home() {
+    this.router.navigate(['dashboard']);
+  }
+
+  checkScreenSize() {
+    const screenWidth = window.innerWidth;
+    this.isMobile = screenWidth < 641; // Adjust the threshold as needed
+
+    // If the screen size is not mobile, hide the dropdown
+    if (!this.isMobile) {
+      this.showDropdown = false;
+      console.log('app window');
+    } else {
+      this.showDropdown = true;
+      console.log('app mobile');
+      this.isMobile = true;
+    }
+  }
+
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
+    console.log(this.showDropdown);
+  }
+
   capitalizeFirstLetter(str: string): string {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
-
 }

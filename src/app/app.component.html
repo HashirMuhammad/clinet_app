@@ -1,13 +1,11 @@
 <!-- <div class="bg-slate-500 k-h-screen h-screen"> -->
-<div *ngIf="!isMobile" class="bg-img bg-cover object-cover w-full" >
+<div *ngIf="!isMobile" class="bg-img bg-cover object-cover w-full">
   <div class="flex">
-    
-    
 
     <!-- for window -->
-      <div class="p-1 h-screen">
-        <app-sidebar></app-sidebar>
-      </div>
+    <div class="p-1 h-screen">
+      <app-sidebar></app-sidebar>
+    </div>
 
     <!-- ml-56 mr-8 h-fit overflow-y-auto -->
     <div class="2xl:ml-72 xl:ml-72 sm:ml-56 md:ml-64 lg:ml-60 h-fit flex-grow">
@@ -16,7 +14,7 @@
           <div class="md:flex lg:flex">
             <!-- routing -->
             <div class="flex">
-              <img src="../../assets/dashboard/home-icon.png" class="cursor-pointer" />
+              <img src="../../assets/dashboard/home-icon.png" class="cursor-pointer" (click)="home()" />
               <img src="../assets/dashboard/route-arrow.png" alt="Image" class="w-3 h-3 mt-3 ml-0.5" />
               <div [innerHTML]="routeName" class="flex text-gray-500 mt-2 ml-2"></div>
             </div>
@@ -55,7 +53,7 @@
 <!-- </div> -->
 
 <!-- for mobile -->
-<div *ngIf="isMobile" class="flex flex-col">
+<div *ngIf="isMobile" class="flex flex-col ">
   <!-- header -->
   <div class=" sticky flex items-center justify-between p-2 bg-white round">
     <div class="flex items-center">
@@ -71,7 +69,7 @@
   </div>
 
   <!-- main div -->
-  <div class=" top-0 left-0 w-full h-full overflow-y-auto bg-slate-300">
+  <div class=" top-0 left-0 w-full h-full overflow-y-auto bg-red-200">
     <router-outlet></router-outlet>
   </div>
 </div>

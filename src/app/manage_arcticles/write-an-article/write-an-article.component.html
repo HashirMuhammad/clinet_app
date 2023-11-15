@@ -1,80 +1,85 @@
 <div class="main pb-4 pr-4 flex-grow h-full">
     <div class="bg-white rounded-lg pb-6 flex-grow h-screen mb-40">
-     <div class="p-4 border-b">
-        <div *ngIf="!(art === 'generateAI')">
-            <label class="text-xl font-medium">Write an Article</label>
+        <div class="p-4 border-b">
+            <div *ngIf="!(art === 'generateAI')">
+                <label class="text-xl font-medium">Write an Article</label>
+            </div>
+            <div *ngIf="art === 'generateAI' ">
+                <label class="text-xl font-medium">Generate An Article with AI</label>
+            </div>
         </div>
-         <div *ngIf="art === 'generateAI' ">
-            <label class="text-xl font-medium">Generate An Article with AI</label>
-         </div>
-     </div>
 
-     <div class="radiodiv  mt-2">
-        <div *ngIf="toogle">
-            <div class="p-3">
-                <label class="text-base font-medium text-red-500 ml-3">Please select how you want to Write an Article.</label>
+        <div class="radiodiv  mt-2">
+            <div *ngIf="toogle">
+                <div class="p-3">
+                    <label class="text-base font-medium text-red-500 ml-3">Please select how you want to Write an
+                        Article.</label>
                 </div>
-        
+
                 <!-- radio button -->
                 <div class="rd flex">
                     <div class="rd1 rounded-lg ml-5 p-4" style="background-color: #F0F2F7BF;">
-                        <div class="flex"> 
+                        <div class="flex">
                             <input type="radio" class="custom-radio" [(ngModel)]="selectedOption" value="writeArticle">
                             <label class="ml-4 text-lg font-medium">Write An Article</label>
                         </div>
-                        
+
                         <div class="flex ml-9 mt-1">
-                            <label>Add title of the article, upload <br/> image and article content to <br/> create an Article.</label>
+                            <label>Add title of the article, upload <br /> image and article content to <br /> create an
+                                Article.</label>
                             <img src="../../../assets/manage_content/write_an_article.png" class="ml-6 w-12 h-12">
                         </div>
                     </div>
-        
+
                     <div class="rd2 rounded-lg ml-6 p-4" style="background-color: #F0F2F7BF;">
                         <div class="flex">
                             <input type="radio" class="custom-radio" [(ngModel)]="selectedOption" value="generateAI">
                             <label class="ml-4 text-lg font-medium">Generate An Article with AI</label>
                         </div>
-                        
+
                         <div class="flex ml-9 mt-1">
-                            <label>Turn a title into a fully SEO <br/> optimized and long article with <br/> this AI editor.</label>
+                            <label>Turn a title into a fully SEO <br /> optimized and long article with <br /> this AI
+                                editor.</label>
                             <img src="../../../assets/manage_content/ai_article.png" class="ml-6 w-12 h-12">
                         </div>
                     </div>
-        
+
                 </div>
-        
+
                 <div class="flex mt-8 mr-3">
                     <div class="ml-auto">
-                        <button class="p-1 rounded-lg px-5 mr-5" style="background-color: #00000026;" (click)="onCancelClick()">Discard</button>
-                        <button class="p-1 rounded-lg px-5 mr-5 text-white" style="background-color: #29CCB1;" (click)="onNextClick()">Next</button>
+                        <button class="p-1 rounded-lg px-5 mr-5" style="background-color: #00000026;"
+                            (click)="onCancelClick()">Discard</button>
+                        <button class="p-1 rounded-lg px-5 mr-5 text-white" style="background-color: #29CCB1;"
+                            (click)="onNextClick()">Next</button>
                     </div>
                 </div>
+            </div>
+
+            <div class="h-full flex-grow">
+                <div *ngIf="art === 'writeArticle' " class="h-full">
+                    <app-simple-article (valueEmitter)="receiveValue($event)"></app-simple-article>
+                </div>
+
+                <div *ngIf="art === 'generateAI' " class="h-full">
+                    <app-ai-article (aivalueEmitter)="aireceiveValue($event)"></app-ai-article>
+                </div>
+
+                <div *ngIf="(receivedValue === 'false' || aireceivedValue === 'ai_art')" class="h-full">
+                    <app-articles-details (detailvalueEmitter)="detailreceiveValue($event)"></app-articles-details>
+                </div>
+
+                <div *ngIf="detailreceivedValue === 'false'" class="h-full">
+                    <app-preview-article></app-preview-article>
+                </div>
+
+            </div>
+
+            <!-- <app-ai-article></app-ai-article> -->
+            <!-- <app-simple-article></app-simple-article> -->
+            <!-- <app-preview-article></app-preview-article> -->
+            <!-- <app-articles-details></app-articles-details> -->
+
         </div>
-
-        <div class="h-full flex-grow">
-            <div *ngIf="art === 'writeArticle' " class="h-full">
-                <app-simple-article (valueEmitter)="receiveValue($event)"></app-simple-article>
-            </div>
-    
-            <div *ngIf="art === 'generateAI' " class="h-full">
-                <app-ai-article (aivalueEmitter)="aireceiveValue($event)"></app-ai-article>
-            </div>
-    
-            <div *ngIf="(receivedValue === 'false' || aireceivedValue === 'ai_art')" class="h-full">
-                <app-articles-details (detailvalueEmitter)="detailreceiveValue($event)"></app-articles-details>
-            </div>
-    
-            <div *ngIf="detailreceivedValue === 'false'" class="h-full">
-                <app-preview-article></app-preview-article>
-            </div>
-    
-        </div>
-
-        <!-- <app-ai-article></app-ai-article> -->
-        <!-- <app-simple-article></app-simple-article> -->
-        <!-- <app-preview-article></app-preview-article> -->
-        <!-- <app-articles-details></app-articles-details> -->
-
-     </div>
     </div>
 </div>

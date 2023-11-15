@@ -1,11 +1,10 @@
-
 /* pagination -------------------------------------------------------------------------------------- */
-.pagibtn:hover{
-    background-color: #FFF2F2;
-    color: #CC0000;
-    padding-top: 0%;
-  
-  }
+.pagibtn:hover {
+  background-color: #FFF2F2;
+  color: #CC0000;
+  padding-top: 0%;
+}
+
 /* drop button------------------------------------------------------------------------------------ */
 .drpbtn {
   padding: 0.5rem 1rem;
@@ -17,69 +16,76 @@
   align-self: start;
   width: 100%;
   padding: auto;
-  
 }
 
 .drpbtn:hover {
-  background-color: #CC000026; /* Use your desired hover background color */
-  color: #CC0000; /*rgb(248, 212, 212)ur desired hover text color */
+  background-color: #CC000026;
+  /* Use your desired hover background color */
+  color: #CC0000;
+  /*rgb(248, 212, 212)ur desired hover text color */
   border-color: transparent;
   /* box-shadow: 0 4px 6px rgba(251, 45, 45, 0.777); This adds a shadow */
 }
 
 .drpbtn:hover img {
-  filter: brightness(80%) saturate(100%) invert(30%) sepia(82%) saturate(900%) hue-rotate(315deg) contrast(100%); 
+  filter: brightness(80%) saturate(100%) invert(30%) sepia(82%) saturate(900%) hue-rotate(315deg) contrast(100%);
 }
-  .avatar {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: black;
-    text-align: center;
-    font-size: 16px;
-    line-height: 22px; /* Adjust line height for vertical centering */
-  }
+
+.avatar {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  /* Adjust line height for vertical centering */
+}
 
 
 /* -----------------table------------------------------------------- */
-  /* Style for the entire table */
-  .table-container {
-    border-collapse: collapse;
-  }
-  
-  /* Style for table header row */
-  .table-container thead tr {
-    background-color: #F0F2F7; /* Header background color */
-    border-radius: 50px; /* Rounded corners for header */
-  }
-  
-  /* Style for table header cells */
-  .table-container th {
-    padding: 10px;
-  }
-  
-  /* Style for table data cells */
-  .table-container td {
-    padding: 7px;
-    border-top: 1px solid #F0F2F7; /* Add a border between rows */
-  }
-  
-  /* Apply border-radius to the first and last cells in the header row */
-  .table-container th:first-child {
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
-  
-  .table-container th:last-child {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
-  
-  /* Optional: Add hover effect to rows */
-  .table-container tbody tr:hover {
-    background-color: #f0f0f0; /* Hover color */
-  }
+/* Style for the entire table */
+.table-container {
+  border-collapse: collapse;
+}
+
+/* Style for table header row */
+.table-container thead tr {
+  background-color: #F0F2F7;
+  /* Header background color */
+  border-radius: 50px;
+  /* Rounded corners for header */
+}
+
+/* Style for table header cells */
+.table-container th {
+  padding: 10px;
+}
+
+/* Style for table data cells */
+.table-container td {
+  padding: 7px;
+  border-top: 1px solid #F0F2F7;
+  /* Add a border between rows */
+}
+
+/* Apply border-radius to the first and last cells in the header row */
+.table-container th:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.table-container th:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Optional: Add hover effect to rows */
+.table-container tbody tr:hover {
+  background-color: #f0f0f0;
+  /* Hover color */
+}
 
 @media screen and (max-width: 600px) {
   .table-container {
@@ -88,15 +94,18 @@
     font-size: small;
     overflow-x: auto;
   }
+
   .table-container td img {
     width: 200%;
     height: 200%;
   }
-  .imgpanel{
+
+  .imgpanel {
     right: 2rem;
     height: fit-content;
     width: fit-content;
   }
+
   .drpbtn {
     padding: 0.5rem 1rem;
     background-color: transparent;
@@ -108,21 +117,23 @@
     width: fit-content;
     padding: auto;
   }
+
   .pagination {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+  }
 
-  }
-  
   .pagination-controls button {
-    font-size: 14px; /* Adjust the font size as needed */
-    
+    font-size: 14px;
+    /* Adjust the font size as needed */
   }
+
   .pagination-jump input {
     margin-top: 4px;
-    width: 50px; /* Adjust the width as needed */
-    margin-right: 0; /* Remove margin */
+    width: 50px;
+    /* Adjust the width as needed */
+    margin-right: 0;
+    /* Remove margin */
   }
 }

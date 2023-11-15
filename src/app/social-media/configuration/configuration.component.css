@@ -29,19 +29,21 @@
     display: none;
 }
 
-#toggleSwitch1:checked + .switch1 {
-    background-color: #FFEDED; /* Change color when switched on */
+#toggleSwitch1:checked+.switch1 {
+    background-color: #FFEDED;
+    /* Change color when switched on */
 }
 
-#toggleSwitch1:checked + .switch1::before {
-    transform: translateX(20px); /* Move the knob to the right when switched on */
+#toggleSwitch1:checked+.switch1::before {
+    transform: translateX(20px);
+    /* Move the knob to the right when switched on */
     background-color: #CC0000;
 }
 
 
 @media screen and (max-width: 640px) {
 
-    .sercli{
+    .sercli {
         padding-left: 10px;
     }
 }

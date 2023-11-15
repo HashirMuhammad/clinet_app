@@ -12,12 +12,11 @@
 }
 
 @media screen and (max-width: 600px) {
+
   /* Styles for small screens go here */
-  .bg-img{
+  .bg-img {
     background-image: url("../assets/bg-img/358871.webp");
   }
 
   /* Add this CSS to your stylesheet */
-
-
 }

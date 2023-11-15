@@ -35,8 +35,8 @@ import { ArticlesComponent } from './history/history/articles/articles.component
 import { WriteAnArticleComponent } from './manage_arcticles/write-an-article/write-an-article.component';
 import { SimpleArticleComponent } from './manage_arcticles/write-an-article/simple-article/simple-article.component';
 import { AiArticleComponent } from './manage_arcticles/write-an-article/ai-article/ai-article.component';
-import { EditorModule } from "@progress/kendo-angular-editor";
-import { LabelModule } from "@progress/kendo-angular-label";
+import { EditorModule } from '@progress/kendo-angular-editor';
+import { LabelModule } from '@progress/kendo-angular-label';
 import { ArticlesDetailsComponent } from './manage_arcticles/write-an-article/articles-details/articles-details.component';
 import { PreviewArticleComponent } from './manage_arcticles/write-an-article/preview-article/preview-article.component';
 import { ConnectionComponent } from './connection/connection.component';
@@ -50,8 +50,6 @@ import { ManageArticlesComponent } from './manage_arcticles/write-an-article/man
 import { ViewArticlesComponent } from './manage_arcticles/write-an-article/manage-articles/view-articles/view-articles.component';
 import { SearchArticlesComponent } from './manage_arcticles/write-an-article/search-articles/search-articles.component';
 import { ProofNewslettersComponent } from './manage_arcticles/write-an-article/proof-newsletters/proof-newsletters.component';
-
-
 
 @NgModule({
   declarations: [

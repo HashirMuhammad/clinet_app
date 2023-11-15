@@ -1,7 +1,7 @@
 <div class="previewdiv flex-grow pl-4 pb-4">
     <!-- textarea  -->
     <div class="">
-        <div >
+        <div>
             <textarea class="w-full h-80 p-4 rounded-lg bg-white" [value]="textarea" disabled></textarea>
         </div>
     </div>
@@ -10,31 +10,33 @@
     <div>
         <div class="div1 flex mt-10">
             <div class="w-full mb-8 lg:mb-0">
-                <label class="text-base font-medium " style="color: #CC0000;">Include in</label><br/>
+                <label class="text-base font-medium " style="color: #CC0000;">Include in</label><br />
                 <div class="mt-2">
                     <span class="bg-slate-200 px-4 py-2 rounded-lg">{{include_in}}</span>
                 </div>
             </div>
 
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Include in(currently proofing)</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Include in(currently
+                    proofing)</label><br />
                 <div class="mt-2">
-                <span class="bg-slate-200 px-4 py-2 rounded-lg mr-1" *ngFor="let item of include_in_currently_proofing">{{item}}</span>
+                    <span class="bg-slate-200 px-4 py-2 rounded-lg mr-1"
+                        *ngFor="let item of include_in_currently_proofing">{{item}}</span>
                 </div>
             </div>
 
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Source</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Source</label><br />
                 <div class="mt-2">
-                <span>{{source}}</span>
+                    <span>{{source}}</span>
 
                 </div>
             </div>
 
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Category</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Category</label><br />
                 <div class="mt-2">
-                <span>{{category}}</span>
+                    <span>{{category}}</span>
                 </div>
 
             </div>
@@ -42,67 +44,67 @@
 
         <div class="div2 flex mt-10">
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Profiling: Standard Profiles</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Profiling: Standard Profiles</label><br />
                 <div class="mt-2">
-                <span class="bg-slate-200 px-4 py-2 rounded-lg text-sm">{{profiling}}</span>
+                    <span class="bg-slate-200 px-4 py-2 rounded-lg text-sm">{{profiling}}</span>
                 </div>
 
             </div>
 
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Newsfeed?</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Newsfeed?</label><br />
                 <div class="mt-2">
-                <span>{{newsfeed}}</span>
+                    <span>{{newsfeed}}</span>
                 </div>
 
             </div>
 
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Feature this Article</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Feature this Article</label><br />
                 <div class="mt-2">
-                <span>{{featureThisArticle}}</span>
+                    <span>{{featureThisArticle}}</span>
                 </div>
 
             </div>
 
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Feature Until</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Feature Until</label><br />
                 <div class="mt-2">
-                <span>{{featureUntil}}</span>
+                    <span>{{featureUntil}}</span>
 
                 </div>
 
             </div>
-            
+
         </div>
 
         <div class="div3 flex mt-10">
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Social Media</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Social Media</label><br />
                 <div class="mt-2">
-                <img src="{{socialMedia}}">
+                    <img src="{{socialMedia}}">
                 </div>
 
             </div>
 
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Social Media Title</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Social Media Title</label><br />
                 <div class="mt-2">
-                <span>{{socialMediaTitle}}</span>
+                    <span>{{socialMediaTitle}}</span>
                 </div>
 
             </div>
 
             <div class="w-full mb-4 lg:mb-0 ">
-                <label class="text-base font-medium" style="color: #CC0000;">Specific Date</label><br/>
+                <label class="text-base font-medium" style="color: #CC0000;">Specific Date</label><br />
                 <div class="mt-2">
-                <span>{{specificDate}}</span>
+                    <span>{{specificDate}}</span>
                 </div>
 
             </div>
 
             <div class="w-full">
-                <label class="text-base font-medium">&nbsp;</label><br/>
+                <label class="text-base font-medium">&nbsp;</label><br />
             </div>
         </div>
 
@@ -114,8 +116,9 @@
 
             <button class="border border-gray-300  rounded-lg p-1.5 pl-3 pr-3 mr-4 sm:mt-2">Save as draft</button>
 
-            <button class="bg-white border p-1.5 pl-3 pr-3 mr-0 rounded-lg items-center text-white sm:mt-2" style="background-color: #29CCB1;">Save</button>
-        
+            <button class="bg-white border p-1.5 pl-3 pr-3 mr-0 rounded-lg items-center text-white sm:mt-2"
+                style="background-color: #29CCB1;">Save</button>
+
         </div>
     </div>
 </div>

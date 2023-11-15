@@ -1,18 +1,22 @@
 @media screen and (max-width: 640px) {
-
-    .viewdiv, .titlediv{
+    .viewdiv,
+    .titlediv {
         padding-left: 15px;
     }
-    .textareadiv{
+
+    .textareadiv {
         padding-top: 15px;
     }
-    .imgdiv{
+
+    .imgdiv {
         padding: 10px;
     }
-    .btndiv{
+
+    .btndiv {
         display: block;
         padding: 10px;
     }
+
     .btndiv button {
         margin-bottom: 10px;
     }
